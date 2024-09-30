@@ -1,140 +1,156 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import './navbar.css'; 
-import { IoMdSearch,IoMdArrowRoundBack } from "react-icons/io";
-import { FaRegUserCircle,FaLongArrowAltRight,FaSignInAlt } from "react-icons/fa";
-import { MdWallet,MdOutlineContactPhone,MdSubscriptions,MdAccountCircle,MdCreateNewFolder } from "react-icons/md";
-import { RiAccountCircleFill } from "react-icons/ri";
 
+import React, { useState } from 'react';
+import { FaPlus } from 'react-icons/fa';
+import './navbar.css';
+import { RiArrowDropDownFill } from "react-icons/ri";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [showFullMenu, setShowFullMenu] = useState(false);
+  const [showDropdownCreate, setShowDropdownCreate] = useState(false);
+  const [showDropdownExplore, setShowDropdownExplore] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-const [isSearchActive, setIsSearchActive] = useState(false);
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
 
-const handleSearchClick = () => {
-  setIsSearchActive(true); 
-};
-
-const handleCloseSearch = () => {
-  setIsSearchActive(false);
-};
-  const handleUserClick = () => setShowFullMenu(!showFullMenu);
- return (
-  <nav className='navbar'>
-    {!isSearchActive ? (
-      <div className="nav-container">
-        <div className="left_component">
-          <div className="nav-icon" onClick={handleUserClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </div>
-          <div className="logo_nav">
-            <a href="/Dashboard">
-              <img src="./img/collection.png" alt="" />
-              <p>FINTECH</p>
-            </a>
-          </div>
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="logo_navbar">
+          <img src="./img/collection.png" alt="" />
+          <div className="navbar-logo">FINTECH</div>
         </div>
 
-        <div className="menu_nav">
-          <ul className="nav-menu">
-            <li className="nav-item">
-              <a href="/CreatePage" className="nav-links">Collection</a>
-            </li>
-            <li className="nav-item">
-              <a href="/about" className="nav-links">Create Collection</a>
-            </li>
-            <li className="nav-item">
-              <a href="/UploadNFTPage" className="nav-links">Upload NFT</a>
-            </li>
-          </ul>
-        </div>
+        <div className="menu_navbar">
+          {/* Desktop Create Menu Item */}
+          <div className="navbar-item-wrapper">
+            <div
+              className="navbar-item"
+              onMouseEnter={() => setShowDropdownCreate(true)}
+              onMouseLeave={() => setShowDropdownCreate(true)}
+            >
+             
+              Create
+               <RiArrowDropDownFill size={30}/>
+            </div>
+            {showDropdownCreate && (
+              <div
+                className="dropdown"
+                onMouseEnter={() => setShowDropdownCreate(true)}
+                onMouseLeave={() => setShowDropdownCreate(false)}
+              >
+                <a href="#">NFT</a>
+                <a href="#">Collection</a>
+                <a href="#">My Profile</a>
+              </div>
+            )}
+          </div>
 
-        <div className="right_component">
-          <div className="search_nav" onClick={handleSearchClick}>
-            <IoMdSearch className='icon_search' />
-            <p>Search</p>
+          {/* Desktop Explore Menu Item */}
+          <div className="navbar-item-wrapper">
+            <div
+              className="navbar-item"
+              onMouseEnter={() => setShowDropdownExplore(true)}
+              onMouseLeave={() => setShowDropdownExplore(true)}
+            >
+              Explore
+               <RiArrowDropDownFill size={30}/>
+            </div>
+            {showDropdownExplore && (
+              <div
+                className="dropdown"
+                onMouseEnter={() => setShowDropdownExplore(true)}
+                onMouseLeave={() => setShowDropdownExplore(false)}
+              >
+                <a href="#">All NFTs</a>
+                <a href="#">All Collections</a>
+                <a href="#">Categories</a>
+              </div>
+            )}
           </div>
-       
-          <div className="wallet1">
-            <a href="/">
-              <MdWallet className='icon_wallet' />
-              <p>Login</p>
-            </a>
-         
-          </div>
-          <div className="user_nav">
-            <a href="/">
-             <FaRegUserCircle className='icon_user' />
-            </a>
-           
-          </div>
-        </div>
-      </div>
-    ) : (
-      <div className="search-container">
-          <button onClick={handleCloseSearch} className="close-search-btn">
-            <IoMdArrowRoundBack />
-          </button>
-        <div className="search-input-wrapper">
-          <input type="text" className="search-input" placeholder="Search..." />
+
+          {/* Desktop Menu Items */}
+          <div className="navbar-item"><a href="">About</a></div>
+          <div className="navbar-item"><a href="">Contact Us</a></div>
         </div>
       </div>
-    )}
 
-    {showFullMenu && (
-      <div className="full-menu">
-        <ul>
-            <li className="nav-item">
-              <RiAccountCircleFill  className='nav-item_icon'/>
-              <a href="/Account" className="nav-links1">Account</a>
-              {/* <IoMdArrowDropright className='icon_arrow_item'/> */}
-            </li>
-            <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/Dashboard" className="nav-links1">DashBoard</a>
-            </li>
-            <li className="nav-item">
-               <MdOutlineContactPhone  className='nav-item_icon'/>
-              <a href="/UploadNFTPage" className="nav-links1">Upload NFT</a>
-            </li>
-            <li className="nav-item">
-               <FaSignInAlt className='nav-item_icon'/>
-              <a href="/" className="nav-links1">Sign in</a>
-            </li>
-            <li className="nav-item">
-               <MdSubscriptions className='nav-item_icon'/>
-              <a href="/" className="nav-links1">Subscription</a>
-            </li>
+      <button className="connect-wallet-btn"><a href="">Connect Wallet</a></button>
+      <FaBarsStaggered className="icon_navbar-bars" onClick={toggleMobileMenu} />
+
+      {/* Mobile Menu */}
+      {showMobileMenu && (
+        <div className="mobile-menu">
+          {/* Mobile Create Menu Item */}
+          <div
+            className="mobile-menu-item"
+            onClick={() => setShowDropdownCreate(!showDropdownCreate)}
+          >
+            <a href="#">Create</a>
+            <RiArrowDropDownFill className='icon_dropdown_fill'/>
             
-            <li className="nav-item">
-               <MdCreateNewFolder  className='nav-item_icon'/>
-              <a href="/" className="nav-links1">About</a>
-            </li>
-            <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/ContactUs" className="nav-links1">Contact Us</a>
-            </li>
-             <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/Changepassword" className="nav-links1">Change Password</a>
-            </li>
-              <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/Login" className="nav-links1">Login</a>
-            </li>
-              <li className="nav-item">
-               <RiAccountCircleFill className='nav-item_icon'/>
-              <a href="/Register" className="nav-links1">Register</a>
-            </li>
-          </ul>
-      </div>
-    )}
-  </nav>
-);
+          </div>
+          {showDropdownCreate && (
+            <div className="mobile-dropdown">
+               <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">NFT</a>
+              </div>
+               <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">Collection</a>
+              </div>
+               <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">My profile</a>
+              </div>
+              
+            </div>
+          )}
 
-}
+          {/* Mobile Explore Menu Item */}
+          <div
+            className="mobile-menu-item"
+            onClick={() => setShowDropdownExplore(!showDropdownExplore)}
+          >
+            <a href="#">Explore</a>
+            <RiArrowDropDownFill className='icon_dropdown_fill'/>
+            
+          </div>
+          {showDropdownExplore && (
+            <div className="mobile-dropdown">
+              <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">All NFTs</a>
+              </div>
+           
+           <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">All Collections</a>
+              </div>
+              <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+              <a href="#">Categories</a>
+              </div>
+        
+            </div>
+          )}
+          <div className="mobile-menu-item">
+            <a href="#" className='item_normal'>About</a> 
+          </div>
+          <div className="mobile-menu-item">
+            <a href="#"className='item_normal'>Contact Us</a>   
+          </div>
+        <div className="mobile-menu-item">
+          <a href="#" className='item_normal'>Connect Wallet</a>
+        </div>
+          
+        </div>
+      )}
+    </nav>
+  );
+};
 
 export default Navbar;

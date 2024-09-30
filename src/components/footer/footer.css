@@ -1,223 +1,173 @@
-
-
- .section__padding{
-  padding: 1.5rem 2rem;
- }
-
- .footer{
-  background-color: #ffffff;
-  width: 100%;
-  top: 0;
-  bottom: 0;
- }
-
- .sb__footer{
-  display: flex;
-  flex-direction: column;
-
- }
- .sb__footer-links{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+.footer {
+  background-image: url('../../../public/img/hinh2.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 40px;
   width: 100%;
   text-align: left;
-  margin-bottom: 1rem;
-
- }
-
- 
- .sb__footer-links-div{
-  width: 180px;
- margin: 1rem 1rem 0rem 1rem;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  color: rgb(0, 0, 0);
- }
-  .sb__footer-links-div1{
-  width: 670px;
-   margin: 1rem 1rem 0rem 1rem;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  color: rgb(0, 0, 0);
- }
-
- 
-   .sb__footer-links-div a {
-        color: rgb(0, 0, 0);
-        text-decoration: none; 
-    }
-
-    .sb__footer-links-div a:hover {
-        color: rgb(145, 145, 145); 
-    }
-
-
-
-
- .sb__footer-links-div h4{
-  font-size: 16px;
-  line-height: 10px;
- margin-bottom: 1rem;
- 
- }
-
-
-
-.sb__footer-links-div p {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 1rem;
-   
 }
-p.content{
-   line-height: 30px;
+
+.container_footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Chia thành 12 cột */
+  gap: 2rem;
 }
- .sb__footer-below{
+
+.footer-about-us {
+  grid-column: span 3; 
+}
+.footer-about-us h4 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1rem;
- }
- .sb__footer-below  .socialmedia{
-  display: flex;
-  flex-direction: row;
-  top: 0;
- }
+  align-items: center; 
+}
 
-  .socialmedia a {
-  margin-right: .4rem;
+.footer-about-us .logo {
+  margin-right: 10px; 
+  width: 30px; 
+  height: auto;
+  border-radius: 50px; 
+}
+.footer-pages {
+  grid-column: span 2; 
+}
 
- }
+.footer-follow-us {
+  grid-column: span 2; 
+}
 
- .sb__footer-below-links{
-  display: flex;
-  flex-direction: row;
- }
- .sb__footer-below-links p {
-  font-size: 13px;
-  line-height: 15px;
-  margin-left: 2rem;
-  color: rgb(0, 0, 0);
-  font-family: 600;
- }
+.footer-follow-us ul li a {
+   display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-company{
+  grid-column: span 2;
+}
 
- hr{
-  color: white !important;
+.footer-stay-updated {
+  grid-column: span 3; 
+}
+.footer-stay-updated p{
+  margin-bottom: 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  margin-left: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 14px;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.footer-col ul li a:hover {
+  color: #9a9a9a;
+}
+
+.input-wrapper {
+  background: linear-gradient(90deg, #154e75, #65057a); /* Màu gradient cho viền */
+  padding: 4px; 
+  border-radius: 4px;
+}
+
+.footer-input {
+  padding: 10px;
   width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+   text-align: start;
+  background-color: white; 
+}
+.footer-input::placeholder{
+  color: #3e3d3d;
  
- }
-
-
- .sb__footer-copyright p{
-  font-size: 13px;
-  line-height: 15px;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
- 
- }
-   
- .sb__footer-below-links a{
-text-decoration: none;
- font-size: 13px;
-  line-height: 15px;
-  color: rgb(0, 0, 0);
- }
- 
-  .sb__footer-below-links a:hover{
-
-  color: rgb(119, 28, 28);
- }
- 
-
- @media screen and (max-width:1399px) {
-  .sb__footer-heading h1{
-    font-size: 44px;
-    line-height: 50px;
-  }
-
- }
-
- @media screen and (max-width:991px) {
-  
-   .sb__footer-heading h1{
-    font-size: 44px;
-    line-height: 50px;
-  }
- }
-
-  @media screen and (max-width:550px) {
-  .sb__footer-heading h1{
-    font-size: 34px;
-    line-height: 42px;
-  }
-
-  .sb__footer-links div{
-    margin: 1rem 0;
-  }
-  .sb__footer-btn p{
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .sb__footer-below{
-    flex-direction: column;
-    justify-content: left;
-  }
-  .sb__footer-below-links{
-    flex-direction: column;
-  }
-  .sb__footer-below-links p {
-    margin-left: 0rem;
-    margin-top: 1rem;
-  }
-
-
- }
-
- @media screen and (max-width:400px) {
-  .sb__footer-heading h1{
-    font-size: 27px;
-    line-height: 38px;
-  }
-
-
- }
-
-
-@media screen and (max-width: 375px) {
-  
- 
-  .sb__footer-links-div{
-    width: 100%;
-
-  }
-    .sb__footer-links-div h4 {
-        display: block;
-        position: relative;
-       cursor: pointer;
-    }
-
-    .sb__footer-links-div p {
-        display: none;
-        margin-top: 0.5rem;
-       
-    }
-
-    .sb__footer-links-div:hover h4 {
-        cursor: pointer;
-      }
-
-    .sb__footer-links-div:hover p {
-        display: block;
-         margin-top: .2rem;
-    }
-
-
-  
 }
 
+.subscribe-btn {
+  background-image: url('../../../public/img/hinh1.jpg'); 
+  border: none;
+  background-size: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease; 
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  box-shadow: 2px 2px 3px rgb(83, 82, 82);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.subscribe-btn:hover {
+  background-image: url('../../../public/img/hinh1.jpg');
+  transform: translateY(-5px); /* Di chuyển chữ lên trên khi hover */
+}
+
+.subscribe-btn:hover::after {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+
+@media (max-width: 768px) {
+  .container_footer {
+    grid-template-columns: repeat(6, 1fr); 
+  }
+
+  .footer-about-us {
+    grid-column: span 6; 
+  }
+
+  .footer-pages, .footer-follow-us {
+    grid-column: span 3; 
+  }
+
+  .footer-stay-updated {
+    grid-column: span 6; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container_footer {
+    grid-template-columns: 1fr; 
+  }
+
+  .footer-about-us, .footer-pages, .footer-follow-us, .footer-stay-updated {
+    grid-column: span 1; 
+  }
+
+  .footer-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
