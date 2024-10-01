@@ -33,6 +33,8 @@ import TemplateTransferNFT from "./pages/TemplateEmail/TemplateTransferNFT.jsx";
 import ERC_Contract from "./pages/ERC_Contract/ERC_Contract.jsx";
 import Advertisement from "./components/Advertisement/Advertisement.jsx";
 import LogoCompany from "./components/LogoCompany/LogoCompany.jsx";
+import Guide from "./components/Guide/Guide.jsx";
+import Introduce from "./components/Introduce/Introduce.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -66,6 +68,8 @@ function App() {
          <Route path="/ERC_Contract" element={<ERC_Contract/>}/>
          <Route path="/Advertisement" element={<Advertisement/>}/>
          <Route path="/LogoCompany" element={<LogoCompany/>}/>
+         <Route path="/GuideNFT" element={<Guide/>}/>
+         <Route path="/Introduce" element={<Introduce/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

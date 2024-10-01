@@ -1,0 +1,44 @@
+.IntroduceContainer{
+    display: flex;
+}
+.IntroduceImg1{
+    width: 800px;
+    height: 500px;
+}
+.IntroduceImg{
+    width: 60%;
+}
+.IntroduceText{
+    width: 40%;
+}
+.IntroduceContainer{
+    background-color: black;
+    color: white;
+    padding: 80px;
+    width: 100%;
+}
+.IntroduceText h4{
+    font-weight: normal;
+}
+.Introducetext{
+    display: flex;
+    background-color: #b126ca;
+    padding: 30px 50px 30px 50px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    gap: 30px;
+}
+
+.Introducetext h5{
+    font-weight: normal;
+}
+.Introducebutton{
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+}

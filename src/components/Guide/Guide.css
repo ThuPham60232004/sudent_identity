@@ -1,0 +1,55 @@
+
+.GuideContainer{
+    background-color: black;
+    color: white;
+    display: flex;
+    gap:30px;
+    justify-content: center;
+    padding: 8px;
+}
+
+.GuideContainer_STEP1,
+.GuideContainer_STEP2,
+.GuideContainer_STEP3,
+.GuideContainer_STEP4 {
+    background-color: rgba(9, 9, 37, 0.157);
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.236); 
+    transition: box-shadow 0.3s ease; 
+}
+
+.GuideContainer_STEP1:hover,
+.GuideContainer_STEP2:hover,
+.GuideContainer_STEP3:hover,
+.GuideContainer_STEP4:hover {
+    box-shadow: 0 8px 16px rgba(0.2, 0.2, 0.2, 0.2); 
+}
+
+
+.GuideContainer_STEP1 h4,
+.GuideContainer_STEP2 h4,
+.GuideContainer_STEP3 h4,
+.GuideContainer_STEP4 h4{
+    font-weight: normal;
+    color: grey;
+}
+.GuideContainerimg{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px auto;
+    margin: 30px;
+}
+.GuideContainer h2{
+    font-size: 19px;
+}
+.GuideContainer_STEP1 h5,
+.GuideContainer_STEP2 h5,
+.GuideContainer_STEP3 h5,
+.GuideContainer_STEP4 h5{
+    font-weight: normal;
+}

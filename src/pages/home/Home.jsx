@@ -11,12 +11,14 @@ import TrendingList from "../../components/TrendingList/TrendingList.jsx";
 import CardSlider from "../../components/CardSlider/CardSlider.jsx";
 import WalletLogin from "../../components/WalletLogin/WalletLogin.jsx";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel.jsx";
-import Service1 from "../../components/Service1/Service.jsx";
 import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";
 import ERC_Contract from "../ERC_Contract/ERC_Contract.jsx";
 import Advertisement from "../../components/Advertisement/Advertisement.jsx";
 import LogoCompany from "../../components/LogoCompany/LogoCompany.jsx";
+import GuideNFT from "../../components/Guide/Guide.jsx";
+import Introduce from "../../components/Introduce/Introduce.jsx";
+import Connective from "../../components/Connective/Connective.jsx";
 const Home = () => {
   return (
 
@@ -59,19 +61,18 @@ const Home = () => {
       <div className="Services_home_page">
          <Services/>
       </div>
-      {/*
-      các bước tạo nft
-
+      <div className="Services_home_page">
+         <GuideNFT/>
+      </div>
+     
       <div className="Introduce_home_page">
          <Introduce/>
       </div>
+      
       <div className="Connective_home_page">
        <Connective/>
       </div>
-
- */}
       <div className="footer_home_page">
-
         <Footer/>
       </div>
   </div>

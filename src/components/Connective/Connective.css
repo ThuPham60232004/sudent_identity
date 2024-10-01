@@ -1,0 +1,22 @@
+.ConnectiveContainer{
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    padding: 70px;
+    gap: 90px;
+    justify-content: center;
+}
+.iconConnective{
+    width: 70px;
+    height: 70px;
+}
+.ConnectiveWebsite,
+.ConnectiveTwitter,
+.ConnectiveDiscord,
+.ConnectiveTelegram{
+    display: flex;
+    gap: 15px;
+}
+.Connectivetext{
+   padding: 13px 0 0 13px;
+}
