@@ -16,27 +16,60 @@ import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";
 const Home = () => {
   return (
+
+    <div className="home_page">
+      <div className="navbar_home_page">
+         <Navbar />
+      </div>
+    
+  <div className="body_home_page">
+        <div className="header_home_page">
+         <Header/>
+      </div>
+         <div className="trendinglist_home_page">
+        <TrendingList/>
+      </div>
+     {/* <div className="cardslide_home_page">
+       <CardSlider/>  
+      </div>
+        
+      <div className="featuredproducts_home_page">
+
     <div>
-      <Navbar />
-      <Header/>
       <CardSlider/>
       <FeaturedProducts/>
-      <WalletLogin/>
-      <div className="LogoCarousel">
+      </div>
+      <div className="walletlogin_home_page">
+         <WalletLogin/>
+      </div>
+      <div className="logocarousel_home_page">
         <LogoCarousel/>
       </div>
-     
-      <Services/>
-      <TrendingList/>
-      <NFTGallery/>
-      <Service1/>
-      <BrandInfo/>
-      <SubscriptionPlans/>
-      <div className="homeContainer">
+      <div className="services_home_page">
+         <Services/>
+      </div>
+   
+      <div className="nftgallrery_home_page">
+        <NFTGallery/>
+      </div>
+      <div className="service1_home_page">
+         <Service1/>
+      </div>
+      <div className="brandinfo_home_page">
+         <BrandInfo/>
+      </div>
+      <div className="subscriptionplans_home_page">
+       <SubscriptionPlans/>
+      </div>
+
+      <div className="maillist_home_page">
         <MailList/>
- 
+      </div> */}
+      <div className="footer_home_page">
+
         <Footer/>
       </div>
+  </div>
     </div>
   );
 };

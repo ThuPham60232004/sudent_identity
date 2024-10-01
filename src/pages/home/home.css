@@ -1,15 +1,31 @@
-.homeContainer{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(255, 255, 255);
 }
 
-.homeTitle{
-  width: 1024px;
-  font-size: 20px;
+body * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  
 }
-.LogoCarousel{
-  margin-top: 50px;
+
+.home_page{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar_home_page{
+  width: 100%;
+}
+.body_home_page{
+  display: flex;
+  width: 100%;
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 10px;
 }

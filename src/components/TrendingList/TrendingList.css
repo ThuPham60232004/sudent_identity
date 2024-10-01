@@ -1,122 +1,167 @@
-:root {
-  --icons-color: #4c5773;
-  --icons-light-color: #4c577341;
-  --icons-bg-color: #e2e6e9;
-  --shadow-dark-color: #d3dae7;
-  --shadow-light-color: #fff;
-  --main-bg-color: #ecf0f3;
-  --dropdown-bg-color: #ffffff;
-  --profile-bg-color: #f0f0f0;
-  --highlight-color: #0871a6;
 
-  --box-shadow: 0 4px 8px var(--shadow-dark-color), 0 1px 4px var(--shadow-light-color);
-  --box-shadow-2: 0 2px 4px var(--shadow-dark-color);
+.trendinglist_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  padding: 10px; /* Thêm khoảng đệm cho container */
 }
 
-.trending-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+.trendinglist_content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 20px; 
   padding: 20px;
-  background-color: var(--main-bg-color);
-  border-radius: 12px;
-  box-shadow: var(--box-shadow);
-  overflow: hidden;
-  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(51, 51, 51);
 }
 
-.topTreding {
+.trendinglist_content_left {
+  width: 70%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-}
+  flex-direction: column;
+  gap: 10px;
 
-.tabs {
-  display: flex;
-  margin-bottom: 10px;
-  left: auto;
-  background-color: var(--icons-bg-color);
-  border-radius: 10px;
-  padding: 10px;
-}
 
-.tabs button {
-  padding: 12px 25px;
-  margin: 0 10px;
-  border: none;
-  background-color: var(--icons-bg-color);
-  color: var(--icons-color);
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  padding: 10px; /* Thêm khoảng đệm cho phần trái */
 }
-
-.tabs button:hover {
-  background-color: var(--profile-bg-color);
-  transform: scale(1.05);
+.trendinglist_content_left h2 {
+  font-size: 35px;
+  font-weight: 800;
+  font-family: "Outfit", Sans-serif;
+    background: linear-gradient(45deg, #e30b86, #0974ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-
-.active-tab {
-  background-color: var(--highlight-color);
+.trendinglist_content_left p{
+  font-size: 18px;
+  font-weight: 500;
   color: white;
+  line-height: 28px;
+}
+.trendinglist_content_left span{
+  font-weight: 700;
 }
 
-.timeframes {
+.trendinglist_content_right {
+  width: 30%;
   display: flex;
-  padding-left: 300px;
+  justify-content: flex-end; /* Căn phải nút */
+}
+.trendinglist_content_right button a{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+.trendinglist_content_right button{
+  background-color: rgb(75, 73, 73);
+}
+
+.trendinglist_body {
+  display: flex;
+
   justify-content: center;
-  
+  flex-wrap: wrap; /* Cho phép các cột tự động xuống hàng */
 }
 
-.timeframes button {
-  padding: 8px 20px;
-  margin: 0 6px;
-  border: none;
-  background-color: var(--icons-bg-color);
-  color: var(--icons-color);
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+.trendinglist-col {
+  display: flex;
+  padding: 20px;
+  flex-direction: row; 
+  width: calc(33.33% - 1rem); 
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(51, 51, 51); 
 }
 
-.timeframes button:hover {
-  background-color: var(--icons-light-color);
-  transform: scale(1.05);
+.trendinglist_col_left {
+  display: flex;
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  gap: 10px;
+  width: 80%;
 }
 
-.active-timeframe {
-  background-color: var(--highlight-color);
-  color: white;
+.trendinglist_col_left p{
+  text-align: center;
+  margin-right: 5px;
+  color: rgb(90, 90, 90);
+  font-size: 12px;
+  font-weight: 600;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px 20px;
-  text-align: left;
-  border-bottom: 1px solid var(--icons-light-color);
-}
-
-th {
-  background-color: var(--dropdown-bg-color);
-  font-weight: bold;
-}
-
-.collection-image {
+.trendinglist_col_left img {
   width: 40px;
   height: 40px;
-  margin-right: 12px;
-  vertical-align: middle;
-  border-radius: 50%;
+  border-radius: 5px;
+  background-size: cover;
 }
 
-tr:hover {
-  background-color: var(--icons-bg-color);
+.trendinglist_name_price {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 4px;
+}
+.trendinglist_name_price h4 {
+  color: white;
+  font-size: 12px;
+}
+.trendinglist_name_price p{
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.trendinglist_name_price span{
+  color: gray;
+}
+
+.trendinglist_col_right {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  text-align: end;
+  gap: 4px;
+  padding: 2px;
+}
+.trendinglist_col_right p{
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.trendinglist_col_right span{
+  color: gray;
+}
+/* Responsive Styles */
+@media (max-width: 1030px) {
+  .trendinglist-col {
+    width: calc(50% - 1rem); /* Hiển thị 2 cột trên màn hình nhỏ hơn */
+  }
+}
+
+@media (max-width: 787px) {
+.trendinglist_content{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.trendinglist_content_left,
+.trendinglist_content_right{
+  width: 90%;
+}
+.trendinglist_content_left h2{
+ font-size: 30px;
+}
+.trendinglist_content_left p{
+  font-size: 16px;
+}
+.trendinglist_content_right button{
+ margin-right: auto;
+}
+}
+@media (max-width: 696px) {
+  .trendinglist-col {
+    width: 100%; /* Hiển thị 1 cột trên màn hình nhỏ nhất */
+  }
 }

@@ -7,10 +7,12 @@
   background-color: #000000;
   padding: 10px 30px;
   color: white;
-  position: fixed;
-  z-index: 100;
+  position: fixed; 
+   z-index: 100;
   top: 0;
   left: 0;
+   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s; 
 }
 
 .navbar-container {
@@ -28,7 +30,7 @@
 
 .navbar-logo {
   font-size: 24px;
-    color: transparent; /* Ẩn màu chữ gốc */
+  color: transparent; /* Ẩn màu chữ gốc */
   background: linear-gradient(45deg, #e30b86, #0974ff); /* Màu gradient */
   background-clip: text; /* Cắt nền thành hình chữ */
   -webkit-background-clip: text; /* Hỗ trợ trình duyệt webkit */

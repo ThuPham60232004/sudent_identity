@@ -1,39 +1,40 @@
-.header{
+.header {
   width: 100%;
-  height: auto;
+  height: auto; /* Chiều cao mặc định cho desktop */
+  padding: 50px;
   background: rgb(0, 0, 0);
 }
-.header-content{
+
+.header-content {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-  padding: 20px;
 }
-.left_content_header{
-  width: 50%;
+
+.left_content_header {
+  width: 50%; /* Chiếm 50% chiều rộng trên desktop */
   height: 100%;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-top: 160px;
+  text-align: center;
 }
 
-.content1_header p{
-    font-family: "Inter", Sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    text-align: center;
-    color: white;
+.content1_header p {
+  font-family: "Inter", Sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: white;
 }
 
-.content2_header p { 
-  color: white; 
+.content2_header p {
+  color: white;
   font-family: "Outfit", Sans-serif;
-  font-size: 50px;
+  font-size: 50px; /* Kích thước chữ lớn trên desktop */
   font-weight: 800;
   line-height: 1.2em;
   text-align: center;
@@ -43,56 +44,176 @@
   background: linear-gradient(45deg, #e30b86, #0974ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; 
+  background-clip: text;
 }
 
-.content3_header p{
+.content3_header p {
   text-align: center;
-    color: white;
-    font-family: "Inter", Sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.8em;
+  color: white;
+  font-family: "Inter", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8em;
 }
-.bold-text{
-  font-weight: 700 ;
+
+.bold-text {
+  font-weight: 700;
   font-style: italic;
 }
-.button_header_content {
-  display: flex;            
-  justify-content: center;    
-  align-items: center;        
-  gap: 10px;                 
-  padding: 20px;              
-}
 
-.button_header_content button {
-  background-color: #ff7f50;  
-  border: none;          
-  border-radius: 10px;     
-  color: white;       
-  padding: 10px 20px;      
-  font-size: 16px;           
-  cursor: pointer;            
-  transition: background-color 0.3s ease;
-}
-
-.button_header_content button:hover {
-  background-color: #e30b86;  
-}
-
-.button_header_content a {
-  text-decoration: none;      
-  color: inherit;          
-}
 
 .right_content_header {
-  width: 40%;
-  margin-top: 130px;
+  width: 40%; /* Chiếm 40% chiều rộng trên desktop */
+  margin: auto;
 }
 
-.right_content_header img{
+.right_content_header img {
   width: 90%;
   height: auto;
   display: flex;
+}
+
+
+@media screen and (max-width: 992px) {
+    .header {
+    height: auto; /* Giảm chiều cao cho tablet */
+    padding: 20px;
+    
+  }
+
+  .left_content_header,
+  .right_content_header {
+    width: 100%; /* Đặt chiều rộng 100% */
+  }
+  .left_content_header {
+    padding: 40px;
+  }
+  .right_content_header{
+    margin-bottom: 10px;
+  }
+    .header-content {
+    flex-direction: column;
+    gap: 2rem;
+  } 
+  .header {
+    height: auto;
+    padding: 30px;
+  }
+
+  .content1_header p{
+    font-size: 20px;
+  }
+  .content2_header p {
+    font-size: 55px; 
+  }
+
+  .content3_header p {
+    font-size: 18px; 
+  }
+
+  .right_content_header img {
+  width: 70%;
+  height: auto;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  }
+ 
+
+}
+
+
+@media screen and (max-width: 576px) { /* Kích thước cho điện thoại nhỏ */
+ .header {
+    height: auto; /* Giảm chiều cao cho tablet */
+    padding: 20px;
+    
+  }
+
+  .left_content_header,
+  .right_content_header {
+    width: 100%; /* Đặt chiều rộng 100% */
+  }
+  .left_content_header {
+    padding: 40px;
+  }
+  .right_content_header{
+    margin-bottom: 10px;
+  }
+    .header-content {
+    flex-direction: column;
+    gap: .5rem;
+  } 
+  .header {
+    height: auto;
+    padding: 10px;
+  }
+
+  .content1_header p{
+    font-size: 15px;
+  }
+  .content2_header p {
+    font-size: 40px; 
+  }
+
+  .content3_header p {
+    font-size: 15px; 
+  }
+
+  .right_content_header img {
+  width: 70%;
+  height: auto;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  }
+}
+
+
+
+
+@media screen and (max-width: 478px) { /* Kích thước cho điện thoại nhỏ */
+ .header {
+    height: auto; /* Giảm chiều cao cho tablet */
+    padding: 20px;
+    
+  }
+
+  .left_content_header,
+  .right_content_header {
+    width: 100%; /* Đặt chiều rộng 100% */
+  }
+  .left_content_header {
+    padding: 30px;
+  }
+  .right_content_header{
+    margin-bottom: 10px;
+  }
+    .header-content {
+    flex-direction: column;
+    gap: .5rem;
+  } 
+  .header {
+    height: auto;
+    padding: 10px;
+  }
+
+  .content1_header p{
+    font-size: 12px;
+  }
+  .content2_header p {
+    font-size: 30px; 
+  }
+
+  .content3_header p {
+    font-size: 12px; 
+  }
+
+  .right_content_header img {
+  width: 70%;
+  height: auto;
+  background-size: cover;
+  display: flex;
+  margin: auto;
+  }
 }
