@@ -41,8 +41,8 @@ const Navbar = () => {
                 onMouseEnter={() => setShowDropdownCreate(true)}
                 onMouseLeave={() => setShowDropdownCreate(false)}
               >
-                <a href="#">NFT</a>
-                <a href="#">Collection</a>
+                <a href="#">NFT & Collection</a>
+         
                 <a href="#">My Profile</a>
               </div>
             )}
@@ -96,11 +96,7 @@ const Navbar = () => {
             <div className="mobile-dropdown">
                <div className="mobile_dropdown_box">
                  <FaPlus className='icon_mobile_dropdown'/>
-                <a href="#">NFT</a>
-              </div>
-               <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-                <a href="#">Collection</a>
+                <a href="#">NFT & Collection</a>
               </div>
                <div className="mobile_dropdown_box">
                  <FaPlus className='icon_mobile_dropdown'/>
@@ -130,10 +126,7 @@ const Navbar = () => {
                  <FaPlus className='icon_mobile_dropdown'/>
                   <a href="#">All Collections</a>
               </div>
-              <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-              <a href="#">Categories</a>
-              </div>
+        
         
             </div>
           )}
@@ -145,6 +138,9 @@ const Navbar = () => {
           </div>
         <div className="mobile-menu-item">
           <a href="#" className='item_normal'>Connect Wallet</a>
+        </div>
+        <div className="mobile-menu-item">
+          <img src="./img/collection.png" alt="" />
         </div>
           
         </div>
