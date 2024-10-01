@@ -30,6 +30,8 @@ import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx"
 import TransferItem from "./pages/TransferItem/TransferItem.jsx";
 import TemplateResetpass from "./pages/TemplateEmail/TemplateResetpass.jsx";
 import TemplateTransferNFT from "./pages/TemplateEmail/TemplateTransferNFT.jsx";
+import ERC_Contract from "./pages/ERC_Contract/ERC_Contract.jsx";
+import Advertisement from "./components/Advertisement/Advertisement.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -60,6 +62,8 @@ function App() {
         <Route path="/TransferItem" element={<TransferItem/>}/>
          <Route path="/TemplateResetpass" element={<TemplateResetpass/>}/>
          <Route path="/TemplateTransferNFT" element={<TemplateTransferNFT/>}/>
+         <Route path="/ERC_Contract" element={<ERC_Contract/>}/>
+         <Route path="/Advertisement" element={<Advertisement/>}/>
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

@@ -1,0 +1,55 @@
+.neon-text {
+    font-family: 'Arial', sans-serif; 
+    font-size: 48px; 
+    color: #fff;
+    text-shadow: 
+    0 0 5px #000000, 
+    0 0 10px #000000, 
+    0 0 15px #000000, 
+    0 0 20px #0000FF, 
+    0 0 30px #0000FF, 
+    0 0 40px #0000FF;
+  letter-spacing: 2px;
+  text-align: center;
+  }
+.ERC_Contract{
+    background-color: #000000;
+}
+.ERC_Contract_Containt{
+    display: flex;
+    
+}
+.ERC_Contract_img{
+    width: 45px;
+    height: 40px;
+    border-radius: 200px;
+    background-color: #fff;
+    
+}
+
+.ERC_Contract_One h5,
+.ERC_Contract_Two h5,
+.ERC_Contract_Three h5{
+    color: #fff;
+    font-weight: normal;
+    
+}
+.ERC_Contract_One,
+.ERC_Contract_Two,
+.ERC_Contract_Three{
+    padding: 20px;
+    color: #fff;
+    font-weight: normal;
+    margin: 35px;
+    border-radius: 20px;
+    
+}
+.ERC_Contract_One{
+    background-color: rgba(225, 174, 57, 0.997);
+}
+.ERC_Contract_Two{
+    background-color: rgb(201, 54, 79);
+}
+.ERC_Contract_Three{
+    background-color: rgba(25, 191, 206, 0.917);
+}

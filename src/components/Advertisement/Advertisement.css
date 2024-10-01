@@ -1,0 +1,79 @@
+.text-gradient {
+    background: linear-gradient(90deg, #8040cf, #F47171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.Advertisement{
+    background: black;
+}
+
+.Advertisement_container_one{
+    color: aliceblue;
+
+}
+.Advertisement_container_two{
+    display: flex;
+    color: aliceblue;
+    gap: 50px;
+}
+.Advertisement_containertext{
+    display: flex;
+    background-color: #b126ca;
+    padding: 30px 70px 30px 70px;
+    margin: 40px;
+    border-radius: 20px;
+    text-align: center;
+    gap: 40px;
+}
+
+.Advertisement_containertext h5{
+    font-weight: normal;
+}
+.Advertisement_button{
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+}
+.picture_1_advertisement{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    text-align: center;
+}
+.Advertisement_picture1_container{
+    background-color: rgba(0, 255, 255, 0.594);
+    padding: 10px;
+    border-radius: 15px;
+
+}
+.Advertisement_picture2_container{
+    background-color: rgb(230, 83, 15);
+    padding: 10px;
+    border-radius: 15px;
+}
+.Advertisement_container_two h6{
+    font-weight: normal;
+}
+.Advertisement_picture_container_one{
+    border: 2px solid rgba(0, 255, 255, 0.594);
+    padding: 10px;
+    border-radius: 15px;
+    height: 340px;
+}
+.Advertisement_picture_container_two{
+    border: 2px solid rgb(230, 83, 15);
+    padding: 10px;
+    border-radius: 15px;
+    height: 340px;
+}
+.Container_Adv{
+    display: flex;
+    padding: 110px;
+    gap: 50px;
+}
