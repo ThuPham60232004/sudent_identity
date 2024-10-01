@@ -29,42 +29,40 @@ const Home = () => {
          <div className="trendinglist_home_page">
         <TrendingList/>
       </div>
-     {/* <div className="cardslide_home_page">
-       <CardSlider/>  
+
+     {/* <div className="NFTGallery_home_page">
+       <NFTGallery/>  
       </div>
         
-      <div className="featuredproducts_home_page">
-
-    <div>
-      <CardSlider/>
-      <FeaturedProducts/>
+      <div className="SubscriptionPlans_home_page">
+        <SubscriptionPlans/>
       </div>
-      <div className="walletlogin_home_page">
-         <WalletLogin/>
+      <div className="ERC_Contract_home_page">
+         <ERC_Contract/>
       </div>
-      <div className="logocarousel_home_page">
-        <LogoCarousel/>
+      <div className="Advertisement_home_page">
+        <Advertisement/>
       </div>
-      <div className="services_home_page">
-         <Services/>
+      <div className="LogoCompany_home_page">
+         <LogoCompany/>
       </div>
    
-      <div className="nftgallrery_home_page">
-        <NFTGallery/>
+      <div className="LogoCarousel_home_page">
+        <LogoCarousel/>
       </div>
-      <div className="service1_home_page">
-         <Service1/>
+      <div className="Services_home_page">
+         <Services/>
       </div>
-      <div className="brandinfo_home_page">
-         <BrandInfo/>
+      các bước tạo nft
+
+      <div className="Introduce_home_page">
+         <Introduce/>
       </div>
-      <div className="subscriptionplans_home_page">
-       <SubscriptionPlans/>
+      <div className="Connective_home_page">
+       <Connective/>
       </div>
 
-      <div className="maillist_home_page">
-        <MailList/>
-      </div> */}
+ */}
       <div className="footer_home_page">
 
         <Footer/>
