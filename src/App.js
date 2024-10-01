@@ -28,6 +28,7 @@ import NFTsPage from "./pages/NFTsPage/NFTsPage.jsx";
 import NFTDetail from "./pages/NFTDetail/NFTDetail.jsx";
 import ChangePassword from "./pages/ChangePassword/ChangePassword.jsx"
 import TransferItem from "./pages/TransferItem/TransferItem.jsx";
+
 function App() {
   return (
     <BrowserRouter>

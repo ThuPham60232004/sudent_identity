@@ -17,7 +17,6 @@ import ContactUs from "../ContactUs/ContactUs.jsx";
 const Home = () => {
   return (
     <div>
-
       <Navbar />
       <Header/>
       <CardSlider/>
