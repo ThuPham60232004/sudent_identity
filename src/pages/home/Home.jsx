@@ -15,6 +15,7 @@ import Service1 from "../../components/Service1/Service.jsx";
 import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";
 import ERC_Contract from "../ERC_Contract/ERC_Contract.jsx";
+import Advertisement from "../../components/Advertisement/Advertisement.jsx";
 const Home = () => {
   return (
 
@@ -37,14 +38,15 @@ const Home = () => {
         
       <div className="SubscriptionPlans_home_page">
         <SubscriptionPlans/>
-      </div>*/
+      </div>*/}
       <div className="ERC_Contract_home_page">
          <ERC_Contract/>
       </div>
-      /*
+   
       <div className="Advertisement_home_page">
         <Advertisement/>
       </div>
+         {/*
       <div className="LogoCompany_home_page">
          <LogoCompany/>
       </div>
