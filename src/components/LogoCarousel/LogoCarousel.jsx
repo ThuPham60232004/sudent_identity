@@ -1,12 +1,18 @@
 import React from 'react';
-import './LogoCarousel.css'; // Nơi chứa CSS
+import './LogoCarousel.css';
 
 const LogoCarousel = () => {
   const imageUrls = [
-    './img/cty_DTS.png',
-    './img/cty_fada.png',
-    './img/cty_TSS.png'
-    
+    './img/METAMASK.png',
+    './img/NEXTJS.png',
+    './img/MONGODB.png',
+    './img/SCSS.png',
+    './img/TS.png',
+    './img/HTML.png',
+    './img/REACTJS.png',
+    './img/ETHERUM.png',
+    './img/JS.png',
+    './img/NOSQL.png',
   ];
 
   return (

@@ -1,0 +1,17 @@
+.scroll-images {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 100px;
+    background-color: black;
+    filter: grayscale(100%);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scroll-images img {
+    width: 200px;
+    height: auto;
+  }
+  

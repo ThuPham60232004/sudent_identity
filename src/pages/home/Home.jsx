@@ -16,6 +16,7 @@ import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";
 import ERC_Contract from "../ERC_Contract/ERC_Contract.jsx";
 import Advertisement from "../../components/Advertisement/Advertisement.jsx";
+import LogoCompany from "../../components/LogoCompany/LogoCompany.jsx";
 const Home = () => {
   return (
 
@@ -46,17 +47,19 @@ const Home = () => {
       <div className="Advertisement_home_page">
         <Advertisement/>
       </div>
-         {/*
+         
       <div className="LogoCompany_home_page">
          <LogoCompany/>
       </div>
-   
+
       <div className="LogoCarousel_home_page">
         <LogoCarousel/>
       </div>
+         
       <div className="Services_home_page">
          <Services/>
       </div>
+      {/*
       các bước tạo nft
 
       <div className="Introduce_home_page">

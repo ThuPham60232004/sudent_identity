@@ -15,7 +15,6 @@ const Login = () => {
   const [error, setError] = useState(null);   
 
 
-  // Simulated login data (replace with actual API call)
   const fakeLoginData = {
     username: 'abc',
     password: '123',
@@ -24,17 +23,15 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate username and password
     if (username !== fakeLoginData.username || password !== fakeLoginData.password) {
  
       toast.error('Invalid username or password. Please try again.');
       return;
     }
 
-    // Simulate successful login (replace with actual logic)
     setError(null);
     toast.success('Login successful!');
-    navigate('/Dashboard'); // Replace with your desired dashboard route
+    navigate('/Dashboard'); 
   };
 
   const registerLink = () => {

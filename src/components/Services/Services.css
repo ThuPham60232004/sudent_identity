@@ -1,6 +1,7 @@
 .services-container {
     padding: 40px;
     text-align: center;
+    color: aliceblue;
   }
   
   .services-container h1 {
@@ -12,10 +13,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
   }
   
   .service-card {
-    border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -35,6 +36,7 @@
   .service-details {
     padding: 20px;
     text-align: left;
+    color: aliceblue;
   }
   
   .service-details h2 {
@@ -45,13 +47,13 @@
   
   .service-details h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: aliceblue;
     margin-bottom: 10px;
   }
   
   .service-details p {
     font-size: 1rem;
-    color: #777;
+    color: aliceblue;
     margin-bottom: 20px;
   }
   
