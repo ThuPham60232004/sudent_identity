@@ -2,7 +2,7 @@
   background-image: url('../../../public/img/hinh2.jpg');
   background-size: cover;
   color: #fff;
-  padding: 40px;
+  padding: 0 40px 40px 40px;
   width: 100%;
   text-align: left;
 }

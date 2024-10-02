@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: auto; /* Chiều cao mặc định cho desktop */
-  padding: 50px;
+ padding: 50px 50px 20px 50px; 
   background: rgb(0, 0, 0);
 }
 

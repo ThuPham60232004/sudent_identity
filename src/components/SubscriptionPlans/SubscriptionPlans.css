@@ -1,4 +1,4 @@
-.subscription-container {
+/* .subscription-container {
     padding: 40px;
     text-align: center;
   }
@@ -6,11 +6,12 @@
   .subscription-container h1 {
     font-size: 3rem;
     margin-bottom: 40px;
+    color: white;
   }
   
   .plans-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   
@@ -22,13 +23,14 @@
     transition: transform 0.3s ease;
   }
   
+
   .plan-card:hover {
     transform: scale(1.05);
   }
   
   .plan-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
   }
   
@@ -54,19 +56,127 @@
     color: #777;
     margin-bottom: 20px;
   }
-  
-  .sign-up-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
+   */
+
+   .subsubscription_parent {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+   }
+
+   .title_sub{
+   font-size: 35px;
+  font-weight: 800;
+  font-family: "Outfit", Sans-serif;
+  background: linear-gradient(45deg, #e30b86, #0974ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin: 20px;
+}
+
+.subscription_slider{
+  display: flex;
+  gap: 5px;
+}
+.pre_sub,
+.next_sub{
+  background: #3a3a3a;
+  width: 25px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre_sub:hover, 
+.next_sub:hover{
+  background: #353535;;
+}
+
+.icon_sub{
+  font-size: 20px;
+}
+  .subscription-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow: hidden;
   }
-  
-  .sign-up-button:hover {
-    background-color: #333;
+
+
+  .subscription_con{
+   flex: 0 0 calc(25% - 10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  } 
+    .subscription_con:hover{
+  transform: scale(1.05);
   }
+  .avatar_sub {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background: white;
+    padding: 2px;
+    border-radius: 10px;
+    position: absolute;
+    background-size: cover;
+    margin-top: 170px;
+    margin-left: 10px;
   
+  }
+  .plans-grid {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgb(45, 45, 45);
+    border-radius: 10px;
+  }
+  .bg_plan{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    }
+    .detail_plan_card{
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px 20px;
+      gap: 5px;
+    
+    }
+   .detail_plan_card p {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .detail_plan_grid{
+       display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: center;
+      gap: 5px;
+    }
+    .detail_plan_content {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .detail_plan_content h4{
+      font-size: 12px;
+      color: gray;
+    }
+
+    .detail_plan_content p{
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+    }
+ 

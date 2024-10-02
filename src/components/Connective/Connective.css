@@ -2,7 +2,7 @@
     background-color: black;
     color: aliceblue;
     display: flex;
-    padding: 70px;
+    padding: 0 70px;
     gap: 90px;
     justify-content: center;
 }
