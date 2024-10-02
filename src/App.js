@@ -35,6 +35,12 @@ import Advertisement from "./components/Advertisement/Advertisement.jsx";
 import LogoCompany from "./components/LogoCompany/LogoCompany.jsx";
 import Guide from "./components/Guide/Guide.jsx";
 import Introduce from "./components/Introduce/Introduce.jsx";
+import ActivityDetailCollection from "./components/CollectionDetailComponents/ActivityDetailCollection/ActivityDetailCollection.jsx";
+import AnalyticsDetailCollection from "./components/CollectionDetailComponents/AnalyticsDetailCollection/AnalyticsDetailCollection.jsx";
+import IteamDetailCollection from "./components/CollectionDetailComponents/IteamDetailCollection/IteamDetailCollection.jsx";
+import OffersDetailCollection from "./components/CollectionDetailComponents/OffersDetailCollection/OffersDetailCollection.jsx";
+import OverviewDetailCollection from "./components/CollectionDetailComponents/OverviewDetailCollection/OverviewDetailCollection.jsx";
+import CollectionDetailPage from "./pages/CollectionDetailPage/CollectionDetailPage.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -73,6 +79,12 @@ function App() {
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>
+          <Route path="/ActivityDetailCollection" element={<ActivityDetailCollection/>}/>
+          <Route path="/AnalyticsDetailCollection" element={<AnalyticsDetailCollection />} />
+          <Route path="/IteamDetailCollection" element={<IteamDetailCollection/>} />
+          <Route path="/OffersDetailCollection" element={<OffersDetailCollection/>} />
+          <Route path="/OverviewDetailCollection" element={<OverviewDetailCollection/>} />
+          <Route path="/CollectionDetailPage" element={<CollectionDetailPage/>} />
       </Routes>
     </BrowserRouter>
   );
