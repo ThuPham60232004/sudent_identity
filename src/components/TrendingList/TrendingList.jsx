@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "./TrendingList.css"; 
+import { ItemContext } from "../../context/ItemContext";
 import { useNavigate } from "react-router-dom";
 const TrendingList = () => {
+  const { setItem } = useContext(ItemContext);
   const trendingData = [
     {
       rank: 1,
@@ -103,6 +105,7 @@ const TrendingList = () => {
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
+    setItem(item); 
     navigate("/CollectionDetailPage", { state: { item } });
   };
 

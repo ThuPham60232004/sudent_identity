@@ -3,7 +3,7 @@ import './HeaderDetailCollection.css';
 import { SiTicktick } from "react-icons/si";
 const HeaderDetailCollection = ({ item }) => {
   if (!item) {
-    return <div>Loading...</div>; // Xử lý nếu không có dữ liệu item
+    return <div>Loading...</div>; 
   }
   return (
     <div className='HeaderDetailCollectionContainer' style={{ backgroundImage: `url('/img/112.png')` }}>

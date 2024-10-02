@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{useContext}from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './CollectionDetailPage.css';
 import HeaderDetailCollection from '../../components/CollectionDetailComponents/HeaderDetailCollection/HeaderDetailCollection';
 import Navbar from '../../components/navbar/Navbar';
-import { useLocation } from 'react-router-dom';
+import { ItemContext } from '../../context/ItemContext';
 const CollectionDetailPage = () => {
-    const location = useLocation();
-    const { item } = location.state || {};
+    const { item } = useContext(ItemContext);
   return (
     <div className='CollectionDetailPageContainer'>
       <Navbar />
