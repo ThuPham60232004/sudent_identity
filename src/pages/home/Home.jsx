@@ -37,11 +37,11 @@ const Home = () => {
 
      {/* <div className="NFTGallery_home_page">
        <NFTGallery/>  
-      </div>
+      </div>*/}
         
       <div className="SubscriptionPlans_home_page">
         <SubscriptionPlans/>
-      </div>*/}
+      </div>
       <div className="ERC_Contract_home_page">
          <ERC_Contract/>
       </div>
@@ -61,7 +61,7 @@ const Home = () => {
       <div className="Services_home_page">
          <Services/>
       </div>
-      <div className="Services_home_page">
+      <div className="GuideNFT_home_page">
          <GuideNFT/>
       </div>
      
