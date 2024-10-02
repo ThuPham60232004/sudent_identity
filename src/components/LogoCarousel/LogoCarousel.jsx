@@ -12,7 +12,6 @@ const LogoCarousel = () => {
     './img/REACTJS.png',
     './img/ETHERUM.png',
     './img/JS.png',
-    './img/NOSQL.png',
   ];
 
   return (
