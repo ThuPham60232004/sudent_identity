@@ -51,7 +51,7 @@
   text-align: center;
   color: white;
   font-family: "Inter", Sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.8em;
 }
@@ -76,52 +76,60 @@
 
 @media screen and (max-width: 992px) {
     .header {
-    height: auto; /* Giảm chiều cao cho tablet */
-    padding: 20px;
+    height: auto;
+    padding: 30px 20px;
+    width: 100%;
     
   }
-
+    .header-content {
+      display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  } 
   .left_content_header,
   .right_content_header {
-    width: 100%; /* Đặt chiều rộng 100% */
+    width: 50%; 
   }
   .left_content_header {
-    padding: 40px;
+    padding: 20px;
   }
   .right_content_header{
     margin-bottom: 10px;
   }
-    .header-content {
-    flex-direction: column;
-    gap: 2rem;
-  } 
-  .header {
-    height: auto;
-    padding: 30px;
-  }
 
   .content1_header p{
-    font-size: 20px;
+    font-size: 12px;
   }
   .content2_header p {
-    font-size: 55px; 
+    font-size: 32px; 
   }
 
   .content3_header p {
-    font-size: 18px; 
+    font-size: 12px; 
+  }
+  .right_content_header{
+    margin: auto 0;
+    
   }
 
   .right_content_header img {
-  width: 70%;
+  width: 80%;
   height: auto;
   background-size: cover;
   display: flex;
-  margin: auto;
+  margin: 0 auto;
+
   }
  
 
 }
 
+@media screen and (max-width: 745px) {
+
+  .content2_header p{
+    font-size: 24px;
+  }
+}
 
 @media screen and (max-width: 576px) { /* Kích thước cho điện thoại nhỏ */
  .header {
@@ -153,7 +161,7 @@
     font-size: 15px;
   }
   .content2_header p {
-    font-size: 40px; 
+    font-size: 30px; 
   }
 
   .content3_header p {
@@ -174,28 +182,28 @@
 
 @media screen and (max-width: 478px) { /* Kích thước cho điện thoại nhỏ */
  .header {
-    height: auto; /* Giảm chiều cao cho tablet */
-    padding: 20px;
+    height: auto; 
+    padding: 10px;
+    width: 100%;
     
   }
-
-  .left_content_header,
-  .right_content_header {
-    width: 100%; /* Đặt chiều rộng 100% */
-  }
-  .left_content_header {
-    padding: 30px;
-  }
-  .right_content_header{
-    margin-bottom: 10px;
-  }
-    .header-content {
+     .header-content {
+      display: flex;
     flex-direction: column;
     gap: .5rem;
   } 
-  .header {
-    height: auto;
-    padding: 10px;
+
+  .left_content_header,
+  .right_content_header {
+    width: 100%; 
+  }
+  .left_content_header {
+    padding: 20px;
+
+  }
+  .right_content_header{
+    margin-bottom: 10px;
+    padding: 0;
   }
 
   .content1_header p{
@@ -210,7 +218,7 @@
   }
 
   .right_content_header img {
-  width: 70%;
+  width: 80%;
   height: auto;
   background-size: cover;
   display: flex;

@@ -133,10 +133,11 @@
 .trendinglist_col_right span{
   color: gray;
 }
-/* Responsive Styles */
+
+
 @media (max-width: 1030px) {
   .trendinglist-col {
-    width: calc(50% - 1rem); /* Hiển thị 2 cột trên màn hình nhỏ hơn */
+    width: calc(50% - 1rem); 
   }
 }
 
@@ -154,14 +155,18 @@
  font-size: 30px;
 }
 .trendinglist_content_left p{
-  font-size: 16px;
+  font-size: 13px;
 }
 .trendinglist_content_right button{
  margin-right: auto;
 }
 }
+
 @media (max-width: 696px) {
   .trendinglist-col {
-    width: 100%; /* Hiển thị 1 cột trên màn hình nhỏ nhất */
+    width: 100%; 
+  }
+  .trendinglist_content_left h2 {
+    font-size: 20px;
   }
 }
