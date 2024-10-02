@@ -1,3 +1,10 @@
+.ERC_Contract {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 .neon-text {
     font-family: 'Arial', sans-serif; 
     font-size: 48px; 
@@ -12,38 +19,45 @@
   letter-spacing: 2px;
   text-align: center;
   }
-.ERC_Contract{
-    background-color: #000000;
-}
-.ERC_Contract_Containt{
+
+  .ERC_Contract_Containt{
+    width: 100%;
     display: flex;
+    gap: 20px;
+  }
+
+  .ERC_Contract_One,
+  .ERC_Contract_Two,
+  .ERC_Contract_Three{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  .ERC_Contract_One img,
+  .ERC_Contract_Two img,
+  .ERC_Contract_Three img{
+   width: 45px;
+   height: 45px;
+   background-size: cover;
+   border-radius: 100%;
+  }
+
+  .ERC_Contract_One h5,
+  .ERC_Contract_Two h5,
+  .ERC_Contract_Three h5{
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
     
 }
-.ERC_Contract_img{
-    width: 45px;
-    height: 40px;
-    border-radius: 200px;
-    background-color: #fff;
-    
+.title_erc{
+    font-size: 22px;
+    font-weight: 800;
 }
 
-.ERC_Contract_One h5,
-.ERC_Contract_Two h5,
-.ERC_Contract_Three h5{
-    color: #fff;
-    font-weight: normal;
-    
-}
-.ERC_Contract_One,
-.ERC_Contract_Two,
-.ERC_Contract_Three{
-    padding: 20px;
-    color: #fff;
-    font-weight: normal;
-    margin: 35px;
-    border-radius: 20px;
-    
-}
 .ERC_Contract_One{
     background-color: rgba(225, 174, 57, 0.997);
 }
@@ -52,4 +66,27 @@
 }
 .ERC_Contract_Three{
     background-color: rgba(25, 191, 206, 0.917);
+}
+
+@media (max-width: 867px) {
+.ERC_Contract{
+    padding: 30px;
+}
+.neon-text {
+    font-size: 35px; 
+}
+}
+
+@media (max-width: 700px) {
+.ERC_Contract{
+    padding: 0 70px;
+}
+.neon-text {
+    font-size: 26px; 
+}
+.ERC_Contract_Containt{
+    display: flex;
+    flex-direction: column;
+}
+
 }

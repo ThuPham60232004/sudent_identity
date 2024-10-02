@@ -1,79 +1,238 @@
-.text-gradient {
-    background: linear-gradient(90deg, #8040cf, #F47171);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-left: 50px;
-    margin-top: 5px;
-}
+
 .Advertisement{
-    background: black;
-}
+    width: 100%;
+    height: auto;
 
-.Advertisement_container_one{
-    color: aliceblue;
 
 }
-.Advertisement_container_two{
+.Container_Adv{
+    width: 90%;
+    padding: 0 20px;
     display: flex;
-    color: aliceblue;
-    gap: 50px;
+    margin: 0 auto;
+}
+
+.text-gradient {
+    font-size: 20px;
+    font-weight: 600;
+  font-family: "Outfit", Sans-serif;
+    background: linear-gradient(45deg, #ff0d96, #006eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.Advertisement_container_one {
+    width: 50%;
+    height: auto;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Advertisement_container_one ul {
+
+    color: #f82170;
+}
+.Advertisement_container_one h1{
+    font-weight: 700;
+    color: white;
+}
+.Advertisement_container_one ul {
+    padding: 0 40px;
+ 
+}
+
+.Advertisement_container_one ul li{
+    font-size: 16px;
+    line-height: 26px;
+ 
 }
 .Advertisement_containertext{
     display: flex;
-    background-color: #b126ca;
-    padding: 30px 70px 30px 70px;
-    margin: 40px;
-    border-radius: 20px;
+    width:95%;
+    background-color: #f82170;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 40px;
+    align-items: center;
+}
+.Advertisement_containertext_con {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
-    gap: 40px;
+}
+.Advertisement_containertext h3{
+    font-size: 12px;
+    color: white;
+}
+.Advertisement_containertext h5 {
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
 }
 
-.Advertisement_containertext h5{
-    font-weight: normal;
-}
+
 .Advertisement_button{
     background-color: aliceblue;
     color: black;
-    padding: 20px;
-    margin: 40px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 8px;
+    border-radius: 10px;
     text-align: center;
-    width: 300px;
-}
-.picture_1_advertisement{
     width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    text-align: center;
 }
-.Advertisement_picture1_container{
-    background-color: rgba(0, 255, 255, 0.594);
-    padding: 10px;
-    border-radius: 15px;
+.Advertisement_button h3{
+font-size: 12px;
+}
+
+.Advertisement_container_two{
+width: 50%;
+padding: 10px;
+}
+
+.Advertisement_con{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 
 }
+.Advertisement_picture1_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgba(0, 255, 255, 0.594);
+}
 .Advertisement_picture2_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(230, 83, 15);
     padding: 10px;
+    gap: 10px;
     border-radius: 15px;
 }
+
 .Advertisement_container_two h6{
     font-weight: normal;
 }
+
+.picture_1_advertisement{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    border-radius: 15px;
+    text-align: center;
+}
+
 .Advertisement_picture_container_one{
     border: 2px solid rgba(0, 255, 255, 0.594);
     padding: 10px;
+    width: 45%;
+    background-size: cover;
     border-radius: 15px;
-    height: 340px;
 }
 .Advertisement_picture_container_two{
     border: 2px solid rgb(230, 83, 15);
     padding: 10px;
+    width: 45%;
     border-radius: 15px;
-    height: 340px;
+    background-size: cover;
+
 }
-.Container_Adv{
+.Advertisement_picture_border {
     display: flex;
-    padding: 110px;
-    gap: 50px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 1200px) {
+    .Container_Adv{
+    width: 100%;
+
+}
+}
+@media (max-width: 1000px) {
+    
+    .Advertisement_container_one h1{
+    font-size: 26px;
+   
+}
+.Advertisement_container_one {
+    width: 60%;
+}
+.Advertisement_container_two {
+    width: 40%;
+}
+.Advertisement_picture_container_one{
+    width: 100%;
+}
+.Advertisement_picture_container_two {
+    display: none;
+}
+
+}
+
+
+@media (max-width: 953px) {
+    .Container_Adv{
+    width: 100%;
+
+ 
+}
+    .Advertisement_containertext{
+    width:100%;
+    padding: 10px 20px;
+    gap: 8px;
+}
+
+   .Advertisement_button{
+   
+    padding: 10px 10px;
+ 
+}
+}
+
+@media (max-width: 745px) {
+ .Container_Adv{
+    flex-direction: column;
+    gap: 40px;
+ }
+ .Advertisement_container_one{
+    width: 100%;
+ }
+  .Advertisement_container_two{
+    width: 100%;
+ 
+ }
+ .Advertisement_con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+ }
+ .Advertisement_picture1_container {
+    width: 100%;
+ }
+ .Advertisement_picture_container_one{
+    width: 100%;
+ }
+
+ .Advertisement_picture_container_two{
+    width: 100%;
+ }
+.Advertisement_picture2_container{
+    width: 100%;
+}
+ .Advertisement_container_one h1{
+    font-size: 25px;
+ }
+ .Advertisement_picture_container_two {
+    display: flex;
+}
+
 }

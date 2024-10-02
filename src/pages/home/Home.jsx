@@ -50,7 +50,7 @@ const Home = () => {
         <Advertisement/>
       </div>
          
-      <div className="LogoCompany_home_page">
+      {/* <div className="LogoCompany_home_page">
          <LogoCompany/>
       </div>
 
@@ -67,11 +67,11 @@ const Home = () => {
      
       <div className="Introduce_home_page">
          <Introduce/>
-      </div>
+      </div> */}
       
-      <div className="Connective_home_page">
+      {/* <div className="Connective_home_page">
        <Connective/>
-      </div>
+      </div> */}
       <div className="footer_home_page">
         <Footer/>
       </div>
