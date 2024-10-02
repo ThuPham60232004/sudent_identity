@@ -5,14 +5,20 @@
 .CollectionDetailPageContainer{
     background-color: black;
     color: white;
+   
 }
 .CollectionDetailPageSelect{
     display: flex;
     gap:30px;
     padding: 30px;
 }
-.CollectionDetailPageItems{
+.CollectionDetailPageItems:hover{
     background-color: rgba(65, 64, 62, 0.811);
+    padding: 15px;
+    border-radius: 12px;
+
+}
+.CollectionDetailPageItems{
     padding: 15px;
     border-radius: 12px;
 }

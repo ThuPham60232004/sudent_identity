@@ -79,12 +79,14 @@ function App() {
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>
-          <Route path="/ActivityDetailCollection" element={<ActivityDetailCollection/>}/>
-          <Route path="/AnalyticsDetailCollection" element={<AnalyticsDetailCollection />} />
-          <Route path="/IteamDetailCollection" element={<IteamDetailCollection/>} />
-          <Route path="/OffersDetailCollection" element={<OffersDetailCollection/>} />
-          <Route path="/OverviewDetailCollection" element={<OverviewDetailCollection/>} />
-          <Route path="/CollectionDetailPage" element={<CollectionDetailPage/>} />
+        <Route path="/CollectionDetailPage" element={<CollectionDetailPage />}>
+         
+          <Route path="overview" element={<OverviewDetailCollection />} />
+          <Route path="items" element={<IteamDetailCollection />} />
+          <Route path="offers" element={<OffersDetailCollection />} />
+          <Route path="analytics" element={<AnalyticsDetailCollection />} />
+          <Route path="activity" element={<ActivityDetailCollection />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,16 @@
+.collection-image-1{
+    width: 400px;
+   height: 400px;
+   padding: 40px;
+}
+.OverviewDetailCollectionContainer{
+    display: flex;
+    background-color: black;
+    color: white;
+}
+.OverviewDetailCollectionHeader{
+
+}
+.OverviewDetailCollectionRight{
+    
+}

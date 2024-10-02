@@ -1,39 +1,47 @@
-import React from 'react'
-import './CollectionDetailPage.css'
-import HeaderDetailCollection from '../../components/CollectionDetailComponents/HeaderDetailCollection/HeaderDetailCollection'
+import React from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import './CollectionDetailPage.css';
+import HeaderDetailCollection from '../../components/CollectionDetailComponents/HeaderDetailCollection/HeaderDetailCollection';
+import Navbar from '../../components/navbar/Navbar';
+
 const CollectionDetailPage = () => {
   return (
     <div className='CollectionDetailPageContainer'>
-        <HeaderDetailCollection/>
-        <div className='CollectionDetailPageSelect'>
-            <div className='CollectionDetailPageItems'>
-                <a href='OverviewDetailCollection'>
-                    <h3>Overview</h3>
-                </a> 
-            </div>
-            <div className='CollectionDetailPageItems'>
-                <a href='IteamDetailCollection'>
-                    <h3>Items</h3>
-                </a>
-            </div>
-            <div className='CollectionDetailPageItems'>
-                <a href='OffersDetailCollection'>
-                    <h3>Offers</h3>
-                </a>
-            </div>
-            <div className='CollectionDetailPageItems'>
-                <a href='AnalyticsDetailCollection'>
-                    <h3>Analytics</h3>
-                </a>
-            </div>
-            <div className='CollectionDetailPageItems'>
-                 <a href='ActivityDetailCollection'>
-                    <h3>Activity</h3>
-                 </a>
-            </div>
+      <Navbar />
+      <br/> <br/> <br/> <br/> <br/>
+      <HeaderDetailCollection />
+      <div className='CollectionDetailPageSelect'>
+        <div className='CollectionDetailPageItems'>
+          <NavLink to="overview" activeClassName="active">
+            <h3>Overview</h3>
+          </NavLink>
         </div>
+        <div className='CollectionDetailPageItems'>
+          <NavLink to="items" activeClassName="active">
+            <h3>Items</h3>
+          </NavLink>
+        </div>
+        <div className='CollectionDetailPageItems'>
+          <NavLink to="offers" activeClassName="active">
+            <h3>Offers</h3>
+          </NavLink>
+        </div>
+        <div className='CollectionDetailPageItems'>
+          <NavLink to="analytics" activeClassName="active">
+            <h3>Analytics</h3>
+          </NavLink>
+        </div>
+        <div className='CollectionDetailPageItems'>
+          <NavLink to="activity" activeClassName="active">
+            <h3>Activity</h3>
+          </NavLink>
+        </div>
+      </div>
+
+    
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default CollectionDetailPage
+export default CollectionDetailPage;
