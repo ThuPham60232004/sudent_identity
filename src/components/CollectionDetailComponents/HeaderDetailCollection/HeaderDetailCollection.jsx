@@ -1,34 +1,29 @@
 import React from 'react';
 import './HeaderDetailCollection.css';
 import { SiTicktick } from "react-icons/si";
-const HeaderDetailCollection = () => {
+const HeaderDetailCollection = ({ item }) => {
+  if (!item) {
+    return <div>Loading...</div>; // Xử lý nếu không có dữ liệu item
+  }
   return (
     <div className='HeaderDetailCollectionContainer' style={{ backgroundImage: `url('/img/112.png')` }}>
       <div className='CollectionDetails'>
         <div className='CollectionDetailsText'>
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjye7TbDEjJXF6dK9VlxNk3KtKVEcYU2v9OQ&s' alt='CollectionDetailsImg' className='CollectionDetailsImg'/>
-        <div className='CollectionDetailsIcon'>
-            <h1>Rare Pepe</h1> 
+          <img src={item.imageUrl} alt={item.name} className='CollectionDetailsImg'/>
+          <div className='CollectionDetailsIcon'>
+            <h1>{item.name}</h1> 
             <img  
               src='/img/tickBlue.png'
               alt='tickBlue'
               className='tickBlueHeaderDetail'
             />
           </div>
-          <div className='CollectionDetailsIcon'>
-            <h6>Emblem Vault</h6>
-            <img  
-              src='/img/tickBlue.png'
-              alt='tickBlue'
-              className='tickBlueHeaderDetail1'
-            />
-          </div>
           <div className='textheader1'>
-            <h1><span>Rare Pepes is a historic NFT collection of 1,774 unique cards with...</span>See more</h1>
-              <span>Unique items 1.658 · Total items 23,1K · Created Jan 2023  · </span>
-            <br/>
-              <span>Creator earnings 5% · Chain Ethereum</span>
-            </div>
+            <h1><span>{item.name} is a historic NFT collection...</span>See more</h1>
+            <span>Floor Price: {item.floorPrice}</span><br/>
+            <span>Volume: {item.volume}</span><br/>
+            <span>Items: {item.item}</span><br/>
+          </div>
         </div>
      
         <div className='Stats'>
