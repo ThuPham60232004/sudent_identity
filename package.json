@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@ethersproject/providers": "^5.7.2",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -22,6 +23,7 @@
     "date-fns": "^2.30.0",
     "echarts": "^5.5.1",
     "echarts-for-react": "^3.0.2",
+    "ethers": "^5.7.2",
     "postcss-loader": "^8.1.1",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
@@ -39,7 +41,8 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.79.1",
     "scss": "^0.2.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3modal": "^1.9.12"
   },
   "scripts": {
     "start": "react-scripts start",
