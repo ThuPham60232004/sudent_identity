@@ -68,7 +68,7 @@ const Home = () => {
       <div className="Introduce_home_page">
          <Introduce/>
       </div> 
-<div className="Connective_home_page">
+      <div className="Connective_home_page">
        <Connective/>
       </div>
       <div className="footer_home_page">

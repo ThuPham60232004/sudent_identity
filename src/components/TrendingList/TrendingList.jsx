@@ -4,6 +4,7 @@ import { ItemContext } from "../../context/ItemContext";
 import { useNavigate } from "react-router-dom";
 const TrendingList = () => {
   const { setItem } = useContext(ItemContext);
+  
   const trendingData = [
     {
       rank: 1,

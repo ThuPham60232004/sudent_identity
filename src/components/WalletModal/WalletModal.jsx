@@ -3,7 +3,7 @@ import Web3Modal from "web3modal";
 import { Web3Provider } from '@ethersproject/providers';
 import "./WalletModal.css";
 
-const WalletModal = ({ onClose }) => {
+const WalletModal = ({ onClose, onConnect }) => {
     const [provider, setProvider] = useState(null);
 
     const connectWallet = async () => {
@@ -15,14 +15,16 @@ const WalletModal = ({ onClose }) => {
             const instance = await web3Modal.connect();
             const provider = new Web3Provider(instance);
             setProvider(provider);
-
+    
             const accounts = await provider.listAccounts();
             console.log("Connected account:", accounts[0]);
+    
+            onConnect(accounts[0], provider);  
         } catch (error) {
             console.error("Failed to connect wallet", error);
         }
     };
-
+    
     return (
         <div className="modal-overlay_modal" onClick={onClose}>
             <div className="wallet-login_modal" onClick={(e) => e.stopPropagation()}>

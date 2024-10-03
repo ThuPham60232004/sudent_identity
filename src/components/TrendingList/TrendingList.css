@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   background: black;
-  padding: 10px; /* Thêm khoảng đệm cho container */
+  padding: 10px;
 }
 
 .trendinglist_content {
@@ -65,7 +65,7 @@
   display: flex;
 
   justify-content: center;
-  flex-wrap: wrap; /* Cho phép các cột tự động xuống hàng */
+  flex-wrap: wrap; 
 }
 
 .trendinglist-col {
@@ -79,7 +79,7 @@
 
 .trendinglist_col_left {
   display: flex;
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  align-items: center; 
   gap: 10px;
   width: 80%;
 }
