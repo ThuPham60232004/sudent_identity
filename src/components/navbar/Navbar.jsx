@@ -4,6 +4,7 @@ import './navbar.css';
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { FaBarsStaggered } from "react-icons/fa6";
 import WalletModal from '../WalletModal/WalletModal';
+import WalletDetailLogin from '../WalletDetailLogin/WalletDetailLogin';
 import { ethers } from 'ethers';
 const Navbar = () => {
   const [showDropdownCreate, setShowDropdownCreate] = useState(false);
@@ -13,6 +14,8 @@ const Navbar = () => {
   const [walletAddress, setWalletAddress] = useState(null); 
   const [walletBalance, setWalletBalance] = useState(null);
   const [chainName, setChainName] = useState(null); 
+  const [openWalletDetailModal, setOpenWalletDetailModal] = useState(false);
+
   useEffect(() => {
     const savedAddress = localStorage.getItem("walletAddress");
     if (savedAddress) {
@@ -20,6 +23,7 @@ const Navbar = () => {
       handleWalletConnect(savedAddress, provider);
     }
   }, []);
+  
   const toggleMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
   };
@@ -31,22 +35,31 @@ const Navbar = () => {
   const handleClose = () => {
     setOpenModal(false);
   };
-
-  const handleWalletConnect = async (address, provider) => {
-    setWalletAddress(address);  // Cập nhật địa chỉ ví
-    localStorage.setItem("walletAddress", address);
-    // Lấy số dư ví
-    const balance = await provider.getBalance(address);
-    const formattedBalance = ethers.utils.formatEther(balance);  // Chuyển đổi sang Ether
-    setWalletBalance(formattedBalance);  // Cập nhật số dư
-  
-    // Lấy tên chain
-    const network = await provider.getNetwork();
-    setChainName(network.name);  // Cập nhật tên chain
-  
-    setOpenModal(false);  // Đóng modal sau khi kết nối
+  const handleOpenWalletDetail = () => {
+    setOpenWalletDetailModal(true);
   };
+  const handleWalletConnect = async (address, provider) => {
+    setWalletAddress(address);  
+    localStorage.setItem("walletAddress", address);
+    
+    const balance = await provider.getBalance(address);
+    const formattedBalance = ethers.utils.formatEther(balance); 
+    setWalletBalance(formattedBalance); 
   
+  
+    const network = await provider.getNetwork();
+    setChainName(network.name);
+  
+    setOpenModal(false); 
+  };
+  const handleWalletDisconnect = () => {
+    localStorage.removeItem("walletAddress");
+    setWalletAddress(null);
+    setWalletBalance(null);
+    setChainName(null);
+    setOpenWalletDetailModal(false); 
+  };
+
 
   return (
     <div className="navbar">
@@ -98,7 +111,7 @@ const Navbar = () => {
 
 
         {walletAddress ? (
-        <div className="wallet-info">
+        <div className="wallet-info" onClick={handleOpenWalletDetail}>
           <div className="wallet-address">
             {/* Hiển thị địa chỉ ví rút gọn */}
             {`${walletAddress.substring(0, 6)}...${walletAddress.substring(walletAddress.length - 4)}`}
@@ -120,6 +133,8 @@ const Navbar = () => {
 
 
         {openModal && <WalletModal onClose={handleClose} onConnect={handleWalletConnect} />}
+        {openWalletDetailModal  && <WalletDetailLogin onClose={() => setOpenWalletDetailModal(false)} onDisconnect={handleWalletDisconnect} />}
+
         <FaBarsStaggered className="icon_navbar-bars" onClick={toggleMobileMenu} />
 
         {showMobileMenu && (

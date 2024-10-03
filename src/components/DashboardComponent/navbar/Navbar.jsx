@@ -45,12 +45,11 @@ const Navbar = () => {
   };
 
   const handleWalletDisconnect = () => {
-    // Xóa thông tin ví khỏi localStorage và reset các trạng thái
     localStorage.removeItem("walletAddress");
     setWalletAddress(null);
     setWalletBalance(null);
     setChainName(null);
-    setOpenWalletDetailModal(false); // Đóng modal chi tiết ví
+    setOpenWalletDetailModal(false); 
   };
 
   return (

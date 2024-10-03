@@ -12,10 +12,10 @@ import { IoIosSend } from "react-icons/io";
 import { RiDownloadLine } from "react-icons/ri";
 import { FiPlus } from "react-icons/fi";
 
-const WalletDetailLogin = () => {
+const WalletDetailLogin = ({onClose, onDisconnect }) => {
   return (
     <div className="WalletDetailModal_Container_login">
-    <IoCloseCircleOutline className='icon_close_wallet_detail_login'/>
+    <IoCloseCircleOutline className='icon_close_wallet_detail_login' onClick={onClose}/>
     <div className="info_wallet_container_login">
         <div className="img_avatar">
              <img src="./img/METAMASK.png" alt="" className='logo_wallet_user_login'/>
@@ -58,7 +58,7 @@ const WalletDetailLogin = () => {
           <h3>Manage Wallet</h3>
         </div>
        
-            <div className="item_detail_wallet_out_login">
+          <div className="item_detail_wallet_out_login" onClick={onDisconnect}>
           <MdLogout className='icon_item_menu_login'/>
            <h3>Disconnect Wallet</h3>
         </div>
