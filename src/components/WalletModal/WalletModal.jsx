@@ -15,15 +15,18 @@ const WalletModal = ({ onClose, onConnect }) => {
             const instance = await web3Modal.connect();
             const provider = new Web3Provider(instance);
             setProvider(provider);
-    
+
             const accounts = await provider.listAccounts();
-            console.log("Connected account:", accounts[0]);
-    
-            onConnect(accounts[0], provider);  
+            const account = accounts[0];
+            
+            // Gọi lại hàm onConnect từ Navbar với địa chỉ và provider
+            onConnect(account, provider);
+
         } catch (error) {
             console.error("Failed to connect wallet", error);
         }
     };
+
     
     return (
         <div className="modal-overlay_modal" onClick={onClose}>

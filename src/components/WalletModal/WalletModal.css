@@ -17,7 +17,7 @@
     border-radius: 12px;
     width: 90%;
     max-width: 550px;
-    height: auto; /* Set to auto for responsive height */
+    height: auto;
     padding: 1rem 3rem 3rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: relative;

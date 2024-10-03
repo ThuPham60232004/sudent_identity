@@ -12,8 +12,14 @@ const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
   const [walletAddress, setWalletAddress] = useState(null); 
   const [walletBalance, setWalletBalance] = useState(null);
-const [chainName, setChainName] = useState(null); 
-
+  const [chainName, setChainName] = useState(null); 
+  useEffect(() => {
+    const savedAddress = localStorage.getItem("walletAddress");
+    if (savedAddress) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      handleWalletConnect(savedAddress, provider);
+    }
+  }, []);
   const toggleMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
   };
@@ -28,7 +34,7 @@ const [chainName, setChainName] = useState(null);
 
   const handleWalletConnect = async (address, provider) => {
     setWalletAddress(address);  // Cập nhật địa chỉ ví
-  
+    localStorage.setItem("walletAddress", address);
     // Lấy số dư ví
     const balance = await provider.getBalance(address);
     const formattedBalance = ethers.utils.formatEther(balance);  // Chuyển đổi sang Ether

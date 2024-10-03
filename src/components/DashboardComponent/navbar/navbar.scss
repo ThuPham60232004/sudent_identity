@@ -65,6 +65,7 @@
           top: -5px;
           right: -5px;
         }
+
         .connect-button {
           padding: 10px 20px;
           background-color: black;
@@ -73,13 +74,101 @@
           border-radius: 20px;
           cursor: pointer;
           font-weight: bold;
-          transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease, color 0.3s ease;
 
           &:hover {
             background-color: #333;
+            color: #f1f1f1;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);  // Hiệu ứng khi được focus
           }
         }
       }
     }
+  }
+}
+
+.wallet-info1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px; 
+  border-radius: 12px;  // Smooth round corners
+  color: #333;  // Dark text for light background
+  background-color: #f9f9f9;  // Light background for the card
+  border: 1px solid #e0e0e0;  // Light border
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Subtle shadow for elevation
+}
+
+.wallet-address1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;  // Darker text for the address
+}
+
+.wallet-balance1 {
+  font-size: 12px;
+  color: #757575;  // Softer gray for the balance text
+}
+
+/* Rounded avatar similar to your image */
+.wallet-avatar1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #9c27b0, #673ab7);  // Gradient similar to the purple circle in the image
+}
+
+.connect-button1 {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #f1f1f1;
+    color: #000;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarDashboard {
+    .wrapper1 {
+      padding: 10px;
+
+      .search {
+        input {
+          font-size: 10px;
+        }
+      }
+
+      .items {
+        .item {
+          margin-right: 10px;
+
+          .connect-button {
+            padding: 8px 16px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .wallet-info1 {
+    gap: 5px;
+    padding: 5px 8px;
   }
 }
