@@ -12,6 +12,38 @@ const SubscriptionPlans = () => {
 }
 const plans = 
 [
+    {
+        rank: 1,
+        name: "Courtyard.io",
+        floorPrice: "0.004 ETH",
+        volume: "15.1 ETH",
+        item : "8",
+        imageUrl: "https://www.artnews.com/wp-content/uploads/2022/01/unnamed-2.png?w=631",
+      },
+      {
+        rank: 2,
+        name: "KIP Protocol Genesis Pass",
+        floorPrice: "0.05 ETH",
+        volume: "4.5 ETH",
+         item : "8",
+        imageUrl: "https://coinstats.app/blog/wp-content/uploads/2023/06/The-Rise-of-NFTs-How-Will-AI-Impact-the-NFT-Art-Ecosystem-copy-1-1200x675.webp", 
+      },
+      {
+        rank: 3,
+        name: "Pepels",
+        floorPrice: "0.09 ETH",
+        volume: "4.3 ETH",
+         item : "9",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXny2o2hbmXC-MOmVaZsCPvfLEZOMvzgcP6rxEjIyxNEMDdNfuPwpmWZiDR9Mvmj7u_oM&usqp=CAU", 
+      },
+      {
+        rank: 4,
+        name: "egg",
+        floorPrice: "0.14 ETH",
+        volume: "6 ETH",
+         item : "1",
+        imageUrl: "https://miro.medium.com/v2/resize:fit:1358/1*aN5K9yD54q6XvJJEW8_Q7A.jpeg", 
+      },
         {
         rank: 6,
         name: "DeGods",
