@@ -1,44 +1,198 @@
 .IntroduceContainer{
+    width: 100%;
+    background-color: black;
     display: flex;
-}
-.IntroduceImg1{
-    width: 800px;
-    height: 500px;
-}
-.IntroduceImg{
-    width: 60%;
 }
 .IntroduceText{
-    width: 40%;
-}
-.IntroduceContainer{
-    background-color: black;
-    color: white;
-    padding: 80px 80px 10px 80px;
-    width: 100%;
-}
-.IntroduceText h4{
-    font-weight: normal;
-}
-.Introducetext{
+    width: 50%;
     display: flex;
-    background-color: #b126ca;
-    padding: 30px 50px 30px 50px;
+     flex-direction: column;
+    background-color: black;
+    padding: 30px;
     margin: 10px;
     border-radius: 20px;
-    text-align: center;
     gap: 30px;
+
 }
 
-.Introducetext h5{
-    font-weight: normal;
+.IntroduceText p{
+    color: white;
+    line-height: 30px;
+
 }
-.Introducebutton{
-    background-color: aliceblue;
-    color: black;
+.IntroduceText h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    text-shadow: 0 0 2px white;
+}
+.Introducetext {
+    display: flex;
+    gap: 15px;
+    background: rgb(28, 26, 48);
     padding: 20px;
-    margin: 20px;
-    border-radius: 20px;
-    text-align: center;
-    width: 300px;
+    border-radius: 10px;
+   
+    width: 100%;
+}
+.Introduce_con{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+    margin: 0 auto;
+}
+.Introduce_con p{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.button_intro{
+    width: 100%;
+}
+  .Introducetext_btn {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+button.Introducebutton {
+    box-shadow:  0 0 5px cyan,
+    0 0 23px cyan;
+}
+button.Introducebutton a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+
+}
+ button.Introducebutton:hover {
+    box-shadow:  0 0 5px cyan, 0 0 25px cyan,0 0 50px cyan;
+ }
+.IntroduceImg{
+    width: 50%;
+    margin: auto 0;
+   
+}
+.IntroduceImg1 {
+    width: 90%;
+    background-size: cover;
+    
+}
+
+@media screen and (max-width:1215px) {
+    .IntroduceText{
+        width: 60%;
+    }
+    .IntroduceImg{
+        width: 40%;
+    }
+    .IntroduceText h1{
+        font-size: 34px;
+    }
+    .IntroduceText p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1017px) {
+    .IntroduceContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .IntroduceText {
+    width: 90%;
+    margin: 0 auto;
+    }
+    .IntroduceImg{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .IntroduceImg1{
+       width: 100%;
+    }
+    .IntroduceText h1 {
+    font-size: 35px;
+    }
+    .IntroduceText p {
+        font-size: 16px;
+    }
+    .Introducetext_btn {
+        display: flex;
+        flex-direction: row;
+    }
+    .Introducetext {
+        width: 60%;
+    }
+    .button_intro{
+        width: 40%;
+        justify-content: center;
+    }
+    button.Introducebutton{
+        font-size: 12px;
+    }
+    .Introduce_con{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+    .Introduce_con p{
+        font-size: 12px;
+    }
+    .Introducetext {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .IntroduceText {
+        gap:20px;
+    }
+    .Introducetext_btn{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .Introducetext{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .button_intro{
+        width: 100%;
+       text-align: center;
+        
+    }
+    .Introduce_con {
+        width: 25%;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .IntroduceText h1{
+        font-size: 28px;
+    }
+    .button_intro{
+        width: 100%;
+    }
+    button.Introducebutton {
+        margin: 0 auto;
+    }
+}
+
+@media screen and ( max-width:565px) {
+    
+    .IntroduceText{
+        width: 95%;
+    }
+    .IntroduceText h1{
+        font-size: 24px;
+    }
+    .IntroduceText p{
+        font-size: 13px;
+    }
+    .Introduce_con p{
+        font-size: 10px;
+    }
 }

@@ -25,7 +25,9 @@ const Services = () => {
 
   return (
     <div className="services-container">
+             <button className='button_services'>View more</button>
       <h1>Our Services</h1>
+
       <div className="services-grid">
         {services.map(service => (
           <div className="service-card" key={service.id}>
@@ -38,6 +40,7 @@ const Services = () => {
           </div>
         ))}
       </div>
+     
     </div>
   );
 };

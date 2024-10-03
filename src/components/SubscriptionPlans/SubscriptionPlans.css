@@ -33,9 +33,10 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto; 
+    overflow-y: hidden; 
 }
 
 .subscription_con {

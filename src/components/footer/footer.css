@@ -16,7 +16,7 @@
 .footer-about-us {
   grid-column: span 3; 
 }
-.footer-about-us h4 {
+.footer-about-us h3 {
   display: flex;
   align-items: center; 
 }
@@ -139,7 +139,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 874px) {
   .container_footer {
     grid-template-columns: repeat(6, 1fr); 
   }
@@ -149,23 +149,53 @@
   }
 
   .footer-pages, .footer-follow-us {
-    grid-column: span 3; 
+    grid-column: span 2; 
   }
 
   .footer-stay-updated {
     grid-column: span 6; 
+ 
+  }
+  .footer-stay-updated form {
+    text-align: center;
+  }
+  .subscribe-btn {
+    width: auto;
+    padding: 10px 50px;
+   
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
+  .footer{
+    padding: 30px;
+  }
   .container_footer {
-    grid-template-columns: 1fr; 
+    grid-template-columns: repeat(6, 1fr);  
+    gap: 1.5rem;
+  }
+  .footer-about-us {
+    grid-column: span 6;
+  }
+  .footer-pages {
+    grid-column: span 3;
+  }
+  .footer-follow-us {
+    grid-column: span 3;
+  }
+  .footer-company{
+    grid-column: span 3;
+  }
+  .footer-stay-updated {
+    grid-column: span 6;
   }
 
-  .footer-about-us, .footer-pages, .footer-follow-us, .footer-stay-updated {
-    grid-column: span 1; 
+  .footer-about-us h3 {
+    font-size: 18px;
   }
-
+  .footer-col h4 {
+    font-size: 14px;
+  }
   .footer-input {
     width: 100%;
     margin-bottom: 10px;

@@ -41,6 +41,8 @@ import IteamDetailCollection from "./components/CollectionDetailComponents/Iteam
 import OffersDetailCollection from "./components/CollectionDetailComponents/OffersDetailCollection/OffersDetailCollection.jsx";
 import OverviewDetailCollection from "./components/CollectionDetailComponents/OverviewDetailCollection/OverviewDetailCollection.jsx";
 import CollectionDetailPage from "./pages/CollectionDetailPage/CollectionDetailPage.jsx";
+import WalletDetailModal from "./components/WalletDetailModal/WalletDetailModal.jsx";
+import WalletDetailLogin from "./components/WalletDetailLogin/WalletDetailLogin.jsx"
 function App() {
   return (
     <BrowserRouter>
@@ -76,6 +78,8 @@ function App() {
          <Route path="/LogoCompany" element={<LogoCompany/>}/>
          <Route path="/GuideNFT" element={<Guide/>}/>
          <Route path="/Introduce" element={<Introduce/>}/>
+          <Route path="/WalletDetailModal" element={<WalletDetailModal />} />
+          <Route path="/WalletDetailLogin" element={<WalletDetailLogin />} />
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>
@@ -86,6 +90,8 @@ function App() {
           <Route path="offers" element={<OffersDetailCollection />} />
           <Route path="analytics" element={<AnalyticsDetailCollection />} />
           <Route path="activity" element={<ActivityDetailCollection />} />
+         
+          
         </Route>
       </Routes>
     </BrowserRouter>

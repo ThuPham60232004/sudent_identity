@@ -26,7 +26,7 @@ body * {
 .body_home_page{
   display: flex;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 20px;
   flex-direction: column;
   gap: 2rem;
 }

@@ -13,7 +13,7 @@ const NFTGallery = () => {
       stock: "61 in stock"
     },
     {
-        id: 1,
+        id: 2,
         title: "Clone #17373",
         imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
         likes: 22,
@@ -21,7 +21,7 @@ const NFTGallery = () => {
         price: "1.000 ETH",
         stock: "61 in stock"
       },{
-        id: 1,
+        id: 3,
         title: "Clone #17373",
         imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
         likes: 22,
@@ -29,7 +29,7 @@ const NFTGallery = () => {
         price: "1.000 ETH",
         stock: "61 in stock"
       },{
-        id: 1,
+        id: 4,
         title: "Clone #17373",
         imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
         likes: 22,
@@ -37,7 +37,7 @@ const NFTGallery = () => {
         price: "1.000 ETH",
         stock: "61 in stock"
       },{
-        id: 1,
+        id: 5,
         title: "Clone #17373",
         imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
         likes: 22,
@@ -45,31 +45,7 @@ const NFTGallery = () => {
         price: "1.000 ETH",
         stock: "61 in stock"
       },{
-        id: 1,
-        title: "Clone #17373",
-        imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
-        likes: 22,
-        timeRemaining: "3h:15m:20s",
-        price: "1.000 ETH",
-        stock: "61 in stock"
-      },{
-        id: 1,
-        title: "Clone #17373",
-        imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
-        likes: 22,
-        timeRemaining: "3h:15m:20s",
-        price: "1.000 ETH",
-        stock: "61 in stock"
-      },{
-        id: 1,
-        title: "Clone #17373",
-        imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
-        likes: 22,
-        timeRemaining: "3h:15m:20s",
-        price: "1.000 ETH",
-        stock: "61 in stock"
-      },{
-        id: 1,
+        id: 6,
         title: "Clone #17373",
         imageUrl: "https://media.vneconomy.vn/w900/images/upload/2022/06/16/untitled.png",
         likes: 22,
@@ -82,10 +58,7 @@ const NFTGallery = () => {
   return (
     <div className="nft-gallery">
       <div className="nft-gallery-header">
-        <div className="nft-gallery-title">Featured NFTs</div>
-        <div className="nft-gallery-subtitle">
-          Discover the most outstanding NFTs in all topics of life
-        </div>
+        <div className="nft-gallery-title">TRENDING NOW</div>
         <nav className="nft-gallery-nav">
           <ul className="nft-gallery-categories">
             <li className="nft-gallery-category">NFTs</li>
@@ -96,16 +69,7 @@ const NFTGallery = () => {
           </ul>
         </nav>
       </div>
-      
-      <div className="nft-gallery-filters">
 
-        <div className="nft-gallery-media-types">
-          <div className="nft-gallery-media-type">Images</div>
-          <div className="nft-gallery-media-type">Video</div>
-          <div className="nft-gallery-media-type">Music</div>
-          <div className="nft-gallery-media-type-verified">Verified</div>
-        </div>
-      </div>
       
       <div className="nft-gallery-items">
         {nftData.map((nft) => (
@@ -114,7 +78,6 @@ const NFTGallery = () => {
               <img src={nft.imageUrl} alt={nft.title} />
             </div>
             <div className="nft-gallery-item-info">
-              <div className="nft-gallery-item-likes">{nft.likes}</div>
               <div className="nft-gallery-item-timer">{nft.timeRemaining}</div>
               <div className="nft-gallery-item-title">{nft.title}</div>
               <div className="nft-gallery-item-price">{nft.price}</div>

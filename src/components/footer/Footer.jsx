@@ -9,9 +9,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="container_footer">
      <div className="footer-col footer-about-us">
-  <h4>
+  <h3>
     <img src="./img/collection.png" alt="Company Logo" className="logo" /> FINTECH
-  </h4>
+  </h3>
   <p>
     We are a company that provides top-notch services in the field of web and mobile development.
     We strive to deliver the best quality for our clients.
@@ -51,6 +51,7 @@ const Footer = () => {
           <div className="input-wrapper">
             <input type="email" placeholder="Enter your email" className="footer-input" />
           </div>
+
             <button type="submit" className="subscribe-btn">Subscribe</button>
           </form>
         </div>

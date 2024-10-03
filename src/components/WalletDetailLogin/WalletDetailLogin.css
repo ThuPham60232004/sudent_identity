@@ -1,0 +1,151 @@
+.WalletDetailModal_Container_login{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(44, 43, 43);
+    gap: 10px;
+    padding: 10px 20px;
+    box-shadow: 10px 10px 20px #68696c, -10px -10px 20px #211d1d;
+    border-radius: 10px;
+
+
+    margin:50px auto;
+
+}
+.info_wallet_container_login {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+.avatar_user_login{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-size: cover;
+    padding: 2px;
+    background: white;
+}
+.logo_wallet_user_login{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-size: cover;
+   border-radius: 100%;
+   margin-left: 23px;
+   margin-top: 28px;
+   padding: 1.5px;
+   background: white;
+   
+}
+.icon_close_wallet_detail_login{
+   font-size: 30px;
+   margin-left: auto;
+   color: white;
+
+}
+
+.copy_info_user_login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.copy_info_user_login h2 {
+    font-size: 14px;
+    color: white;
+}
+.text_info_wallet_user_login{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+}
+.text_info_wallet_user_login p{
+    font-size: 12px;
+    color: white;
+}
+.icon_wallet_detail_style_login{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+.action_wallet_detail_con_login{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px;
+
+}
+.action_wallet_detail_con_login a{
+    text-decoration: none;
+    font-size: 10px;
+    display:flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    font-weight: 500;
+    color: white;
+}
+.action_wallet_detail_con_login button{
+    width: 33.33%;
+   padding: 0;
+   margin: 0;
+   border-radius: 5px;
+   background: rgb(124, 124, 124);
+ 
+}
+
+
+.menu_detail_wallet_login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+}
+.item_detail_wallet_login{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.item_detail_wallet_login h3{
+    font-size: 12px;
+    line-height: 20px;
+}
+.item_detail_wallet_out_login h3,
+.item_detail_wallet_login h3{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+.content_item_menu_login {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.content_item_menu_login p{
+    font-size: 8px;
+    color: white;
+}
+.icon_item_menu_login {
+    margin: auto 0;
+    font-size: 16px;
+    color: white;
+}
+.icon_dropdown_item_menu_login{
+  margin-left: auto;
+  color: white;
+}
+
+.item_detail_wallet_out_login{
+    display: flex;
+    gap: 5px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(117, 115, 115);
+}

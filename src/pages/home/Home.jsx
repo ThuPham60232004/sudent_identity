@@ -35,9 +35,9 @@ const Home = () => {
         <TrendingList/>
       </div>
 
-     {/* <div className="NFTGallery_home_page">
+     <div className="NFTGallery_home_page">
        <NFTGallery/>  
-      </div>*/}
+      </div>
         
       <div className="SubscriptionPlans_home_page">
         <SubscriptionPlans/>
@@ -49,33 +49,32 @@ const Home = () => {
       <div className="Advertisement_home_page">
         <Advertisement/>
       </div>
-         
+{/*          
      <div className="LogoCompany_home_page">
          <LogoCompany/>
       </div>
-
-      <div className="LogoCarousel_home_page">
-        <LogoCarousel/>
-      </div>
+*/}
+     
         
       <div className="Services_home_page">
          <Services/>
       </div>
-      <div className="GuideNFT_home_page">
+     <div className="GuideNFT_home_page">
          <GuideNFT/>
       </div>
-     
       <div className="Introduce_home_page">
          <Introduce/>
       </div> 
-      <div className="Connective_home_page">
        <Connective/>
-      </div>
+      </div> 
+       <div className="LogoCarousel_home_page">
+        <LogoCarousel/>
+      </div> 
       <div className="footer_home_page">
         <Footer/>
       </div>
   </div>
-    </div>
+
   );
 };
 
