@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import './CollectionDetailPage.css';
 import HeaderDetailCollection from '../../components/CollectionDetailComponents/HeaderDetailCollection/HeaderDetailCollection';
 import Navbar from '../../components/navbar/Navbar';
@@ -8,39 +8,57 @@ import { ItemContext } from '../../context/ItemContext';
 const CollectionDetailPage = () => {
     const { item } = useContext(ItemContext);
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
-        navigate("overview"); 
-    }, [navigate]);
+        if (location.pathname === '/CollectionDetailPage') {
+            navigate('overview');
+        }
+    }, [location.pathname, navigate]);
 
     return (
         <div className='CollectionDetailPageContainer'>
             <Navbar />
-            <br/> <br/> <br/> <br/> <br/>
+            <br /> <br /> <br /> <br /> <br />
             <HeaderDetailCollection item={item} />
             <div className='CollectionDetailPageSelect'>
                 <div className='CollectionDetailPageItems'>
-                    <NavLink to="overview" activeClassName="active">
+                    <NavLink 
+                        to="overview" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
                         <h3>Overview</h3>
                     </NavLink>
                 </div>
                 <div className='CollectionDetailPageItems'>
-                    <NavLink to="items" activeClassName="active">
+                    <NavLink 
+                        to="items" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
                         <h3>Items</h3>
                     </NavLink>
                 </div>
                 <div className='CollectionDetailPageItems'>
-                    <NavLink to="offers" activeClassName="active">
+                    <NavLink 
+                        to="offers" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
                         <h3>Offers</h3>
                     </NavLink>
                 </div>
                 <div className='CollectionDetailPageItems'>
-                    <NavLink to="analytics" activeClassName="active">
+                    <NavLink 
+                        to="analytics" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
                         <h3>Analytics</h3>
                     </NavLink>
                 </div>
                 <div className='CollectionDetailPageItems'>
-                    <NavLink to="activity" activeClassName="active">
+                    <NavLink 
+                        to="activity" 
+                        className={({ isActive }) => isActive ? "active" : ""}
+                    >
                         <h3>Activity</h3>
                     </NavLink>
                 </div>

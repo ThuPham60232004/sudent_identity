@@ -84,15 +84,12 @@ function App() {
           <Route index element={<Dashboard/>} />
         </Route>
         <Route path="/CollectionDetailPage" element={<CollectionDetailPage />}>
-         
           <Route path="overview" element={<OverviewDetailCollection />} />
           <Route path="items" element={<IteamDetailCollection />} />
           <Route path="offers" element={<OffersDetailCollection />} />
           <Route path="analytics" element={<AnalyticsDetailCollection />} />
           <Route path="activity" element={<ActivityDetailCollection />} />
-         
-          
-        </Route>
+          </Route>
       </Routes>
     </BrowserRouter>
   );

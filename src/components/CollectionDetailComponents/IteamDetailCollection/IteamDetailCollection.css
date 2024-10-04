@@ -1,0 +1,135 @@
+.IteamDetailCollectionContainer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.FilterItem{
+    display: flex;
+
+
+}
+.FilterItemRight{
+    background-color: rgb(0, 179, 255);
+    display: flex;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    height: 50px;
+    width: 10%;
+}
+.FilterItemLeft{
+    width: 79%;
+   justify-content: center;
+   align-items: center;
+}
+.FilterItemLeft hr{
+    background-color: gray;
+    width: 100%;
+    height: 1.5px;
+    margin: 0 auto; 
+}
+.FilterItemLeftType{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 30px;
+}
+.FilterItemType:hover{
+  color: rgb(0, 179, 255);
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.IteamDetailCollectionBody{
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 30px;
+
+}
+.IteamDetailCollectionLeft{
+    width: 30%;
+}
+.IteamDetailCollectionLeft hr{
+    margin-top: 30px;
+    background-color: gray;
+    width: 83%;
+    height: 1.5px;
+    
+}
+.IteamDetailCollectionMaxMin{
+    display: flex;
+    gap: 15px;
+    margin: 30px;
+}
+.IteamDetailCollectionMin{
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 5px;
+    width: 38%;
+}
+.IteamDetailCollectionMax{
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 5px;
+    width: 38%;
+}
+.IteamDetailCollectionButton{
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 83%;
+}
+.IteamDetailCollectionRight{
+    width: 65%;
+}
+.IteamDetailCollectionGrouphh4{
+    display: flex;
+    gap: 15px;
+    
+}
+.IteamDetailCollectionGrouphh4 h4{
+    font-weight: normal;
+    
+}
+.IteamDetailCollectionGrouph{
+    background-color: rgba(128, 128, 128, 0.38);
+    padding: 20px;
+    margin-left: 12px;
+    border-radius: 15px;
+    text-align: center;
+}
+.IteamDetailCollectionGroup{
+    display: flex;
+    
+}
+.IteamDetailCollectionGroup h4{
+    background-color: rgba(128, 128, 128, 0.38);
+    padding: 20px;
+    margin-left: 12px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+.tickBlueDetail{
+    padding-bottom: 5px;
+    width: 20px;
+    height: 23px;
+}
+.IteamDetailCollectionRight{
+    display: flex;
+}
+.IteamDetailCollectionRightContainer{
+    width: 20%;
+}
+.detailimg{
+    padding: 30px;
+    border-radius: 12px;
+}

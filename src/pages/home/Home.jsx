@@ -48,12 +48,10 @@ const Home = () => {
    
       <div className="Advertisement_home_page">
         <Advertisement/>
-      </div>
-{/*          
+      </div>      
      <div className="LogoCompany_home_page">
          <LogoCompany/>
       </div>
-*/}
      
         
       <div className="Services_home_page">
