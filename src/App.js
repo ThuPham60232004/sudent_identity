@@ -43,6 +43,8 @@ import OverviewDetailCollection from "./components/CollectionDetailComponents/Ov
 import CollectionDetailPage from "./pages/CollectionDetailPage/CollectionDetailPage.jsx";
 import WalletDetailModal from "./components/WalletDetailModal/WalletDetailModal.jsx";
 import WalletDetailLogin from "./components/WalletDetailLogin/WalletDetailLogin.jsx"
+import CollectionCreate from "./pages/CollectionCreate/CollectionCreate.jsx"
+import Profile from "./pages/Profile/Profile.jsx"
 function App() {
   return (
     <BrowserRouter>
@@ -80,6 +82,9 @@ function App() {
          <Route path="/Introduce" element={<Introduce/>}/>
           <Route path="/WalletDetailModal" element={<WalletDetailModal />} />
           <Route path="/WalletDetailLogin" element={<WalletDetailLogin />} />
+          <Route path="/CollectionCreate" element={<CollectionCreate />} />
+          <Route path="/Profile" element={<Profile />} />
+
         <Route path="/Dashboard">
           <Route index element={<Dashboard/>} />
         </Route>

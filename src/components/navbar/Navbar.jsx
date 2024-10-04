@@ -140,23 +140,64 @@ const Navbar = () => {
         {showMobileMenu && (
           <div className="mobile-menu">
             {/* Các mục mobile */}
-            <div className="mobile-menu-item">
+            <div className="mobile-menu-item" onClick={() => setShowDropdownCreate(!showDropdownCreate)}>
+
               <a href="#">Create</a>
+              <RiArrowDropDownFill className='icon_dropdown_fill'/>
+
             </div>
-            <div className="mobile-menu-item">
-              <a href="#">Explore</a>
+            {showDropdownCreate && (
+            <div className="mobile-dropdown">
+               <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">NFT & Collection</a>
+              </div>
+               <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">My profile</a>
+              </div>
+              
             </div>
-            <div className="mobile-menu-item">
-              <a href="#">About</a>
-            </div>
-            <div className="mobile-menu-item">
-              <a href="#">Contact Us</a>
-            </div>
+          )}
+
+          <div className="mobile-menu-item"
+            onClick={() => setShowDropdownExplore(!showDropdownExplore)}>
+            <a href="#">Explore</a>
+            <RiArrowDropDownFill className='icon_dropdown_fill'/>
+            
           </div>
-        )}
-      </div>
+          {showDropdownExplore && (
+            <div className="mobile-dropdown">
+              <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                <a href="#">All NFTs</a>
+              </div>
+           
+           <div className="mobile_dropdown_box">
+                 <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">All Collections</a>
+              </div>
+        
+        
+            </div>
+          )}
+          <div className="mobile-menu-item">
+            <a href="#" className='item_normal'>About</a> 
+          </div>
+          <div className="mobile-menu-item">
+            <a href="#"className='item_normal'>Contact Us</a>   
+          </div>
+        <div className="mobile-menu-item">
+          <a href="#" className='item_normal'>Connect Wallet</a>
+        </div>
+          
+        </div>
+      )}
+    </div>
     </div>
   );
 };
 
 export default Navbar;
+
+
