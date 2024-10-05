@@ -1,0 +1,5 @@
+.offers_detail_collection_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
