@@ -113,15 +113,12 @@ const Navbar = () => {
         {walletAddress ? (
         <div className="wallet-info" onClick={handleOpenWalletDetail}>
           <div className="wallet-address">
-            {/* Hiển thị địa chỉ ví rút gọn */}
             {`${walletAddress.substring(0, 6)}...${walletAddress.substring(walletAddress.length - 4)}`}
           </div>
           <div className="wallet-balance">
-            {/* Hiển thị số dư */}
             {walletBalance ? `${walletBalance} ETH` : "Loading..."}
           </div>
           <div className="chain-name">
-            {/* Hiển thị tên chain */}
             {chainName ? chainName : "Unknown Chain"}
           </div>
         </div>

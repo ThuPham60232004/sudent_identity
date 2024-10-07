@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import WalletDetailModal from "../../WalletDetailModal/WalletDetailModal";
+import WalletDetailModal from "../../WalletDetailLogin/WalletDetailLogin";
 import WalletLogin from "../../WalletModal/WalletModal"; 
 import { ethers } from 'ethers';
 const Navbar = () => {

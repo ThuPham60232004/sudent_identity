@@ -9,7 +9,6 @@ import SubscriptionPlans from "../../components/SubscriptionPlans/SubscriptionPl
 import Services from "../../components/Services/Services";
 import TrendingList from "../../components/TrendingList/TrendingList.jsx";
 import CardSlider from "../../components/CardSlider/CardSlider.jsx";
-import WalletLogin from "../../components/WalletLogin/WalletLogin.jsx";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel.jsx";
 import NFTGallery from "../../components/NFTGallery/NFTGallery.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";

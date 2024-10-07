@@ -30,7 +30,6 @@ import IteamDetailCollection from "./components/CollectionDetailComponents/Iteam
 import OffersDetailCollection from "./components/CollectionDetailComponents/OffersDetailCollection/OffersDetailCollection.jsx";
 import OverviewDetailCollection from "./components/CollectionDetailComponents/OverviewDetailCollection/OverviewDetailCollection.jsx";
 import CollectionDetailPage from "./pages/CollectionDetailPage/CollectionDetailPage.jsx";
-import WalletDetailModal from "./components/WalletDetailModal/WalletDetailModal.jsx";
 import CollectionCreate from "./pages/CollectionCreate/CollectionCreate.jsx"
 import Profile from "./pages/Profile/Profile.jsx"
 function App() {
@@ -47,7 +46,6 @@ function App() {
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/resetPassword" element={<ResetPassword/>} />
           <Route path="/inputCode" element={<InputCode/>} />
-          <Route path="/WalletDetailModal" element={<WalletDetailModal />} />
           <Route path="/CollectionCreate" element={<CollectionCreate />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/ChangePassword" element={<ChangePassword/>}/>
