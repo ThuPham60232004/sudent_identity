@@ -55,7 +55,7 @@ function App() {
           <Route path="/Account" element={<Account/>} />
           <Route path="/ContactUs" element={<ContactUs/>} />
           <Route path="/Subscription" element={<SubscriptionPage/>} />
-          {/* DASHBOARD----------------------------------------------------------- */}
+        {/* DASHBOARD----------------------------------------------------------- */}
           <Route path="/Dashboard" element={<Dashboard />}>
               <Route path="BinanceChart" element={<BinanceChart />} />
               <Route path="NFTDetail" element={<NFTDetail />} />

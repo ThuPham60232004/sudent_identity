@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Navbar from "../../components/DashboardComponent/navbar/Navbar";
 import "./Dashboard.css";
 import { NavLink, Outlet } from 'react-router-dom';
 import HomeIcon from "@mui/icons-material/Home";
@@ -19,7 +18,7 @@ const Dashboard = () => {
   const openModal = () => setIsModalOpen(true); 
   const closeModal = () => setIsModalOpen(false); 
   const items = [
-    { icon: <HomeIcon style={{ width: '25px', height: '25px' }} />, text: "Home", path: "/Dashboard" },
+    { icon: <HomeIcon style={{ width: '25px', height: '25px' }} />, text: "Home", path: "/" },
     { icon: <ShowChartIcon style={{ width: '25px', height: '25px' }} />, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
     { icon: <ExploreIcon style={{ width: '25px', height: '25px' }} />, text: "NFT Detail", path: "/Dashboard/NFTDetail" },
     { icon: <CollectionsIcon style={{ width: '25px', height: '25px' }} />, text: "Create Collection", path: "/Dashboard/CreatePage" },
@@ -38,7 +37,6 @@ const Dashboard = () => {
   ];
   return (
   <div className='HomePage'>
-    <Navbar />
     <div className='HomePageContainer'>
         <div className='HomePageSideBar'>
             {items.map((item, index) => (
