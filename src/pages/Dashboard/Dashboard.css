@@ -1,18 +1,25 @@
-.DashboardHome{
+.HomePage{
+    color: black;
+    
+}
+.HomePageContainer {
+    width: 100%;
     display: flex;
 }
-.DashboardHomeSideBar{
+.HomePageSideBar{
     width: 15%;
+    
 }
-.DashboardHomeContainer{
+.HomePageComponent{
     width: 85%;
+    background-color: white;
 }
-.DashboardHomeStatisticExchange{
+.HomePageSideBarItem{
     display: flex;
+    padding: 20px;
+    gap: 7px;
+    background-color: aliceblue;
 }
-.DashboardHomeStatistic{
-    width: 75%;
-}
-.DashboardHomeExchange{
-    width: 20%;
+.HomePageSideBarItemText{
+    font-weight: bold;
 }

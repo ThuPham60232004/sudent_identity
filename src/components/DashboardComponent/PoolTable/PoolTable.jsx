@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import "./PoolTable.css"; 
-import { Slide } from "react-toastify";
-import Sidebar from "../../components/DashboardComponent/sidebar/Sidebar";
-import Navbar from "../../components/DashboardComponent/navbar/Navbar";
-
 const farms = [
   { pool: "BTC-ETH", earned: 0, apr: "29.72%", liquidity: "$232,941,720", multiplier: "40X" },
   { pool: "USDT-BNB", earned: 0, apr: "25.20%", liquidity: "$132,941,720", multiplier: "10X" },
@@ -26,12 +22,7 @@ const PoolTable = () => {
 
   return (
     <div className="farm-table-cointainer">
-        <div className="farm-table-sideBar">
-            <Sidebar/>
-        </div>
         <div className="farm-table">
-            <Navbar/>
-            <br/>
             <div className="farm-table-header">
                 <span>Pool</span>
                 <span>Earned</span>

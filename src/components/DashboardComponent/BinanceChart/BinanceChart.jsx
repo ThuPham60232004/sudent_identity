@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
 import './BinanceChart.scss';
-import Navbar from "../../components/DashboardComponent/navbar/Navbar";
-import Sidebar from "../../components/DashboardComponent/sidebar/Sidebar";
+import Navbar from "../navbar/Navbar";
+import Sidebar from "../sidebar/Sidebar";
 const candlestickData = [
   ['2024/07/25', 570, 600, 560, 580],
   ['2024/07/26', 580, 620, 570, 600],
@@ -288,12 +288,7 @@ const option = {
 const BinanceChart = () => {
   return (
     <div className="BinanceChartDashboard">
-        <div className="BinanceChartDashboardSB">
-        <Sidebar />
-        </div>
-        
          <div className="DashboardContainer">
-            <Navbar /> 
              <div className="candlestick-chart-container">
                 <ReactECharts option={option} style={{ height: '500px', width: '100%' }} />
              </div>

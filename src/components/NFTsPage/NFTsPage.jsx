@@ -1,8 +1,8 @@
 import React from 'react'
-import NFTs from '../../components/DashboardComponent/NFTs/NFTs'
-import Sidebar from '../../components/DashboardComponent/sidebar/Sidebar'
+import NFTs from '../NFTs/NFTs'
+import Sidebar from '../sidebar/Sidebar'
 import './NFTsPage.css'
-import Navbar from '../../components/DashboardComponent/navbar/Navbar'
+import Navbar from '../navbar/Navbar'
 const NFTsPage = () => {
   return (
     <div className='NFTs-Container'>

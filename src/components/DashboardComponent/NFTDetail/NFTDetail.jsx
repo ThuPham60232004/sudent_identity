@@ -5,9 +5,9 @@ import { IoMdSend } from "react-icons/io";
 import { CiShare1 } from "react-icons/ci";
 import { CiMenuKebab } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
-import BuyModal from "../../components/DashboardComponent/BuyModal/BuyModal";
-import SellModal from "../../components/DashboardComponent/SellModal/SellModal";
+import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
+import BuyModal from "../BuyModal/BuyModal";
+import SellModal from "../SellModal/SellModal";
 const NFTDetail = () => {
   const bids = [
     { name: "Esther Howard", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
@@ -51,9 +51,7 @@ const NFTDetail = () => {
                 <CiMenuKebab />
             </Link>
         </div>
-         </div>
-
-        
+        </div>
           <p className="nft-id1">NFT ID : 2548859</p>
           <div className="nft-stats1">
             <div><FaEye /> 200</div>

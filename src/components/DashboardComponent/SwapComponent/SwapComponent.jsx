@@ -3,8 +3,6 @@ import './SwapComponent.css'
 import { CiSettings } from "react-icons/ci";
 import {IoSettingsOutline,IoWalletOutline} from "react-icons/io5";
 import { RxSymbol } from "react-icons/rx";
-import Sidebar from '../../components/DashboardComponent/sidebar/Sidebar';
-import Navbar from '../../components/DashboardComponent/navbar/Navbar';
 import { FaGasPump } from "react-icons/fa6";
 const SwapComponent = () => {
   const [amount,setAmount]=useState('');
@@ -25,13 +23,8 @@ const SwapComponent = () => {
   };
   return (
     <div className='swap'> 
-      <div className='swap-sidebar'>
-        <div className='swap-sidebar-Sidebar'>
-        <Sidebar/>
-        </div>
-      
+      <div className='swap-sidebar'>    
         <div className='swap_full'>
-          <Navbar/>
           <div className='swap-container'>
               <div className='swapBox'>
                 <div className='swap_text'>

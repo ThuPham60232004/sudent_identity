@@ -57,7 +57,7 @@ const Sidebar = () => {
           </li>
           <li>
             <Link to="/NFTsPage" style={{ textDecoration: "none" }}>
-              <ExploreIcon className="icon" />
+              <CollectionsIcon className="icon" />
               <span>NFTs</span>
             </Link>
           </li>
@@ -70,7 +70,7 @@ const Sidebar = () => {
           <p className="title">SERVICE</p>
           <li>
             <Link to="/SwapComponent" style={{ textDecoration: "none" }}>
-              <SwapHorizIcon className="icon" />
+              <DnsIcon className="icon" />
               <span>Swap</span>
             </Link>
           </li>
@@ -91,7 +91,7 @@ const Sidebar = () => {
             <span>Vote</span>
           </li>
           <li>
-            <LockIcon className="icon" />
+            <HowToVoteIcon className="icon" />
             <span>Authentication</span>
           </li>
         </ul>
