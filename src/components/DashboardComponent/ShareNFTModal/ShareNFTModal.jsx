@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const ShareNFTModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null; // Ensure modal is only rendered when open
+  if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
