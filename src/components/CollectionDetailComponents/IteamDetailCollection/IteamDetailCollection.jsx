@@ -16,6 +16,29 @@ const IteamDetailCollection = () => {
     nametype:"Fashion"
   }
 ];
+
+const mockItems = [
+    {
+      imageSrc: 'https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp',
+      creator: 'Eaton Jones',
+      nftName: 'NFTLab#1',
+      endDate: 'Ends in 1 year, 8 months',
+      likes: 4,
+      price: '0.52 ETH',
+      smallImageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5spyvVxk6Hqtp0Pcwh-pgk5LbvafnxwEfw&s'
+    },
+   
+        {
+      imageSrc: 'https://th.bing.com/th/id/OIP.dYV00oMaFWUn4Q0QibkaUgHaHa?rs=1&pid=ImgDetMain',
+      creator: 'Eaton Jones',
+      nftName: 'NFTLab#1',
+      endDate: 'Ends in 1 year, 8 months',
+      likes: 4,
+      price: '0.52 ETH',
+      smallImageSrc: 'https://th.bing.com/th/id/OIP.dYV00oMaFWUn4Q0QibkaUgHaHa?rs=1&pid=ImgDetMain'
+    },
+  ];
+
   return (
     <div className="IteamDetailCollectionContainer">
       <div className="FilterItem">
@@ -69,23 +92,23 @@ const IteamDetailCollection = () => {
 
         <div className="Item_container_right_main">
           <div className="IteamDetailCollectionRight">
-          
-          <div className="IteamDetailCollectionRightContainer">
+          {mockItems.map((item, index) => (
+          <div key={index} className="IteamDetailCollectionRightContainer">
             <img 
-                src='https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp'
+                src={item.imageSrc}
                 alt='detailimg'
                 className='detailimg'
             />
             <div className="IteamDetailCollectionRightSmallContainer">
               <img
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5spyvVxk6Hqtp0Pcwh-pgk5LbvafnxwEfw&s'
+                  src={item.smallImageSrc}
                   alt='detailimgsmall'
                   className='detailimgsmall'
               />
               <div className="info_user_item_collection_right_small">
                 <h3>Creator</h3>
                 <div className="name_user_small">
-                  <h4>Eaton Jones</h4>
+                  <h4>{item.creator}</h4>
                   <HiCheckCircle className='icon_huyhieu_user_small'/>
                 </div>
               </div>
@@ -93,139 +116,23 @@ const IteamDetailCollection = () => {
             <div className="br"></div>
               <div className="info_collection_small">
                 <div className="name_date_created_collection_small">
-                  <h3>NFTLab#4</h3>
-                  <p>Ends in 1 year, 8 months</p>
+                  <h3>{item.nftName}</h3>
+                  <p>{item.endDate}</p>
                 </div>
                 <div className="heart_view_container">
                   <div className="heart_view_collection_small">
                     <FaRegHeart/>
-                    <p>4</p>
+                    <p>{item.likes}</p>
                   </div>
                 </div>
                
               </div>
               <div className="price_collection_small">
                 <p>Price</p>
-                <h3>0.52 ETH</h3>
+                <h3>{item.price}</h3>
               </div>
           </div>
-          <div className="IteamDetailCollectionRightContainer">
-            <img 
-                src='https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp'
-                alt='detailimg'
-                className='detailimg'
-            />
-            <div className="IteamDetailCollectionRightSmallContainer">
-              <img
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5spyvVxk6Hqtp0Pcwh-pgk5LbvafnxwEfw&s'
-                  alt='detailimgsmall'
-                  className='detailimgsmall'
-              />
-              <div className="info_user_item_collection_right_small">
-                <h3>Creator</h3>
-                <div className="name_user_small">
-                  <h4>Eaton Jones</h4>
-                  <HiCheckCircle className='icon_huyhieu_user_small'/>
-                </div>
-              </div>
-            </div>
-            <div className="br"></div>
-              <div className="info_collection_small">
-                <div className="name_date_created_collection_small">
-                  <h3>NFTLab#4</h3>
-                  <p>Ends in 1 year, 8 months</p>
-                </div>
-                <div className="heart_view_container">
-                  <div className="heart_view_collection_small">
-                    <FaRegHeart/>
-                    <p>4</p>
-                  </div>
-                </div>
-               
-              </div>
-              <div className="price_collection_small">
-                <p>Price</p>
-                <h3>0.52 ETH</h3>
-              </div>
-          </div>
-          <div className="IteamDetailCollectionRightContainer">
-            <img 
-                src='https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp'
-                alt='detailimg'
-                className='detailimg'
-            />
-            <div className="IteamDetailCollectionRightSmallContainer">
-              <img
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5spyvVxk6Hqtp0Pcwh-pgk5LbvafnxwEfw&s'
-                  alt='detailimgsmall'
-                  className='detailimgsmall'
-              />
-              <div className="info_user_item_collection_right_small">
-                <h3>Creator</h3>
-                <div className="name_user_small">
-                  <h4>Eaton Jones</h4>
-                  <HiCheckCircle className='icon_huyhieu_user_small'/>
-                </div>
-              </div>
-            </div>
-            <div className="br"></div>
-              <div className="info_collection_small">
-                <div className="name_date_created_collection_small">
-                  <h3>NFTLab#4</h3>
-                  <p>Ends in 1 year, 8 months</p>
-                </div>
-                <div className="heart_view_container">
-                  <div className="heart_view_collection_small">
-                    <FaRegHeart/>
-                    <p>4</p>
-                  </div>
-                </div>
-               
-              </div>
-              <div className="price_collection_small">
-                <p>Price</p>
-                <h3>0.52 ETH</h3>
-              </div>
-          </div>
-          <div className="IteamDetailCollectionRightContainer">
-            <img 
-                src='https://ichef.bbci.co.uk/news/480/cpsprodpb/DBB7/production/_122074265_hi071843849.jpg.webp'
-                alt='detailimg'
-                className='detailimg'
-            />
-            <div className="IteamDetailCollectionRightSmallContainer">
-              <img
-                  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5spyvVxk6Hqtp0Pcwh-pgk5LbvafnxwEfw&s'
-                  alt='detailimgsmall'
-                  className='detailimgsmall'
-              />
-              <div className="info_user_item_collection_right_small">
-                <h3>Creator</h3>
-                <div className="name_user_small">
-                  <h4>Eaton Jones</h4>
-                  <HiCheckCircle className='icon_huyhieu_user_small'/>
-                </div>
-              </div>
-            </div>
-            <div className="br"></div>
-              <div className="info_collection_small">
-                <div className="name_date_created_collection_small">
-                  <h3>NFTLab#4</h3>
-                  <p>Ends in 1 year, 8 months</p>
-                </div>
-                <div className="heart_view_container">
-                  <div className="heart_view_collection_small">
-                    <FaRegHeart/>
-                    <p>4</p>
-                  </div>
-                </div>
-               
-              </div>
-              <div className="price_collection_small">
-                <p>Price</p>
-                <h3>0.52 ETH</h3>
-              </div>
-          </div>
+           ))}
           
           </div>
        <div className="phan_trang_items_collection">
