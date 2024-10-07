@@ -68,6 +68,7 @@
     border: 0;
     outline: none;
     width: 100%;
+    background-color: black;
 }
 .swapInput_cointainer{
     width: 80%;
