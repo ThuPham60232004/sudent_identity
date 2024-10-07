@@ -14,6 +14,7 @@ import Account from "./pages/account/account.jsx";
 import CreatePage from "./pages/CreatePage/CreatePage.jsx";
 import SmartContractForm from "./pages/SmartContractForm/SmartContractForm.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import HomeDashboard from "./components/DashboardComponent/HomeDashboard/HomeDashboard.jsx";
 import BinanceChart from "./components/DashboardComponent/BinanceChart/BinanceChart.jsx";
 import SwapComponent from "./components/DashboardComponent/SwapComponent/SwapComponent.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
@@ -57,6 +58,7 @@ function App() {
           <Route path="/Subscription" element={<SubscriptionPage/>} />
         {/* DASHBOARD----------------------------------------------------------- */}
           <Route path="/Dashboard" element={<Dashboard />}>
+              <Route path="HomeDashboard" element={<HomeDashboard />} />
               <Route path="BinanceChart" element={<BinanceChart />} />
               <Route path="NFTDetail" element={<NFTDetail />} />
               <Route path="CreatePage" element={<CreatePage/>} />

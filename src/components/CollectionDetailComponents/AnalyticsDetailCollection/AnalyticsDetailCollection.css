@@ -1,0 +1,257 @@
+.AnalyticsDetailCollection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.AnalyticsDetailCollection_filter{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    align-items: center;
+}
+
+.container_bars_analytics{
+    background: rgb(50, 49, 49);
+    padding: 5px 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.icon_bars_analytics{
+    font-size: 30px;
+}
+.container_search_analytics{
+    width: 80%;
+    display: flex;
+}
+
+.container_search_analytics input{
+    border: 1px solid gray;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    align-items: center;
+    border-radius: 5px;
+    text-align: start;
+    
+}
+
+
+
+.container_search_analytics{
+    align-items: center;
+}
+.icon_search_analytics_detail{
+    position: absolute;
+    font-size: 25px;
+    margin-left: 5px;
+    
+}
+.container_filter_date_analytics{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+.icon_dropdown_filter_date_analytic{
+    margin-left: auto;
+}
+
+
+
+.AnalyticsDetailCollection_body{
+    width: 100%;
+    display: flex;
+}
+
+.AnalyticsDetailCollection_body_left{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 20px;
+}
+
+
+.dropdown_analytics_con_left{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+
+}
+.dropdown_analytics_con_left:hover{
+    background: rgb(40, 38, 38);
+    border-radius: 10px;
+
+}
+
+.dropdown_analytics_con_left p{
+    font-size: 16px;
+    font-weight: 600;
+}
+.number_dropdown_analytics p {
+    font-size: 15px;
+    font-weight: 500;
+    color: grey;
+}
+.number_dropdown_analytics{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.icon_dropdown_analytic_con_left{
+    font-size: 25px;
+     color: grey;
+}
+
+
+
+.AnalyticsDetailCollection_body_right{
+    width: 75%;
+}
+
+.container_analytics_body_right{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.thong_ke_volume_sales_floor_price{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.thongke_sales,
+.thongke_floor_price,
+.thongke_volume{
+    grid-column: span 4;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  
+}
+
+.title_thongke{
+    font-size: 14px;
+    font-size: 800;
+    color: gray;
+}
+.value_thongke{
+    font-weight: 700;
+}
+.percent_thongke {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.negative {
+    color: red; 
+}
+
+.positive {
+    color: rgb(12, 176, 12);
+}
+
+
+
+
+.chart_analytics_collection{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+.chart_con{
+    grid-column: span 6;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.title_volume_and_price_chart,
+.title_floor_price_chart,
+.title_listing_chart,
+.title_sales_char,
+.title_sales_item_char,
+.title_price_distribution_chart,
+.title_owner_distribution_char,
+.title_owner_char{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.chart_floor_price_con,
+.chart_listing_con,
+.chart_sales_con,
+.item_sales_con,
+.char_price_distribution_con,
+.chart_owner_distribution_con,
+.char_owner_con,
+.chart_volume_and_price_con {
+    background: orange;
+    padding: 10px;
+}
+
+.title_price_distribution_chart,
+.dropdown_price_distribution,
+.title_sales_char,
+.filter_price_listing_chart,
+.title_listing_chart{
+    display: flex;
+    align-items: center;
+}
+.dropdown_price_distribution,
+.checkbox_sales_char,
+.filter_price_listing_chart{
+    margin-left: auto;
+}
+
+.sub_title_chart_con{
+    font-size: 13px;
+    color: gray;
+    font-weight: 600s;
+}
+
+.dropdown_price_distribution,
+.filter_price_listing_chart{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.dropdown_price_distribution:hover,
+.filter_price_listing_chart:hover{
+    background: rgb(36, 36, 36);
+}
+
+.icon_dropdown_chart_con{
+    font-size: 25px;
+}
+
+.checkbox_sales_char {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.checkbox_sales_char input {
+    width: 16px;
+    height: 16px;
+}
+.checkbox_sales_char p{
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}

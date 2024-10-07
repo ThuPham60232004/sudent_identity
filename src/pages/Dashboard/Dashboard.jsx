@@ -18,7 +18,7 @@ const Dashboard = () => {
   const openModal = () => setIsModalOpen(true); 
   const closeModal = () => setIsModalOpen(false); 
   const items = [
-    { icon: <HomeIcon style={{ width: '25px', height: '25px' }} />, text: "Home", path: "/" },
+    { icon: <HomeIcon style={{ width: '25px', height: '25px' }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
     { icon: <ShowChartIcon style={{ width: '25px', height: '25px' }} />, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
     { icon: <ExploreIcon style={{ width: '25px', height: '25px' }} />, text: "NFT Detail", path: "/Dashboard/NFTDetail" },
     { icon: <CollectionsIcon style={{ width: '25px', height: '25px' }} />, text: "Create Collection", path: "/Dashboard/CreatePage" },
