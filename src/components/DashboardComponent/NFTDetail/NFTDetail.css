@@ -127,22 +127,20 @@
 }
   
 .sell-now-btn1 {
-    background-color:white;
     color: black;
 }
 .sell-now-btn1:hover,
 .place-bid-btn1:hover{
-    background-color: gray;
+    background-color: black;
 }
   
 .place-bid-btn1 {
-    background-color: white;
     color: black;
 }
   
 .nft-bids-section1 {
     margin-top: 30px;
-    background-color: white;
+    background-color: black;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -158,12 +156,12 @@
 
 .tab-navigation1 span {
     cursor: pointer;
-    color: #888;
+    color: black;
     font-size: 16px;
 }
 
 .tab-navigation1 .active-tab1 {
-    color: #000;
+    color: white;
 }
 
 .nft-bid-item1 {
@@ -193,17 +191,17 @@
 .bid-name1 {
     font-weight: bold;
     font-size: 14px;
-    color: #333;
+    color: white;
 }
 
 .bid-action1 {
-    color: #888;
+    color: white;
     font-weight: normal;
 }
 
 .bid-time1 {
     font-size: 12px;
-    color: #888;
+    color: white;
 }
 
 .bid-amount-section1 {
@@ -217,7 +215,7 @@
 
 .usd-amount1 {
     font-size: 12px;
-    color: #888;
+    color: white;
 }
 .nft-title1-container {
     display: flex;
@@ -235,7 +233,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #000;
+    color: white;
     padding: 0;
     margin: 0;
 }

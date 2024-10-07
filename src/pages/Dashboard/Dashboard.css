@@ -2,6 +2,7 @@
 
 .HomePage {
   width: 100%;
+  color: white;
 }
 
 .HomePageContainer {
@@ -11,8 +12,9 @@
 
 .HomePageSideBar {
   width: 20%;
-  background: white;
+  background: black;
   transition: width 0.3s ease;
+  color: white;
 }
 
 .HomePageSideBar.collapsed {
