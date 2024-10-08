@@ -8,7 +8,6 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
-import InputCode from "./pages/InputCode/InputCode";
 import SubscriptionPage from "./pages/SubscriptionPage/SubscriptionPage.jsx";
 import Account from "./pages/account/account.jsx";
 import CreatePage from "./pages/CreatePage/CreatePage.jsx";
@@ -46,7 +45,6 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/resetPassword" element={<ResetPassword/>} />
-          <Route path="/inputCode" element={<InputCode/>} />
           <Route path="/CollectionCreate" element={<CollectionCreate />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/ChangePassword" element={<ChangePassword/>}/>
