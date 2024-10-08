@@ -14,6 +14,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HowToVoteIcon from "@mui/icons-material/HowToVote";
 import LockIcon from "@mui/icons-material/Lock";
 import { FaBars } from "react-icons/fa6";
+import { RiNftFill } from "react-icons/ri";
 import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
 
 const Dashboard = () => {
@@ -28,22 +29,22 @@ const Dashboard = () => {
   const closeModal = () => setIsModalOpen(false);
 
   const items = [
-    { icon: <HomeIcon style={{ width: '25px', height: '25px',color:'white'  }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
-    { icon: <ShowChartIcon style={{ width: '25px', height: '25px',color:'white'  }}/>, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
-    { icon: <ExploreIcon style={{ width: '25px', height: '25px' ,color:'white' }}/>, text: "NFT Detail", path: "/Dashboard/NFTDetail" },
-    { icon: <CollectionsIcon style={{ width: '25px', height: '25px' ,color:'white' }}/>, text: "Create Collection", path: "/Dashboard/CreatePage" },
-    { icon: <CollectionsIcon style={{ width: '25px', height: '25px' ,color:'white' }}/>, text: "NFTs", path: "/Dashboard/NFTsPage" },
-    { icon: <DnsIcon style={{ width: '25px', height: '25px' ,color:'white' }}/>, text: "Farm", path: "/Dashboard/PoolTable" },
+    { icon: <HomeIcon style={{ width: '25px', height: '25px' }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
+    { icon: <ShowChartIcon style={{ width: '25px', height: '25px' }}/>, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
+    { icon: <ExploreIcon style={{ width: '25px', height: '25px' }}/>, text: "NFT Detail", path: "/Dashboard/NFTDetail" },
+    { icon: <CollectionsIcon style={{ width: '25px', height: '25px' }}/>, text: "Create Collection", path: "/Dashboard/CreatePage" },
+    { icon: <RiNftFill style={{ width: '25px', height: '25px' }}/>, text: "NFTs", path: "/Dashboard/NFTsPage" },
+    { icon: <DnsIcon style={{ width: '25px', height: '25px' }}/>, text: "Farm", path: "/Dashboard/PoolTable" },
     { 
-      icon: <ShareIcon style={{ width: '25px', height: '25px' ,color:'white' }} />, 
+      icon: <ShareIcon style={{ width: '25px', height: '25px' }} />, 
       text: "Share NFT", 
       path: "#", 
       onClick: openModal 
     },
-    { icon: <SwapHorizIcon style={{ width: '25px', height: '25px',color:'white' }}/>, text: "Swap", path: "/Dashboard/SwapComponent" },
-    { icon: <AccountCircleIcon style={{ width: '25px', height: '25px',color:'white' }}/>, text: "Profile", path: "/Dashboard/AccountDashboard" },
-    { icon: <HowToVoteIcon style={{ width: '25px', height: '25px',color:'white' }}/>, text: "Vote", path: "/Dashboard" },
-    { icon: <LockIcon style={{ width: '25px', height: '25px',color:'white' }}/>, text: "Authentication", path: "/Dashboard" }
+    { icon: <SwapHorizIcon style={{ width: '25px', height: '25px' }}/>, text: "Swap", path: "/Dashboard/SwapComponent" },
+    { icon: <AccountCircleIcon style={{ width: '25px', height: '25px' }}/>, text: "Profile", path: "/Dashboard/AccountDashboard" },
+    { icon: <HowToVoteIcon style={{ width: '25px', height: '25px' }}/>, text: "Vote", path: "/Dashboard" },
+    { icon: <LockIcon style={{ width: '25px', height: '25px' }}/>, text: "Authentication", path: "/Dashboard" }
   ];
 
   return (
@@ -62,21 +63,29 @@ const Dashboard = () => {
           </div>
           
           <div className="sidebar_container_homepage">
-            {items.map((item, index) => (
-              <NavLink
-                to={item.path}
-                key={index}
-                style={{ textDecoration: "none", color: "black" }}
-                className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={item.onClick}
-              >
-                <div className="item_sidebar_group">
-                  <div className="HomePageSideBarItemIcon" >{item.icon}</div>
-                  {!isSidebarCollapsed && <div className="HomePageSideBarItemText"style={{color:'white' }}><p>{item.text}</p></div>}
-                </div>
-              </NavLink>
-            ))}
-          </div>
+  {items.map((item, index) => (
+    <NavLink
+      to={item.path}
+      key={index}
+      style={{ textDecoration: "none", color: "black" }}
+      className={({ isActive }) => (isActive ? "active" : "")}
+      onClick={item.onClick}
+    >
+      <div 
+        className="item_sidebar_group" 
+        style={{ 
+          backgroundColor: item.text === 'Home' ? 'orange' : '', // Orange for Home, gray for others
+          borderRadius: '5px' // Optional for rounded corners
+        }}
+      >
+        <div className="HomePageSideBarItemIcon">{item.icon}</div>
+        {!isSidebarCollapsed && <div className="HomePageSideBarItemText"><p>{item.text}</p></div>}
+      </div>
+    </NavLink>
+  ))}
+</div>
+
+
         </div>
         <div className="HomePageComponent">
           <Outlet />

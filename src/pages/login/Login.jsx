@@ -37,14 +37,21 @@ const Login = () => {
   return (
     <div className="login_page">
       <div className="login_container">
-        <div className="left_container_login">
-          <div className="logo_login_con">
-            <img src="./img/collection.png" alt="" className='logo_login' />
-            <h2 className='title_login'>LOGIN</h2>
+         <div className="right_container_login">
+          <div className="content_right_container_login">
+            <h1>Welcome to the FINTECH</h1>
+            <p>If you don't have an account yet, join us and discover a new world of digital ownership.</p>
+              <button className='btn_register_page_login' onClick={registerLink}>Register</button>
           </div>
+        </div>
+        <div className="left_container_login">
+          <div className="content_left_container_login">
+              <div className="logo_login_con">
+              <img src="./img/collection.png" alt="" />
+              <h2 className='title_login'>LOGIN</h2>
+             </div>
           <div className="body_login_container_left">
-            <form onSubmit={handleSubmit}> 
-              <div className="form_field">
+            <form onSubmit={handleSubmit} className='form_field'> 
                 <div className="input_group_login">
                   <input type="text" className="input_info_login"  
                     id='username'
@@ -61,7 +68,6 @@ const Login = () => {
                     required />
                   <label className="name_label" htmlFor="password">Password</label>
                 </div>
-              </div>
               <div className="action_login">
                 <div className="checkbox_group_login">
                   <input type="checkbox" />
@@ -69,8 +75,9 @@ const Login = () => {
                 </div>
                 <a href="/forgotpassword">Forgot password?</a>
               </div>
-              <button type="submit">Login</button>
+              <button className='btn_login' type="submit">Login</button>
             </form>
+
             <div className="social_login">
               <p>Or use your account</p>
               <div className="social_icons_login">
@@ -78,19 +85,13 @@ const Login = () => {
                 <a href="#"><FaGoogle className='icon_social_login'/></a>
               </div>
             </div>
-            <div className="text_register">
-              <p>No account yet? <span><a href="#" onClick={registerLink}>Register here</a></span></p>
-            </div>
+              <p className='text_register'>No account yet? <span><a href="#" onClick={registerLink}>Register here</a></span></p>
           </div>
+          </div>
+          
         </div>
         {error && <p className="error-message">{error}</p>}
-        <div className="right_container_login">
-          <h1>Welcome to the FINTECH</h1>
-          <p>If you don't have an account yet, join us and discover a new world of digital ownership.</p>
-          <div className="btn_register">
-            <button onClick={registerLink}>Register <FaArrowRightLong className='icon_arrow_register'/></button>
-          </div>
-        </div>
+       
       </div>
       <ToastContainer />
     </div>
@@ -98,3 +99,7 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+

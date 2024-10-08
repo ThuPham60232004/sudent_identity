@@ -20,6 +20,9 @@
 .HomePageSideBar.collapsed {
   width: 5%;
 }
+.HomePageSideBarItemIcon{
+  color: white;
+}
 
 .sidebar_container_homepage {
   display: flex;
@@ -34,11 +37,13 @@
   gap: 10px;
   padding: 5px 10px;
   align-items: center;
+
 }
 
 .HomePageSideBarItemText p {
   font-size: 16px;
   font-weight: 600;
+  color: white;
 }
 
 .item_sidebar_group:hover {
@@ -82,8 +87,8 @@
 
 .HomePageComponent {
   width: 80%;
-  background: black;
-  color: wheat;
+  color: black;
+  background: white; 
   transition: width 0.3s ease;
 }
 
