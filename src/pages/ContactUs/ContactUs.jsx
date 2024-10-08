@@ -32,8 +32,6 @@ const ContactUs = () => {
         <p>Who are helping us pave the way towards a brand new digital economy</p>
           <LogoCarousel/>
       </div>
-  
-
       <div className="address_contact">
           <div className="location_contact">
                   <CiLocationOn className='icon_location'/>
