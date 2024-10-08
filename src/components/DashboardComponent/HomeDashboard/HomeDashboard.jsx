@@ -1,9 +1,10 @@
 import React from 'react'
-import { IoSearchSharp } from "react-icons/io5";
+import { useState } from 'react';
 import { RiArrowDropDownLine,RiUserAddFill } from "react-icons/ri";
 import { FaBell ,FaChartLine,FaCartArrowDown} from "react-icons/fa";
 import { IoBagCheckSharp } from "react-icons/io5";
 import { IoMdSearch } from "react-icons/io";
+import { GrFormPrevious,GrFormNext } from "react-icons/gr";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import "./HomeDashboard.scss"
@@ -31,6 +32,192 @@ const topProducts = [
     { name: 'Customer C', fulfillment: 90 },
     { name: 'Customer D', fulfillment: 75 },
   ];
+
+  const nftData = [
+  {
+    stt: 1,
+    collectionType: "Art",
+    image: "https://th.bing.com/th/id/OIP.rHd9SCnLe9nk0ngHF0hKBAAAAA?w=474&h=711&rs=1&pid=ImgDetMain",
+    name: "Digital Art Piece",
+    floorPrice: "2.5 ETH",
+    volume: "10K",
+    views: 1500,
+  },
+  {
+    stt: 2,
+    collectionType: "Music",
+    image: "https://th.bing.com/th/id/OIP.Wbov41Q_JiEvkOqaBZOAIAHaE8?rs=1&pid=ImgDetMain",
+    name: "Rare Track",
+    floorPrice: "1.8 ETH",
+    volume: "8.2K",
+    views: 1200,
+  },
+  {
+    stt: 3,
+    collectionType: "Gaming",
+    image: "https://th.bing.com/th/id/OIP.kGbNk6wMmDZ9aul31NxrCAAAAA?w=443&h=626&rs=1&pid=ImgDetMain",
+    name: "Gaming NFT",
+    floorPrice: "3.2 ETH",
+    volume: "12.5K",
+    views: 2000,
+  },
+  {
+    stt: 4,
+    collectionType: "Photography",
+    image: "https://th.bing.com/th/id/OIP.et3StuDx38d8-pKRJndFLQHaNK?w=576&h=1024&rs=1&pid=ImgDetMain",
+    name: "Landscape Photography",
+    floorPrice: "1.3 ETH",
+    volume: "5K",
+    views: 900,
+  },
+  {
+    stt: 5,
+    collectionType: "Art",
+    image: "https://th.bing.com/th/id/OIP.rHd9SCnLe9nk0ngHF0hKBAAAAA?w=474&h=711&rs=1&pid=ImgDetMain",
+    name: "Digital Art Piece",
+    floorPrice: "2.5 ETH",
+    volume: "10K",
+    views: 1500,
+  },
+  {
+    stt: 6,
+    collectionType: "Music",
+    image: "https://th.bing.com/th/id/OIP.Wbov41Q_JiEvkOqaBZOAIAHaE8?rs=1&pid=ImgDetMain",
+    name: "Rare Track",
+    floorPrice: "1.8 ETH",
+    volume: "8.2K",
+    views: 1200,
+  },
+  {
+    stt: 7,
+    collectionType: "Gaming",
+    image: "https://th.bing.com/th/id/OIP.kGbNk6wMmDZ9aul31NxrCAAAAA?w=443&h=626&rs=1&pid=ImgDetMain",
+    name: "Gaming NFT",
+    floorPrice: "3.2 ETH",
+    volume: "12.5K",
+    views: 2000,
+  },
+  {
+    stt: 8,
+    collectionType: "Photography",
+    image: "https://th.bing.com/th/id/OIP.et3StuDx38d8-pKRJndFLQHaNK?w=576&h=1024&rs=1&pid=ImgDetMain",
+    name: "Landscape Photography",
+    floorPrice: "1.3 ETH",
+    volume: "5K",
+    views: 900,
+  },
+];
+
+
+// phân trang
+
+const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage_nft = 5; // Số lượng item hiển thị trên mỗi trang
+
+  const totalItems = nftData.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage_nft);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const indexOfLastItem = currentPage * itemsPerPage_nft;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage_nft;
+  const currentItems = nftData.slice(indexOfFirstItem, indexOfLastItem);
+
+//////////
+
+
+const trendingNowData = [
+  {
+    id: 1,
+    name: "CryptoPunks",
+    imgSrc: "../img/collection.png",
+    floor: "0.005 ETH",
+    volume: "4.5 ETH",
+    owners: 8
+  },
+  {
+    id: 2,
+    name: "Bored Ape Yacht Club",
+    imgSrc: "../img/collection.png",
+    floor: "1.2 ETH",
+    volume: "15.6 ETH",
+    owners: 12
+  },
+  {
+    id: 3,
+    name: "Art Blocks",
+    imgSrc: "../img/collection.png",
+    floor: "0.8 ETH",
+    volume: "9.3 ETH",
+    owners: 10
+  },
+  {
+    id: 4,
+    name: "Azuki",
+    imgSrc: "../img/collection.png",
+    floor: "0.02 ETH",
+    volume: "3.2 ETH",
+    owners: 5
+  },
+  {
+    id: 5,
+    name: "CryptoPunks",
+    imgSrc: "../img/collection.png",
+    floor: "0.005 ETH",
+    volume: "4.5 ETH",
+    owners: 8
+  },
+  {
+    id: 6,
+    name: "Bored Ape Yacht Club",
+    imgSrc: "../img/collection.png",
+    floor: "1.2 ETH",
+    volume: "15.6 ETH",
+    owners: 12
+  },
+  {
+    id: 7,
+    name: "Art Blocks",
+    imgSrc: "../img/collection.png",
+    floor: "0.8 ETH",
+    volume: "9.3 ETH",
+    owners: 10
+  },
+  {
+    id: 8,
+    name: "Azuki",
+    imgSrc: "../img/collection.png",
+    floor: "0.02 ETH",
+    volume: "3.2 ETH",
+    owners: 5
+  },
+];
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 4;
+
+    const handleNext = () => {
+    if (currentIndex < trendingNowData.length - itemsPerPage) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
   const CustomLegend = () => {
   return (
@@ -151,72 +338,82 @@ const topProducts = [
         <div className="trending_now_body_home_dashboard">
           <div className="title_trending_now_con">
             <p>Trending now</p>
+            <div className="pre_next">
+              <GrFormPrevious className='pre' onClick={handlePrev} />
+              <GrFormNext className='next'onClick={handleNext} />
+            </div>
           </div>
           <div className="content_trending_now_con">
-            <div className="trending_now_group_db">
-              <img src="../img/collection.png" alt="" />
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-            </div>
-             <div className="trending_now_group_db">
-              <img src="../img/collection.png" alt="" />
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-            </div>
-             <div className="trending_now_group_db">
-              <img src="../img/collection.png" alt="" />
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-            </div>
-             <div className="trending_now_group_db">
-              <img src="../img/collection.png" alt="" />
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
-              </div>
-              <div className="detail_trending_now_group">
-                <h3>Home decord rage</h3>
-                <p>thông tin của nft hay collection gì đó </p>
+        {trendingNowData.slice(currentIndex, currentIndex + itemsPerPage).map(item => (
+          <div className="trending_now_group_db" key={item.id}>
+            <img src={item.imgSrc} alt={item.name} />
+            <div className="detail_trending_now_group">
+              {/* <p>{item.id}</p> */}
+              <h3>{item.name}</h3>
+              <div className="detail_value">
+                <div className="item_con">
+                  <p className='title'>Floor</p>
+                  <p>{item.floor}</p>
+                </div>
+                <div className="item_con">
+                  <p className='title'>Volume</p>
+                  <p>{item.volume}</p>
+                </div>
+                <div className="item_con">
+                  <p className='title'>Owners</p>
+                  <p>{item.owners}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ))}
+      </div>
 
-        <div className="customer_home_dashboard">
-          <div className="title_search_customer_con">
-            <p>Customer</p>
-            <div className="search_customer_ccon">
-              <input type="search" placeholder='Search..' />
-              <IoMdSearch className='icon'/>
-            </div>
-          </div>
-
-          <div className="detail_table_customer_con">
-              <p>đây là bảng gì gì đó</p>
-          </div>
-          <div className="pagination_customer_detail_con">
-            <p>Showing 1-4 out of 15 data</p>
-            <p>nút phân trang</p>
-          </div>
         </div>
+            
+       <div className="all_nft_home_dashboard">
+      <div className="title_search_nft_con">
+        <p>All NFT</p>
+        <div className="search_nft_ccon">
+          <input type="search" placeholder="Search.." />
+          <IoMdSearch className="icon" />
+        </div>
+      </div>
+
+      <div className="detail_table_nft_con">
+        <div className="item_nft1">
+          <p className="stt">Stt</p>
+          <p className="collection">Collection</p>
+          <p className="image">Image</p>
+          <p className="name">Name</p>
+          <p className="floor_price">Floor price</p>
+          <p className="volume">Volume</p>
+          <p className="view">View</p>
+        </div>
+        {currentItems.map((nft, index) => (
+          <div className="item_nft" key={index}>
+            <p className="stt">{nft.stt}</p>
+            <p className="collection">{nft.collectionType}</p>
+            <img className="image" src={nft.image} alt={nft.name} />
+            <p className="name">{nft.name}</p>
+            <p className="floor_price">{nft.floorPrice}</p>
+            <p className="volume">{nft.volume}</p>
+            <p className="view">{nft.views}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="pagination_all_nft_con">
+        <p>
+          Showing {indexOfFirstItem + 1} - {indexOfLastItem > totalItems ? totalItems : indexOfLastItem} out of {totalItems} data
+        </p>
+        <div className="pre_next_page">
+          <GrFormPrevious className="pre" onClick={handlePrevPage} disabled={currentPage === 1} />
+          <p>{currentPage}</p>
+          <GrFormNext className="next" onClick={handleNextPage} disabled={currentPage === totalPages} />
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </div>
