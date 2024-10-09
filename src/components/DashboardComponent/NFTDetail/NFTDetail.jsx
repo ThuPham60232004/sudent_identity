@@ -122,6 +122,17 @@ import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
 import BuyModal from "../BuyModal/BuyModal";
 import SellModal from "../SellModal/SellModal";
 import { RiArrowDropDownLine,RiLayoutGrid2Line } from "react-icons/ri";
+import { IoClose } from "react-icons/io5";
+import { BsFillTagsFill } from "react-icons/bs";
+import { PiArrowsDownUpBold } from "react-icons/pi";
+import { FaEthereum,FaDiscord,FaTwitter } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import { RiBarChartHorizontalFill,RiLayout4Fill } from "react-icons/ri";
+import { TbWorld } from "react-icons/tb";
+import { IoMdMore } from "react-icons/io";
+import { BiSolidCommentDetail } from "react-icons/bi";
+
 
 const NFTDetail = () => {
   const bids = [
@@ -139,73 +150,132 @@ const NFTDetail = () => {
   const closeModal = () => setIsModalOpen(false);
   const openBuyModal = () => setIsBuyModalOpen(true);
   const closeBuyModal = () => setIsBuyModalOpen(false);
+
+const dummyData = [
+    {
+      name: 'NFT Name 1',
+      price: '0.17 ETH',
+      lastSale: '0.13 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 2',
+      price: '0.25 ETH',
+      lastSale: '0.18 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 3',
+      price: '0.17 ETH',
+      lastSale: '0.13 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 4',
+      price: '0.25 ETH',
+      lastSale: '0.18 WETH',
+      image: '../img/collection.png',
+    },
+  ];
+
+
   return (
     <div className="nft_detaile_page">
-      <div className="container1">
-        <div className="left_container">
-          <div className="image_nft">
-            <img src="../img/collection.png" alt="" />
+      <div className="nft_detail_page_container1">
+        <div className="left_detail_page_con1">
+          <div className="left_detail_page_con1_main">
+            <div className="image_nft_detail_con1">
+              <div className="heart_nft_img">
+                <FaEthereum/>
+                <div className="right_heart_nft_img">
+                  <MdOutlineZoomOutMap/>
+                  <CiHeart/>
+                </div>     
+              </div>
+              <img src="../img/collection.png" alt="" />
+              <div className="item_img_detail_con1">
+                <img src="../img/collection.png" alt="" />
+                <img src="../img/collection.png" alt="" />
+                <img src="../img/collection.png" alt="" />
+                <img src="../img/collection.png" alt="" />
+              </div>
+            </div>
+            <div className="description_nft_con1">
+              <div className="title_con1">
+                <RiBarChartHorizontalFill className="icon_RiBarChartHorizontalFill"/>
+                <p>Description</p>
+              </div>
+              <div className="by_user_create_nft_con1">
+                <p>By <span><a href="#">88B223</a></span></p>
+              </div>
+              <div className="about_nft_detail_con1">
+                <div className="title_about_nft_detail_con1">
+                  <div className="title_about_con1_left">
+                    <RiLayout4Fill/>
+                  <p>About Gomble spacekids</p>
+                  </div>
+                  <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+                </div>
+                <div className="des_nft_detail_con1">
+                  <p>GOMBLE's PFP Collection: SpaceKids NFTs unlock exclusive benefits and access to some of the largest token allocations in GOMBLE’s universe. Dive into the dynamic gameplay and secure your place among the stars with these limited-edition NFTs. Don’t miss this last chance to power up your game and take your collection to new heights!</p>
+                  <div className="hype_link_connect_con1">
+
+                    <div className="item_link_connect_con1">
+                      <TbWorld className="icon_link_hype"/>
+                    </div>
+                    <div className="item_link_connect_con1">
+                      <FaDiscord className="icon_link_hype"/>
+                    </div>
+                    <div className="item_link_connect_con1">
+                      <FaTwitter className="icon_link_hype"/>
+                    </div>
+                    <div className="item_link_connect_con1">
+                      <IoMdMore className="icon_link_hype"/>
+                    </div>
+                </div>
+                </div>
+                
+              </div>
+              <div className="detail_nft_con1">
+                <div className="title_detail_con1">
+                  <div className="title_detail">
+                    <BiSolidCommentDetail className="icon_BiSolidCommentDetail"/>
+                    <p>Detail</p>
+                  </div>
+                  <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+                </div>
+                <div className="content_detail_Con1">
+                  <div className="item_content_con1">
+                    <p>Contract Address</p>
+                    <a href="#">0x606e...1081</a>
+                  </div>
+                  <div className="item_content_con1">
+                    <p>Token ID</p>
+                    <p>1316</p>
+                  </div>
+                  <div className="item_content_con1">
+                    <p>Token Standard</p>
+                    <p>1316</p>
+                  </div>
+                  <div className="item_content_con1">
+                    <p>Chain</p>
+                    <p>ERC-721</p>
+                  </div>
+                  <div className="item_content_Con1">
+                    <p>Last Updated</p>
+                    <p>13 days ago</p>
+                  </div>
+                  <div className="item_content_con1">
+                    <p>Creator Earnings</p>
+                    <p>1%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="description_detail">
-            <div className="title">
-              <RiArrowDropDownLine/>
-              <p>Description</p>
-            </div>
-            <div className="by_user">
-              {/* dẫn tới trang người tạo */}
-              <p>By <span><a href="#">88B223</a></span></p>
-            </div>
-            <div className="about_nft">
-              <div className="title_about">
-                <p>About Gomble spacekids</p>
-                <RiArrowDropDownLine/>
-              </div>
-              <div className="detail">
-                <p>GOMBLE's PFP Collection: SpaceKids NFTs unlock exclusive benefits and access to some of the largest token allocations in GOMBLE’s universe. Dive into the dynamic gameplay and secure your place among the stars with these limited-edition NFTs. Don’t miss this last chance to power up your game and take your collection to new heights!</p>
-              </div>
-              <div className="link">
-                <RiArrowDropDownLine/>
-                <RiArrowDropDownLine/>
-                <RiArrowDropDownLine/>
-                <RiArrowDropDownLine/>
-                <p>có nhiều icon ở đây</p>
-              </div>
-            </div>
-            <div className="detail nft">
-              <div className="title_detail">
-                <p>Detail</p>
-                <RiArrowDropDownLine/>
-              </div>
-              <div className="content_detail">
-                <div className="item_content">
-                  <p>Contract Address</p>
-                  <a href="#">0x606e...1081</a>
-                </div>
-                 <div className="item_content">
-                  <p>Token ID</p>
-                  <p>1316</p>
-                </div>
-                <div className="item_content">
-                  <p>Token Standard</p>
-                  <p>1316</p>
-                </div>
-                <div className="item_content">
-                  <p>Chain</p>
-                  <p>ERC-721</p>
-                </div>
-                <div className="item_content">
-                  <p>Last Updated</p>
-                  <p>13 days ago</p>
-                </div>
-                <div className="item_content">
-                  <p>Creator Earnings</p>
-                  <p>1%</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
-        <div className="right_container">
+        <div className="right_detail_page_con1">
             <div className="info_nft">
               <div className="action_con">
                 <a href="#">Gomble spacekids</a>
@@ -315,68 +385,98 @@ const NFTDetail = () => {
             </div>
         </div>
       </div>
-      <div className="container2">
-        <div className="header">
-          <div className="title">
-            <RiArrowDropDownLine/>
-            <p>Item Activity</p>
-          </div>
-          <div className="open_close">
-            <RiArrowDropDownLine/>
-          </div>
+      <div className="nft_detail_page_container2">
+        <div className="nft_detail_page_con2">
+          <div className="header_con2">
+            <div className="title_header_con2">
+                <PiArrowsDownUpBold className="icon_item_activity"/>
+                <p>Item Activity</p>
+              </div>
+              <div className="open_close_con2">
+                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+              </div>   
         </div>
-        <div className="body">
-          <div className="filter">
-            <p>Filter</p>
-            <RiArrowDropDownLine/>
+        <div className="body_con2">
+          <div className="filter_body_con2">
+            <div className="title_filter_con2">
+              <p>Filter</p>
+              <RiArrowDropDownLine className="icon_dropdown_filter_con2"/>
+            </div>
+            <div className="filter_con2">
+              <div className="item_filter_con2">
+                <p>Sales</p>
+                <IoClose/>
+              </div>
+               <div className="item_filter_con2">
+                <p>Listings</p>
+                <IoClose/>
+              </div>
+              <p className="clear_all">Clear All</p>
+            </div>  
           </div>
-          <div className="content">
-            <div className="title_item_activity">
+          <div className="content_con2">
+            <div className="title_item_activity_con2">
               <p>Event</p>
               <p>Price</p>
               <p>From</p>
               <p>To</p>
               <p>Date</p>
             </div>
-            <div className="item_activity">
-              <div className="list_con">
-                <RiArrowDropDownLine/>
+            <div className="item_activity_con2">
+              <div className="list_con2">
+                <BsFillTagsFill className="icon_list_con2"/>
                  <p>List</p>
               </div>
               <p>0.1265 ETH</p>
-              <p>E239FD</p>
-              <p>-</p>
+              <a href="#">YuraYuraGay</a>
+              <a href="#"></a>
+              <p>31m ago</p>
+            </div>
+            <div className="item_activity_con2">
+              <div className="list_con2">
+                <BsFillTagsFill className="icon_list_con2"/>
+                 <p>List</p>
+              </div>
+              <p>0.1265 ETH</p>
+              <a href="#">YuraYuraGay</a>
+              <a href="#">YuraYuraGay</a>
               <p>31m ago</p>
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
-      <div className="container3">
-        <div className="header">
-          <div className="title">
-            <RiLayoutGrid2Line/>
+      <div className="nft_detail_page_container3">
+        <div className="nft_detail_page_con3">
+          <div className="header_con3">
+          <div className="title_con3">
+            <RiLayoutGrid2Line className="icon_nft_detail_page"/>
             <p>More from this collection</p>
           </div>
-          <div className="open_close_container3">
-             <RiArrowDropDownLine/>
+          <div className="open_close_con3">
+             <RiArrowDropDownLine className="icon_open_close_nft_page"/>
           </div>
         </div>
-        <div className="body">
+        <div className="body_container3">
           {/* có thể lướt ngang */}
-          <div className="item_nft">
-            <img src="../img/collection.png" alt="" />
-            <div className="detail_nft">
-              <div className="info">
-                <h3>name</h3>
-                <p>0.17 ETH</p>
-                <p>Last sale : 0.13 WETH</p>
+          {dummyData.map((nft, index) => (
+          <div key={index} className="item_nft_con3">
+            <img src={nft.image} alt="" />
+            <div className="detail_nft_con3">
+              <div className="info_con3">
+                <h3>{nft.name}</h3>
+                <h4>{nft.price}</h4>
+                <p>Last sale : {nft.lastSale}</p>
               </div>
-              <div className="btn_buy_cart">
-                <div className="buy">Buy</div>
-                <div className="cart">Cart</div>
+              <div className="btn_buy_cart_con3">
+                <div className="buy_con3">Buy</div>
+                <div className="cart_con3">Cart</div>
               </div>
             </div>
           </div>
+          ))}
+        </div>
         </div>
       </div>
     </div>
