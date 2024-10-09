@@ -62,7 +62,7 @@ function App() {
               <Route path="CreatePage" element={<CreatePage/>} />
               <Route path="NFTsPage" element={<NFTsPage />} />
               <Route path="PoolTable" element={<PoolTable />} />
-              <Route path="AccountDashboard" element={<Account />} />
+              <Route path="Profile" element={<Profile />} />
               <Route path="SwapComponent" element={<SwapComponent />} />
           </Route>
         {/* COLLECTION DETAIL----------------------------------------------------------- */}

@@ -43,7 +43,7 @@ const Dashboard = () => {
     onClick: openModal 
   },
   { icon: <SwapHorizIcon style={{ width: '20px', height: '20px' }} />, text: "Swap", path: "/Dashboard/SwapComponent" },
-  { icon: <AccountCircleIcon style={{ width: '20px', height: '20px' }} />, text: "Profile", path: "/Dashboard/AccountDashboard" },
+  { icon: <AccountCircleIcon style={{ width: '20px', height: '20px' }} />, text: "Profile", path: "/Dashboard/Profile" },
   { icon: <HowToVoteIcon style={{ width: '20px', height: '20px' }} />, text: "Vote", path: "/Dashboard" },
   { icon: <MdLogout style={{ width: '20px', height: '20px' }} />, text: "Logout", path: "/login" },
  
