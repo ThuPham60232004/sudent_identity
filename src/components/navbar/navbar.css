@@ -110,6 +110,9 @@ align-items: center;
   background-clip: text;
   -webkit-background-clip: text; 
   transition: color 0.5s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px; 
 }
 
 .dropdown {
@@ -138,14 +141,13 @@ align-items: center;
 }
 
 .dropdown a:hover{
-  color: #e20c0c;
+  color: #960758;
 }
 
 .connect-wallet-btn {
   display: flex;
   background: linear-gradient(45deg, #960758, #1057b4); 
   border-radius: 10px;
-
   cursor: pointer;
   align-items: center; 
   justify-content: center; 
@@ -230,7 +232,6 @@ align-items: center;
   .navbar{
     height: 80px;
     width: 100%;
-    /* position: relative; */
     top: auto;
   }
   .navbar-container {
@@ -249,30 +250,27 @@ align-items: center;
   }
   .icon_mobile_dropdown{
     color: #ff7f50;
-}
+  }
   .navbar-item {
     display: none; 
   }
-
   .icon_navbar-bars {
     display: block; 
     font-size: 30px;
   }
-
   .connect-wallet-btn {
     display: none;
   }
-
   .dropdown {
     cursor: pointer;
     margin-left: 10px;
   }
   .mobile-menu {
- margin-top: 30px;
- display: flex;
- height: 100%;
- line-height: 20px;
-  padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    height: 100%;
+    line-height: 20px;
+    padding: 20px;
   }
     .mobile-menu-item a{
     line-height: 20px;
@@ -284,24 +282,20 @@ align-items: center;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 20px;
-  
   }
   a.item_normal{
     color: white;
   }
-
-
   .mobile-menu-item:hover,
   .mobile-menu-item a:hover{
     color: #ff7f50;
   }
   .mobile-menu-item{
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  font-size: 18px;
-
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
   }
   .mobile-menu-item a{
     text-decoration: none;
@@ -312,8 +306,6 @@ align-items: center;
     color:#2d292b ;
     font-size: 25px;
   }
-
-
 }
 
 

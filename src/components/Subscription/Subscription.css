@@ -8,7 +8,7 @@
 
 .SubscriptionBox {
     width: 300px;
-    border: 1px solid var(--icons-color);
+    border: 1px solid white;
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
@@ -20,7 +20,7 @@
 }
 
 .SubscriptionBox:hover {
-    box-shadow: var(--box-shadow);
+    box-shadow: white;
     transform: translateY(-0.5rem);
 }
 
@@ -34,7 +34,7 @@
 .SubscriptionBox_box_span {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: white;
 }
 
 .SubscriptionBox_box_small {
@@ -43,7 +43,7 @@
     top: 1.5rem;
     font-size: 1rem;
     background-color: var(--highlight-color);
-    color: var(--main-bg-color);
+    color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 0.3rem;
     font-weight: bold;
@@ -52,7 +52,7 @@
 .SubscriptionBox_box_price {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--highlight-color);
+    color: white;
     margin: 1rem 0;
 }
 
@@ -69,16 +69,16 @@
     gap: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.5;
-    color: var(--text-color);
+    color: white;
 }
 
 .SubscriptionBox_box_info_para span {
-    color: var(--highlight-color);
+    color: white;
 }
 
 button {
     background-color: var(--highlight-color);
-    color: var(--main-bg-color);
+    color: white;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
@@ -89,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--highlight-color-hover);
+    background-color: white;
 }
 
 @media screen and (max-width: 35em) {

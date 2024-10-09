@@ -12,10 +12,13 @@ const ShareNFTModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-x">
         <button className="close-button" onClick={onClose}>
           &times;
         </button>
         <h3>SHARE THIS NFT</h3>
+        </div>
+        
         <div className="icons-container">
           <div className="icon-item">
             <TwitterIcon className="share-icon" />

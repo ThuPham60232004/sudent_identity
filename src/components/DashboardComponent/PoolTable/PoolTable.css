@@ -1,5 +1,4 @@
 .farm-table-cointainer{
-    width: 100%;
     display: flex;
 }
 .farm-table-sideBar{
@@ -9,8 +8,8 @@
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    background-color: white;
-    
+    background-color: black;
+    color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -26,7 +25,7 @@
   
   .farm-table-header {
     font-weight: bold;
-    background-color: #f9f9f9;
+    background-color: black;
   }
   
   .farm-row {
@@ -42,24 +41,23 @@
   .pool-icon {
     width: 30px;
     height: 30px;
-    background-color: #eee;
+    background-color: black;
     border-radius: 50%;
     margin-right: 10px;
   }
   
   .annualized {
     font-size: 12px;
-    color: #888;
+    color: white;
   }
   
   .farm-row div {
     font-size: 14px;
-    color: #333;
+    color: white;
   }
   
-  /* Expanded section */
   .farm-details {
-    background-color: #f7f8fa;
+    background-color: black;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
@@ -71,7 +69,7 @@
     color: #666;
     text-align: center;
     padding: 10px;
-    background-color: #eee;
+    background-color: black;
     border-radius: 5px;
   }
   
@@ -90,8 +88,8 @@
   }
   
   .approve-btn {
-    background-color: #111;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 12px;
     border: none;
     border-radius: 5px;

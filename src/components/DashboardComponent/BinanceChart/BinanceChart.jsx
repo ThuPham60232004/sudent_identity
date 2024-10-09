@@ -152,136 +152,124 @@ const volumeData = [
 ];
 
 const option = {
-    backgroundColor: '#FFFFFF',
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'cross'
+  backgroundColor: '#121212', 
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    },
+    backgroundColor: '#1e1e1e',
+    borderWidth: 1,
+    borderColor: '#CCCCCC',
+    padding: 10,
+    textStyle: {
+      color: '#ffffff' 
+    },
+    position: function (pos, params, el, elRect, size) {
+      const obj = { top: 10 };
+      obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 30;
+      return obj;
+    }
+  },
+  grid: [
+    {
+      left: '10%',
+      right: '10%',
+      height: '60%',
+      containLabel: true
+    },
+    {
+      left: '10%',
+      right: '10%',
+      top: '75%',
+      height: '15%',
+      containLabel: true
+    }
+  ],
+  xAxis: [
+    {
+      type: 'category',
+      data: candlestickData.map(item => item[0]),
+      scale: true,
+      boundaryGap: false,
+      axisLine: { lineStyle: { color: '#ffffff' } },
+      axisLabel: {
+        margin: 15,
+        color: '#ffffff' 
       },
-      backgroundColor: '#F0F0F0',
-      borderWidth: 1,
-      borderColor: '#CCCCCC',
-      padding: 10,
-      textStyle: {
-        color: '#000000'
-      },
-      position: function (pos, params, el, elRect, size) {
-        const obj = { top: 10 };
-        obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 30;
-        return obj;
+      axisTick: {
+        show: false
       }
     },
-    grid: [
-      {
-        left: '10%',
-        right: '10%',
-        height: '60%',
-        containLabel: true
+    {
+      type: 'category',
+      gridIndex: 1,
+      data: volumeData.map(item => item[0]),
+      axisLine: { lineStyle: { color: '#ffffff' } }, 
+      axisLabel: {
+        margin: 15,
+        color: '#ffffff' 
       },
-      {
-        left: '10%',
-        right: '10%',
-        top: '75%',
-        height: '15%',
-        containLabel: true
+      axisTick: {
+        show: false
       }
-    ],
-    xAxis: [
-      {
-        type: 'category',
-        data: candlestickData.map(item => item[0]),
-        scale: true,
-        boundaryGap: false,
-        axisLine: { lineStyle: { color: '#000000' } },
-        axisLabel: {
-          margin: 15 
+    }
+  ],
+  yAxis: [
+    {
+      scale: true,
+      axisLine: { lineStyle: { color: '#ffffff' } },
+      splitLine: { show: false },
+      axisLabel: {
+        margin: 10,
+        color: '#ffffff' 
+      },
+      axisTick: {
+        show: false
+      }
+    },
+    {
+      scale: true,
+      gridIndex: 1,
+      axisLine: { lineStyle: { color: '#ffffff' } }, 
+      splitLine: { show: false },
+      axisLabel: {
+        margin: 10,
+        color: '#ffffff' 
+      },
+      axisTick: {
+        show: false
+      }
+    }
+  ],
+  series: [
+    {
+      name: 'Candlestick',
+      type: 'candlestick',
+      data: candlestickData.map(item => [item[1], item[2], item[3], item[4]]),
+      itemStyle: {
+        color: function(params) {
+          return params.value[1] < params.value[3] ? '#00FF00' : '#FF0000'; // Màu xanh cho tăng giá, đỏ cho giảm giá
         },
-        axisTick: {
-          show: false
-        }
-      },
-      {
-        type: 'category',
-        gridIndex: 1,
-        data: volumeData.map(item => item[0]),
-        axisLine: { lineStyle: { color: '#000000' } },
-        axisLabel: {
-          margin: 15 
-        },
-        axisTick: {
-          show: false
+        color0: '#00FF00', 
+        borderColor: '#00FF00',
+        borderColor0: '#FF0000'
+      }
+    },
+    {
+      name: 'Volume',
+      type: 'bar',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: volumeData.map(item => item[1]),
+      itemStyle: {
+        color: function(params) {
+          return params.value >= 0 ? '#00FF00' : '#FF0000'; // Màu xanh cho thanh volume
         }
       }
-    ],
-    yAxis: [
-      {
-        scale: true,
-        axisLine: { lineStyle: { color: '#000000' } },
-        splitLine: { show: false },
-        axisLabel: {
-          margin: 10 
-        },
-        axisTick: {
-          show: false
-        }
-      },
-      {
-        scale: true,
-        gridIndex: 1,
-        axisLine: { lineStyle: { color: '#000000' } },
-        splitLine: { show: false },
-        axisLabel: {
-          margin: 10 
-        },
-        axisTick: {
-          show: false
-        }
-      }
-    ],
-    dataZoom: [
-      {
-        type: 'inside',
-        xAxisIndex: [0, 1],
-        start: 50,
-        end: 100
-      },
-      {
-        show: true,
-        xAxisIndex: [0, 1],
-        type: 'slider',
-        top: '85%',
-        start: 50,
-        end: 100
-      }
-    ],
-    series: [
-      {
-        name: 'Candlestick',
-        type: 'candlestick',
-        data: candlestickData.map(item => [item[1], item[2], item[3], item[4]]),
-        itemStyle: {
-          color: function(params) {
-            return params.value[1] < params.value[3] ? '#00FF00' : '#FF0000';
-          },
-          color0: '#FF0000',
-          borderColor: '#00FF00',
-          borderColor0: '#FF0000'
-        }
-      },
-      {
-        name: 'Volume',
-        type: 'bar',
-        xAxisIndex: 1,
-        yAxisIndex: 1,
-        data: volumeData.map(item => item[1]),
-        itemStyle: {
-          color: function(params) {
-            return params.value >= 0 ? '#00FF00' : '#FF0000';
-          }
-        }
-      }
-    ]
-  };
+    }
+  ]
+};
 
 const BinanceChart = () => {
   return (

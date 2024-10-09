@@ -1,69 +1,95 @@
-.NFTs {
+.nfts-container {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #121212;
 }
 
-.NFTs-header {
+.nfts-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.nft-controls {
+.nfts-controls {
   display: flex;
   align-items: center;
 }
 
 select {
-  padding: 8px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid #555;
   border-radius: 5px;
-  margin-right: 15px;
-  background-color: white;
-}
-
-.nft-icons .icon {
-  font-size: 1.5rem;
-  margin-left: 10px;
+  background-color: #1e1e1e;
+  color: white;
+  margin-right: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.nft-grid {
+select:hover {
+  background-color: #333;
+}
+
+.nfts-icons .icon {
+  font-size: 1.5rem;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nfts-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+.nfts-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.nft-card {
+.nfts-gallery-item {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #1e1e1e;
+  color: white;
+  transition: transform 0.2s ease;
 }
 
-.nft-image {
+.nfts-gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.nfts-gallery-item-image img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
-.nft-info {
+.nfts-gallery-item-info {
   padding: 15px;
 }
 
-.nft-username {
-  font-weight: bold;
+.nfts-gallery-item-info h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.nfts-gallery-item-rank,
+.nfts-gallery-item-floorPrice,
+.nfts-gallery-item-volume,
+.nfts-gallery-item-owners {
   margin-bottom: 5px;
+  display: flex;
+  gap: 6px;
+  font-size: 16px;
 }
 
-.nft-title {
-  margin: 5px 0;
-  font-size: 1.1rem;
-}
-
-.nft-collection,
-.nft-price {
-  font-size: 0.9rem;
-  color: #666;
+.loading-spinner {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
 }

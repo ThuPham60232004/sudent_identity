@@ -97,8 +97,8 @@
   margin-left: 20%; 
   margin-top: 80px;
   width: 80%;
-  color: black;
-  background: white;
+  color: white;
+  background: black;
   transition: margin-left 0.3s ease, width 0.3s ease; 
 }
 
