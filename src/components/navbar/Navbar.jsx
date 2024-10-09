@@ -5,7 +5,8 @@ import { RiArrowDropDownFill } from "react-icons/ri";
 import { FaBarsStaggered } from "react-icons/fa6";
 import WalletModal from '../WalletModal/WalletModal';
 import WalletDetailLogin from '../WalletDetailLogin/WalletDetailLogin';
-import { ethers, formatEther, parseEther } from 'ethers'; 
+import { ethers, formatEther } from 'ethers'; 
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [showDropdownCreate, setShowDropdownCreate] = useState(false);
@@ -67,6 +68,22 @@ const Navbar = () => {
     setOpenWalletDetailModal(false); 
   };
 
+  const handleMouseEnterCreate = () => {
+    setTimeout(() => setShowDropdownCreate(true), 200); 
+  };
+
+  const handleMouseLeaveCreate = () => {
+    setTimeout(() => setShowDropdownCreate(false), 1000); 
+  };
+
+  const handleMouseEnterExplore = () => {
+    setTimeout(() => setShowDropdownExplore(true), 200);
+  };
+
+  const handleMouseLeaveExplore = () => {
+    setTimeout(() => setShowDropdownExplore(false), 1000); 
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -76,43 +93,46 @@ const Navbar = () => {
         </div>
 
         <div className="menu_navbar">
+        <div className="navbar-item"><Link to='/'>Home</Link></div>
           <div className="navbar-item-wrapper">
             <div
               className="navbar-item"
-              onMouseEnter={() => setShowDropdownCreate(true)}
-              onMouseLeave={() => setShowDropdownCreate(false)}
+              onMouseEnter={handleMouseEnterCreate}
+              onMouseLeave={handleMouseLeaveCreate}
             >
               Create
               <RiArrowDropDownFill size={30}/>
             </div>
             {showDropdownCreate && (
               <div className="dropdown">
-                <a href="#">NFT & Collection</a>
-                <a href="#">My Profile</a>
+                <Link to='/CreatePage'>NFT & Collection</Link>
+                <Link to='/Profile'>My Profile</Link>
               </div>
             )}
           </div>
 
           <div className="navbar-item-wrapper">
+          
             <div
               className="navbar-item"
-              onMouseEnter={() => setShowDropdownExplore(true)}
-              onMouseLeave={() => setShowDropdownExplore(false)}
+              onMouseEnter={handleMouseEnterExplore}
+              onMouseLeave={handleMouseLeaveExplore}
             >
               Explore
               <RiArrowDropDownFill size={30}/>
             </div>
             {showDropdownExplore && (
               <div className="dropdown">
-                <a href="#">All NFTs</a>
-                <a href="#">All Collections</a>
-                <a href="#">Categories</a>
+                <Link to='/'>All NFTs</Link>
+                <Link to=''>All Collections</Link>
+                <Link to='/Dashboard'>Dashboard</Link>
+                <Link to='/Subscription'>Subscription</Link>
               </div>
             )}
           </div>
 
-          <div className="navbar-item"><a href="">About</a></div>
-          <div className="navbar-item"><a href="">Contact Us</a></div>
+          <div className="navbar-item"><Link to=''>About</Link></div>
+          <div className="navbar-item"><Link to='/ContactUs'>Contact Us</Link></div>
         </div>
 
         {walletAddress ? (
