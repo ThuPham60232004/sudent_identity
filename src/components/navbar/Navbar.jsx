@@ -5,7 +5,8 @@ import { RiArrowDropDownFill } from "react-icons/ri";
 import { FaBarsStaggered } from "react-icons/fa6";
 import WalletModal from '../WalletModal/WalletModal';
 import WalletDetailLogin from '../WalletDetailLogin/WalletDetailLogin';
-import { ethers } from 'ethers';
+import { ethers, formatEther, parseEther } from 'ethers'; 
+
 const Navbar = () => {
   const [showDropdownCreate, setShowDropdownCreate] = useState(false);
   const [showDropdownExplore, setShowDropdownExplore] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const savedAddress = localStorage.getItem("walletAddress");
     if (savedAddress) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.BrowserProvider(window.ethereum);
       handleWalletConnect(savedAddress, provider);
     }
   }, []);
@@ -35,23 +36,29 @@ const Navbar = () => {
   const handleClose = () => {
     setOpenModal(false);
   };
+
   const handleOpenWalletDetail = () => {
     setOpenWalletDetailModal(true);
   };
+
   const handleWalletConnect = async (address, provider) => {
     setWalletAddress(address);  
     localStorage.setItem("walletAddress", address);
     
-    const balance = await provider.getBalance(address);
-    const formattedBalance = ethers.utils.formatEther(balance); 
-    setWalletBalance(formattedBalance); 
-  
-  
-    const network = await provider.getNetwork();
-    setChainName(network.name);
+    try {
+        const balance = await provider.getBalance(address);
+        const formattedBalance = formatEther(balance); 
+        setWalletBalance(formattedBalance); 
+
+        const network = await provider.getNetwork();
+        setChainName(network.name);
+    } catch (error) {
+        console.error("Error fetching balance or network:", error);
+    }
   
     setOpenModal(false); 
   };
+
   const handleWalletDisconnect = () => {
     localStorage.removeItem("walletAddress");
     setWalletAddress(null);
@@ -59,7 +66,6 @@ const Navbar = () => {
     setChainName(null);
     setOpenWalletDetailModal(false); 
   };
-
 
   return (
     <div className="navbar">
@@ -109,92 +115,79 @@ const Navbar = () => {
           <div className="navbar-item"><a href="">Contact Us</a></div>
         </div>
 
-
         {walletAddress ? (
-        <div className="wallet-info" onClick={handleOpenWalletDetail}>
-          <div className="wallet-address">
-            {`${walletAddress.substring(0, 6)}...${walletAddress.substring(walletAddress.length - 4)}`}
+          <div className="wallet-info" onClick={handleOpenWalletDetail}>
+            <div className="wallet-address">
+              {`${walletAddress.substring(0, 6)}...${walletAddress.substring(walletAddress.length - 4)}`}
+            </div>
+            <div className="wallet-balance">
+              {walletBalance ? `${walletBalance} ETH` : "Loading..."}
+            </div>
+            <div className="chain-name">
+              {chainName ? chainName : "Unknown Chain"}
+            </div>
           </div>
-          <div className="wallet-balance">
-            {walletBalance ? `${walletBalance} ETH` : "Loading..."}
-          </div>
-          <div className="chain-name">
-            {chainName ? chainName : "Unknown Chain"}
-          </div>
-        </div>
-      ) : (
-        <button className="connect-wallet-btn" onClick={handleClick}>
-          Connect Wallet
-        </button>
-      )}
-
+        ) : (
+          <button className="connect-wallet-btn" onClick={handleClick}>
+            Connect Wallet
+          </button>
+        )}
 
         {openModal && <WalletModal onClose={handleClose} onConnect={handleWalletConnect} />}
-        {openWalletDetailModal  && <WalletDetailLogin onClose={() => setOpenWalletDetailModal(false)} onDisconnect={handleWalletDisconnect} />}
+        {openWalletDetailModal && <WalletDetailLogin onClose={() => setOpenWalletDetailModal(false)} onDisconnect={handleWalletDisconnect} />}
 
         <FaBarsStaggered className="icon_navbar-bars" onClick={toggleMobileMenu} />
 
         {showMobileMenu && (
           <div className="mobile-menu">
-            {/* Các mục mobile */}
             <div className="mobile-menu-item" onClick={() => setShowDropdownCreate(!showDropdownCreate)}>
-
               <a href="#">Create</a>
               <RiArrowDropDownFill className='icon_dropdown_fill'/>
-
             </div>
             {showDropdownCreate && (
-            <div className="mobile-dropdown">
-               <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-                <a href="#">NFT & Collection</a>
+              <div className="mobile-dropdown">
+                <div className="mobile_dropdown_box">
+                  <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">NFT & Collection</a>
+                </div>
+                <div className="mobile_dropdown_box">
+                  <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">My profile</a>
+                </div>
               </div>
-               <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-                <a href="#">My profile</a>
-              </div>
-              
-            </div>
-          )}
+            )}
 
-          <div className="mobile-menu-item"
-            onClick={() => setShowDropdownExplore(!showDropdownExplore)}>
-            <a href="#">Explore</a>
-            <RiArrowDropDownFill className='icon_dropdown_fill'/>
-            
-          </div>
-          {showDropdownExplore && (
-            <div className="mobile-dropdown">
-              <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-                <a href="#">All NFTs</a>
-              </div>
-           
-           <div className="mobile_dropdown_box">
-                 <FaPlus className='icon_mobile_dropdown'/>
-                  <a href="#">All Collections</a>
-              </div>
-        
-        
+            <div className="mobile-menu-item" onClick={() => setShowDropdownExplore(!showDropdownExplore)}>
+              <a href="#">Explore</a>
+              <RiArrowDropDownFill className='icon_dropdown_fill'/>
             </div>
-          )}
-          <div className="mobile-menu-item">
-            <a href="#" className='item_normal'>About</a> 
+            {showDropdownExplore && (
+              <div className="mobile-dropdown">
+                <div className="mobile_dropdown_box">
+                  <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">All NFTs</a>
+                </div>
+                <div className="mobile_dropdown_box">
+                  <FaPlus className='icon_mobile_dropdown'/>
+                  <a href="#">All Collections</a>
+                </div>
+              </div>
+            )}
+
+            <div className="mobile-menu-item">
+              <a href="#" className='item_normal'>About</a> 
+            </div>
+            <div className="mobile-menu-item">
+              <a href="#" className='item_normal'>Contact Us</a>   
+            </div>
+            <div className="mobile-menu-item">
+              <a href="#" className='item_normal'>Connect Wallet</a>
+            </div>
           </div>
-          <div className="mobile-menu-item">
-            <a href="#"className='item_normal'>Contact Us</a>   
-          </div>
-        <div className="mobile-menu-item">
-          <a href="#" className='item_normal'>Connect Wallet</a>
-        </div>
-          
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </div>
   );
 };
 
 export default Navbar;
-
-
