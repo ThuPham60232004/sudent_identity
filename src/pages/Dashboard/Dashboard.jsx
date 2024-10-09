@@ -16,6 +16,7 @@ import { RiNftFill, RiArrowDropDownLine } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
+import { MdLogout } from "react-icons/md";
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +45,7 @@ const Dashboard = () => {
   { icon: <SwapHorizIcon style={{ width: '20px', height: '20px' }} />, text: "Swap", path: "/Dashboard/SwapComponent" },
   { icon: <AccountCircleIcon style={{ width: '20px', height: '20px' }} />, text: "Profile", path: "/Dashboard/AccountDashboard" },
   { icon: <HowToVoteIcon style={{ width: '20px', height: '20px' }} />, text: "Vote", path: "/Dashboard" },
+  { icon: <MdLogout style={{ width: '20px', height: '20px' }} />, text: "Logout", path: "/login" },
  
 ];
 

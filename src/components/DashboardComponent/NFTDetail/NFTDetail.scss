@@ -1,0 +1,37 @@
+.nft_detaile_page{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .container1{
+        width: 100%;
+        background: orange;
+    }
+    .container2{
+        width: 100%;
+        background: green;
+    }
+    .container3{
+        width: 100%;
+        background: gray;
+        display: flex;
+        flex-direction: column;
+        .header{
+            display: flex;
+            background: rgb(184, 37, 37);
+    
+
+            .title{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                
+                background: olive;
+            }
+            .open_close_container3{
+
+            }
+        }
+    }
+}
