@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext, useEffect,useState } from 'react';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { TbWorld } from "react-icons/tb";
 import { FaInstagram ,FaTwitter,FaHandshake,FaBars,FaEthereum} from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
@@ -7,8 +8,22 @@ import { RiArrowDropDownLine,RiLayoutGrid2Line ,RiLayoutGridLine} from "react-ic
 import { FaListUl } from "react-icons/fa6";
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import "./Profile.css"
-
+import { ItemContext } from '../../context/ItemContext';
 const Profile = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleMore = () => {
+        setIsExpanded(!isExpanded);
+    };
+    const { item } = useContext(ItemContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    useEffect(() => {
+        if (location.pathname === '/Dashboard/Profile') {
+            navigate('ActiveListings');
+        }
+    }, [location.pathname, navigate]);
+
   return (
     <div className="profile_page">
         <div className="navbar_profile">
@@ -46,16 +61,63 @@ const Profile = () => {
             </div>
         </div>   
         <div className="menu_choose_profile">
-            <div className="choose_item"><a href="#">Collected</a></div>
-            <div className="choose_item"><a href="#">Offer made</a></div>
-            <div className="choose_item"><a href="#">Deal</a></div>
-            <div className="choose_item"><a href="#"> Created</a></div>
-            <div className="choose_item"><a href="#">Favorited</a></div>
-            <div className="choose_item"><a href="#">Activity</a></div>
             <div className="choose_item">
-                 <p>More <span><RiArrowDropDownLine className='icon_profile_page'/></span></p>     
+                <NavLink to="Collected" className={({ isActive }) => isActive ? "active" : ""}>
+                    Collected
+                </NavLink>
             </div>
-
+            <div className="choose_item">
+                <NavLink to="OfferMade" className={({ isActive }) => isActive ? "active" : ""}>
+                    Offer made
+                </NavLink>
+            </div>
+            <div className="choose_item">
+                <NavLink to="Deal" className={({ isActive }) => isActive ? "active" : ""}>
+                    Deal
+                </NavLink>
+            </div>
+            <div className="choose_item">
+                <NavLink to="Created" className={({ isActive }) => isActive ? "active" : ""}>
+                    Created
+                </NavLink>
+            </div>
+            <div className="choose_item">
+                <NavLink to="Favorited" className={({ isActive }) => isActive ? "active" : ""}>
+                    Favorited
+                </NavLink>
+            </div>
+            <div className="choose_item">
+                <NavLink to="ActivityProfile" className={({ isActive }) => isActive ? "active" : ""}>
+                    Activity
+                </NavLink>
+            </div>
+            <div className="choose_item" onClick={toggleMore}>
+                <p>More <span><RiArrowDropDownLine className='icon_profile_page'/></span></p>
+            </div>
+            {isExpanded && (
+                <div className="choose_item_more">
+                    <div className="choose_item">
+                        <NavLink to="OffersReceived" className={({ isActive }) => isActive ? "active" : ""}>
+                        OffersReceived
+                        </NavLink>
+                    </div>
+                    <div className="choose_item">
+                        <NavLink to="ActiveListings" className={({ isActive }) => isActive ? "active" : ""}>
+                        ActiveListings
+                        </NavLink>
+                    </div>
+                    <div className="choose_item">
+                        <NavLink to="InactiveListings" className={({ isActive }) => isActive ? "active" : ""}>
+                        InactiveListings
+                        </NavLink>
+                    </div>
+                    <div className="choose_item">
+                        <NavLink to="Hiddens" className={({ isActive }) => isActive ? "active" : ""}>
+                            Hiddens
+                        </NavLink>
+                    </div>
+                </div>
+            )}
         </div>
             <div className="filter_search_profile">
                 <div className="bo_loc_fabar">
@@ -93,13 +155,7 @@ const Profile = () => {
                 </div>
             </div>
             <div className="display_items_container">
-                <div className="total_items">
-                     <p>0 Items</p>
-                </div>
-                <div className="items_container_profile">
-                    <p>No items found  for this search</p>
-                    <button>Back to all items</button>
-                </div>
+            <Outlet/>
             </div>
             
         </div>

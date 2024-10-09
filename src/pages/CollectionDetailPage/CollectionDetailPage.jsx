@@ -176,7 +176,7 @@ const CollectionDetailPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Mock data for item if context is empty
+
     const itemData = item || {
         imageUrl: './img/collection.png', 
         name: 'CryptoPunks', 
