@@ -5,7 +5,7 @@ import { RiArrowDropDownFill } from "react-icons/ri";
 import { FaBarsStaggered } from "react-icons/fa6";
 import WalletModal from '../WalletModal/WalletModal';
 import WalletDetailLogin from '../WalletDetailLogin/WalletDetailLogin';
-import { ethers, formatEther, parseEther } from 'ethers'; // Updated import
+import { ethers, formatEther, parseEther } from 'ethers'; 
 
 const Navbar = () => {
   const [showDropdownCreate, setShowDropdownCreate] = useState(false);
@@ -47,7 +47,7 @@ const Navbar = () => {
     
     try {
         const balance = await provider.getBalance(address);
-        const formattedBalance = formatEther(balance); // Use formatEther directly
+        const formattedBalance = formatEther(balance); 
         setWalletBalance(formattedBalance); 
 
         const network = await provider.getNetwork();
