@@ -122,16 +122,17 @@ import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
 import BuyModal from "../BuyModal/BuyModal";
 import SellModal from "../SellModal/SellModal";
 import { RiArrowDropDownLine,RiLayoutGrid2Line } from "react-icons/ri";
-import { IoClose } from "react-icons/io5";
+import { IoClose,IoShare } from "react-icons/io5";
 import { BsFillTagsFill } from "react-icons/bs";
 import { PiArrowsDownUpBold } from "react-icons/pi";
-import { FaEthereum,FaDiscord,FaTwitter } from "react-icons/fa";
+import { FaEthereum,FaDiscord,FaTwitter,FaHandshake } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import { RiBarChartHorizontalFill,RiLayout4Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
-import { IoMdMore } from "react-icons/io";
+import { IoMdMore,IoIosMore,IoMdCart } from "react-icons/io";
 import { BiSolidCommentDetail } from "react-icons/bi";
+import { FaChartLine } from "react-icons/fa6";
 
 
 const NFTDetail = () => {
@@ -255,13 +256,13 @@ const dummyData = [
                   </div>
                   <div className="item_content_con1">
                     <p>Token Standard</p>
-                    <p>1316</p>
+                    <p>ERC-721</p>
                   </div>
                   <div className="item_content_con1">
                     <p>Chain</p>
-                    <p>ERC-721</p>
+                    <p>Ethereum</p>
                   </div>
-                  <div className="item_content_Con1">
+                  <div className="item_content_con1">
                     <p>Last Updated</p>
                     <p>13 days ago</p>
                   </div>
@@ -276,90 +277,129 @@ const dummyData = [
           
         </div>
         <div className="right_detail_page_con1">
-            <div className="info_nft">
-              <div className="action_con">
+          <div className="right_detail_page_con1_main">
+            <div className="info_nft_right_con1">
+              <div className="action_con1">
                 <a href="#">Gomble spacekids</a>
-                <div className="action">
-                  <RiArrowDropDownLine/>
-                  <RiArrowDropDownLine/>
-                  <RiArrowDropDownLine/>
+                <div className="action__con1">
+                  <FaHandshake/>
+                  <IoShare/>
+                  <IoIosMore/>
                 </div>
               </div>
-              <div className="name_nft">
+              <div className="name_nft_con1">
                 <h3>GOMBLE - SpaceKids: Pill</h3>
                 <p>Owner by <span><a href="#">DB64FF</a></span></p>
               </div>
-              <div className="view">
-                <FaEye/>
-                <p>View</p>
+              <div className="view_nft_con1">
+                <div className="view_nft__con1">
+                   <FaEye/>
+                    <p>40 View</p>
+                </div>
+                <div className="favorite_nft__con1">
+                  <FaHeart/>
+                  <p>2 Favorite</p>
+                </div>
+               
               </div>
             </div>
-            <div className="sale_nft">
-              <div className="time_sale">
-                 <p>Sale ends October 8, 2024 at 10:53 PM </p>
-                <div className="time_con">
-                  <p>00</p>
+            <div className="sale_nft_right_con1">
+              <div className="time_sale__con1">
+                <p>Sale ends October 8, 2024 at 10:53 PM </p>
+                <div className="time_sale_on__con1">
+                   <div className="time_con">
+                  <p className="value_time_con">00</p>
+                  <p>Days</p>
+                </div>
+                  <div className="time_con">
+                  <p className="value_time_con">00</p>
                   <p>Hours</p>
                 </div>
                 <div className="time_con">
-                  <p>17</p>
+                  <p className="value_time_con">17</p>
                   <p>Minutes</p>
                 </div>
                 <div className="time_con">
-                  <p>57</p>
+                  <p className="value_time_con">57</p>
                   <p>Seconds</p>
                 </div>
+                </div>
               </div>
-              <div className="price_con">
+              <div className="price__con1">
                 <p>Current price</p>
-                <div className="price">
-                  <h4>0.13 ETH</h4>
-                  <p>$316.62</p>
-                </div>
+                <h4>0.13 ETH <span>$316.62</span></h4>
+                
               </div>
-              <div className="buy_con">
-                <div className="buy">
-                  <button>Buy now <BuyModal/></button>
+              <div className="buy__con1">
+                <div className="btn__buy__con1">
+                  <button className="btn_buy">Buy now</button>
+                  <button className="btn_add_cart"><IoMdCart className="icon_cart_btn"/></button>
                 </div>
-                <div className="make_offer">
-                  <button><BuyModal/>Make offer</button>
+                <div className="btn__make_offer__con1">
+                  <button className="btn_make_offer">Make offer</button>
                 </div>
               </div>
             </div>
-            <div className="price_history">
-              <div className="title">
-                <p>Price history</p>
-                <RiArrowDropDownLine/>
+            <div className="price_history_right_con1">
+              <div className="title_price_history__con1">
+                <div className="title_price__con">
+                  <FaChartLine/>
+                  <p>Price history</p>
+                </div>
+                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
               </div>
-              <div className="chart_con">
+              <div className="chart_price_history__con1">
                 <p>đây là biểu đồ</p>
               </div>
             </div>
-            <div className="listings">
-              <div className="title">
+            <div className="listings_right_con1">
+              <div className="title_listing__con1">
+                <div className="title__con">
+                  <BsFillTagsFill/>
                 <p>Listings</p>
-                <RiArrowDropDownLine/>
-              </div>
-              <div className="listing_con">
-                <div className="listing_item_title">
-                  <p>Price</p>
-                  <p>USD Price</p>
-                  <p>Quantity</p>
-                  <p>Expiration</p>
-                  <p>From</p>
-                  <p>Action</p>
                 </div>
-                 <div className="listing_item">
-                  <p>0.13 ETH</p>
-                  <p>$316.62</p>
-                  <p>1</p>
-                  <p>In 12 minutes</p>
-                  <a href="DB64FF"></a>
-                  <button>Buy</button>
+                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+              </div>
+              <div className="listing_value__con1">
+                <div className="listing_item_title__con1">
+                  <div className="price_and_usd_price">
+                    <p>Price</p>
+                  </div>
+                  <div className="quantity_list">
+                    <p>Quantity</p>
+                  </div>
+                  <div className="expiration_list">
+                    <p>Expiration</p>
+                  </div>
+                  <div className="from_list">
+                    <p>From</p>
+                  </div>
+                 <div className="action_list">
+                  <p>Action</p>
+                 </div>
+                </div>
+
+                 <div className="listing_item__con1">
+                  <div className="price_and_usd_price1">
+                    <p>0.13 ETH</p>
+                    <p>$316.62</p>
+                  </div>
+                  <div className="quantity_list">
+                    <p>1</p>
+                  </div>
+                  <div className="expiration_list">
+                    <p>In 12 minutes</p>
+                  </div>
+                  <div className="from_list">
+                    <a href="">DB64FF</a>
+                  </div>
+                  <div className="action_list">
+                    <button>Buy</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="offers">
+            <div className="offers_right_con1">
               <div className="title">
                 <p>Offers</p>
                 <RiArrowDropDownLine/>
@@ -383,6 +423,8 @@ const dummyData = [
                 </div>
               </div>
             </div>
+          </div>
+        
         </div>
       </div>
       <div className="nft_detail_page_container2">

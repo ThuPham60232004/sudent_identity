@@ -27,7 +27,7 @@ const Login = () => {
 
     setError(null); 
     toast.success('Login successful!');
-    navigate('/Dashboard'); 
+    navigate('/Dashboard/HomeDashboard'); 
   };
 
   const registerLink = () => {
