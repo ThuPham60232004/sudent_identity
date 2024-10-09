@@ -32,6 +32,16 @@ import OverviewDetailCollection from "./components/CollectionDetailComponents/Ov
 import CollectionDetailPage from "./pages/CollectionDetailPage/CollectionDetailPage.jsx";
 import CollectionCreate from "./pages/CollectionCreate/CollectionCreate.jsx"
 import Profile from "./pages/Profile/Profile.jsx"
+import ActiveListings from "./components/ProfileComponents/ActiveListings/ActiveListings.jsx";
+import ActivityProfile from "./components/ProfileComponents/ActivityProfile/ActivityProfile.jsx";
+import Collected from "./components/ProfileComponents/Collected/Collected.jsx";
+import Deal from "./components/ProfileComponents/Deal/Deal.jsx";
+import Favorited from "./components/ProfileComponents/Favorited/Favorited.jsx";
+import Hiddens from"./components/ProfileComponents/Hiddens/Hiddens.jsx";
+import InactiveListings from "./components/ProfileComponents/InactiveListings/InactiveListings.jsx";
+import OfferMade from "./components/ProfileComponents/OfferMade/OfferMade.jsx";
+import OffersReceived from "./components/ProfileComponents/OffersReceived/OffersReceived.jsx";
+import Created from"./components/ProfileComponents/Created/Created.jsx"
 function App() {
   return (
     <BrowserRouter>
@@ -62,8 +72,21 @@ function App() {
               <Route path="CreatePage" element={<CreatePage/>} />
               <Route path="NFTsPage" element={<NFTsPage />} />
               <Route path="PoolTable" element={<PoolTable />} />
-              <Route path="Profile" element={<Profile />} />
               <Route path="SwapComponent" element={<SwapComponent />} />
+              {/* PROFILE DETAIL----------------------------------------------------------- */}
+              <Route path="Profile" element={<Profile />}>
+                <Route path="ActiveListings" element={<ActiveListings />} />
+                <Route path="ActivityProfile" element={<ActivityProfile />} />
+                <Route path="Collected" element={<Collected />} />
+                <Route path="Deal" element={<Deal />} />
+                <Route path="Favorited" element={<Favorited />} />
+                <Route path="Hiddens" element={<Hiddens />} />
+                <Route path="InactiveListings" element={<InactiveListings />} />
+                <Route path="OfferMade" element={<OfferMade />} />
+                <Route path="OffersReceived" element={<OffersReceived />} />
+                <Route path="Hiddens" element={<Hiddens />} />
+                <Route path="Created" element={<Created />} />
+              </Route>
           </Route>
         {/* COLLECTION DETAIL----------------------------------------------------------- */}
         <Route path="/CollectionDetailPage" element={<CollectionDetailPage />}>

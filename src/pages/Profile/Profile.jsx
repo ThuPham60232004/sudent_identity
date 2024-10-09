@@ -46,7 +46,7 @@ const Profile = () => {
             </div>
         </div>   
         <div className="menu_choose_profile">
-            <div className="choose_item1"><a href="#">Collected</a></div>
+            <div className="choose_item"><a href="#">Collected</a></div>
             <div className="choose_item"><a href="#">Offer made</a></div>
             <div className="choose_item"><a href="#">Deal</a></div>
             <div className="choose_item"><a href="#"> Created</a></div>

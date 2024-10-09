@@ -105,14 +105,7 @@ flex-direction: column;
     padding: 20px 30px;
 }
 .choose_item,
-.choose_item1{
-    padding: 8px 20px;
-    border-radius: 5px;
-}
-.choose_item1{
-    background: rgb(47, 46, 46);
-}
-.choose_item1 a,
+
 .choose_item a {
     text-decoration: none;
     font-size: 16px;
@@ -120,7 +113,6 @@ flex-direction: column;
     color: rgb(110, 107, 107);
     text-align: center;
 }
-.choose_item1 a:hover,
 .choose_item a:hover {
 
     color: rgb(146, 145, 145);
