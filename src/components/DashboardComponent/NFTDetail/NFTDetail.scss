@@ -107,6 +107,8 @@
                             padding: 10px 20px;
                             color: white;
                             justify-content: space-between;
+                             
+                          
                             .title_about_con1_left{
                                 display: flex;
                                 gap: 5px;
@@ -117,9 +119,18 @@
                                     
                                 }
                             }
-                            .icon_open_close_nft_page{
+                            .open_close_about_left_con1{
+
+                                .icon_open_close_nft_page{
                                 font-size: 30px;
+                                color: white;
+                                transition: transform 0.3s ease; 
+                                
+                                &.open {
+                                    transform: rotate(180deg); 
+                                }
                             }
+                        }
                         }
                         .des_nft_detail_con1{
                             display: flex;
@@ -165,6 +176,17 @@
                             gap: 5px;
                             padding: 10px 20px;
                             color: white;
+                            &.closed {
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px; /* For closed state */
+                            }
+
+                            /* For open state */
+                            &:not(.closed) {
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                            }
+
                            .title_detail{
                                 display: flex;
                                 align-items: center;
@@ -180,11 +202,19 @@
                                 }
                             
                            }
-                            .icon_open_close_nft_page{
-                                    font-size: 30px;
-                                    color: white;
+                            .open_close_detail_left_con1{
+
+                                .icon_open_close_nft_page{
+                                font-size: 30px;
+                                color: white;
+                                transition: transform 0.3s ease; 
+                                
+                                &.open {
+                                    transform: rotate(180deg); 
+                                }
                             }
                         }
+                    }
                         .content_detail_Con1{
                             display: flex;
                             flex-direction: column;
@@ -438,6 +468,14 @@
                         gap: 5px;
                         padding: 10px 20px;
                         color: white;
+                        &.closed {
+                                border-radius: 10px;
+                            }
+                            &:not(.closed) {
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+
                         .title_price__con{
                             display: flex;
                             align-items: center;
@@ -447,8 +485,17 @@
                             font-size: 16px;
                             font-weight: 700;
                         }
-                        .icon_open_close_nft_page{
-                            font-size: 30px;
+                        .open_close_price_history_right_con1{
+
+                                .icon_open_close_nft_page{
+                                font-size: 30px;
+                                color: white;
+                                transition: transform 0.3s ease; 
+                                
+                                &.open {
+                                    transform: rotate(180deg); 
+                                }
+                            }
                         }
                     }
                     .chart_price_history__con1{
@@ -467,7 +514,6 @@
                     margin-top: 20px;
                     display: flex;
                     flex-direction: column;
-                    margin-top: 20px;
                     color: white;
                     .title_listing__con1{
                         background-color: #2b2b36;
@@ -476,7 +522,147 @@
                         padding: 10px 20px;
                         color: white;
                         justify-content: space-between;
-                        .title__con{
+
+                         &.closed {
+                                border-radius: 10px;
+                            }
+                            &:not(.closed) {
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+
+                            .title__con{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                p{
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                }
+                            }
+                            .open_close_listing_right_con1{
+
+                                .icon_open_close_nft_page{
+                                font-size: 30px;
+                                color: white;
+                                transition: transform 0.3s ease; 
+                                
+                                &.open {
+                                    transform: rotate(180deg); 
+                                }
+                            }
+                        }
+                    }
+                       
+              
+                    .content_listing_table__con1{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px;
+
+                        .title_table__con1{
+                            display: grid;
+                            grid-template-columns: repeat(12, 1fr);
+                            gap: 10px;
+                            padding: 10px 0;
+                            p{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: grey;
+                            }
+                            .price_list_table__con1{
+                                grid-column: span 3;
+                            }
+                            .quantity_table__con1{
+                                grid-column: span 2;
+                            }
+                            .expiration_table__con1{
+                                grid-column: span 3;
+                            }
+                            .from_table__con1 {
+                                grid-column: span 2;
+                            }
+                            .action_table__con1 {
+                                grid-column: span 2;
+                            }
+                        }
+                        .content_table__con1{
+                            display: grid;
+                            grid-template-columns: repeat(12, 1fr);
+                            gap: 10px;
+                            padding: 10px 0;
+                            border-top: 1px solid gray;
+                            align-items: center;
+                            p{
+                                font-size: 13px;
+                            }
+                            a{
+                                text-decoration: none;
+                                font-size: 13px;
+                            }
+                            .price_list_table__con1{
+                                grid-column: span 3;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 3px;
+                                .usd_price_table__con1{
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    color: grey;
+                                }
+                            }
+                            .quantity_table__con1{
+                                grid-column: span 2;
+                            }
+                            .expiration_table__con1{
+                                grid-column: span 3;
+                            }
+                            .from_table__con1 {
+                                grid-column: span 3;
+                            }
+                            .action_table__con1 {
+                                grid-column: span 1;
+                                margin: 0;
+                                width: 100%;
+                                padding: 5px;
+                                font-size: 12px;
+                                background: rgb(87, 87, 230);
+                                color: white;
+                                border-radius: 5px;
+                            }
+                            .action_table__con1:hover{
+                                 background: rgb(62, 62, 162);
+                            }
+                        }
+                    }
+
+                }
+                .offers_right_con1{
+                    display: flex;
+                    margin-top: 20px;
+                    flex-direction: column;
+                    border-radius: 10px;
+                     box-shadow:
+                        2px 2px 2px rgba(0, 0, 0, 0.2), 
+                        -2px -2px 2px rgba(255, 255, 255, 0.2), 
+                        -2px 2px 2px rgba(0, 0, 0, 0.2),  
+                        2px 2px 2px rgba(255, 255, 255, 0.2);
+                        color: white;
+                    .title_right__con1{
+                        background-color: #2b2b36;
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 20px;
+                        color: white;
+                        justify-content: space-between;
+                         &.closed {
+                                border-radius: 10px;
+                            }
+                            &:not(.closed) {
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        .title_offer_con{
                             display: flex;
                             align-items: center;
                             gap: 5px;
@@ -485,119 +671,156 @@
                                 font-weight: 700;
                             }
                         }
-                        .icon_open_close_nft_page{
-                            font-size: 30px;
+                        .open_close_offer_right_con1{
+
+                                .icon_open_close_nft_page{
+                                font-size: 30px;
+                                color: white;
+                                transition: transform 0.3s ease; 
+                                
+                                &.open {
+                                    transform: rotate(180deg); 
+                                }
+                            }
                         }
                     }
-                    .listing_value__con1{
-                        padding: 20px;
+                    .content_offer_table_con1{
                         display: flex;
                         flex-direction: column;
-
-                        .listing_item_title__con1{
+                        padding: 20px;
+                        .title_content_offer_table__con1{
                             display: grid;
-                            background: orange;
                             grid-template-columns: repeat(12, 1fr);
                             gap: 10px;
+                            padding: 10px 0;
                             p{
                                 font-size: 14px;
-                                font-weight: 600;
+                                font-weight: 500;
+                                color: grey;
                             }
-                            .price_and_usd_price{
+                            .price_offer__con1{
                                 grid-column: span 3;
-                                background: gray;
                             }
-                         
-                            .quantity_list{
-                                grid-column: span 1;
-                                background: gray;
-                            }
-                            .expiration_list{
-                                grid-column: span 3;
-                                background: gray;
-                            }
-                            .from_list{
-                                grid-column: span 3;
-                                background: gray;
-                            }
-                            .action_list{
+                            .quantity_offer__con1{
                                 grid-column: span 2;
-                                background: gray;
-                                
+                            }
+                            .floor_difference_offer__con1{
+                                grid-column: span 3;
+                            }
+                            .exporation_offer__con1 {
+                                grid-column: span 2;
+                            }
+                            .from_offer__con1 {
+                                grid-column: span 2;
                             }
                         }
-                        .listing_item__con1{
+                        .offer_item_value__con1{
                             display: grid;
-                            width: 100%;
                             grid-template-columns: repeat(12, 1fr);
                             gap: 10px;
-                            .price_and_usd_price1{
+                            padding: 10px 0;
+                            border-top: 1px solid gray;
+                            align-items: center;
+                            p{
+                                font-size: 13px;
+                            }
+                            a{
+                                text-decoration: none;
+                                font-size: 13px;
+                            }
+                            .price_offer__con1{
                                 grid-column: span 3;
                                 display: flex;
-                                background: palegreen;
                                 flex-direction: column;
+                                gap: 3px;
+                                .price_usd_value_offer{
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    color: grey;
+                                }
+                            }
+                            .quantity_offer__con1{
+                            grid-column: span 2;
+                            }
+                            .floor_difference_offer__con1{
+                                grid-column: span 3;
+                            }
+                            .exporation_offer__con1 {
+                                grid-column: span 2;
+                            }
+                            .from_offer__con1 {
+                                grid-column: span 2;
+                            }
                             }
                         }
-                       
-                        
                     }
+                }
 
                 }
-                .offers_right_con1{
-                    background: gray;
-                }
             }
+      
+
+    .nft_detail_page_container2 {
+  background: black;
+  width: 100%;
+  padding: 20px;
+
+  .nft_detail_page_con2 {
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+      2px 2px 2px rgba(0, 0, 0, 0.2),
+      -2px -2px 2px rgba(255, 255, 255, 0.2),
+      -2px 2px 2px rgba(0, 0, 0, 0.2),
+      2px 2px 2px rgba(255, 255, 255, 0.2);
+
+    .header_con2 {
+      width: 100%;
+      background-color: #2b2b36;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      color: white;
+
+      &.closed {
+        border-radius: 20px; /* For closed state */
+      }
+
+      /* For open state */
+      &:not(.closed) {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .title_header_con2 {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        p {
+          font-size: 18px;
+          font-weight: 600;
         }
+        .icon_item_activity {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+      .open_close_con2 {
+        .icon_open_close_nft_page {
+          font-size: 30px;
+          color: white;
+          transition: transform 0.3s ease; 
+          
+          &.open {
+            transform: rotate(180deg); 
+          }
+        }
+      }
     }
-    .nft_detail_page_container2{
-        background: black;
-        width: 100%;
-        padding: 20px;
-        .nft_detail_page_con2{
-            background: black;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            box-shadow:
-            2px 2px 2px rgba(0, 0, 0, 0.2), 
-            -2px -2px 2px rgba(255, 255, 255, 0.2), 
-            -2px 2px 2px rgba(0, 0, 0, 0.2),  
-            2px 2px 2px rgba(255, 255, 255, 0.2);
-
-            .header_con2{
-                width: 100%;
-                background-color: #2b2b36;
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                align-items: center;
-                justify-content: space-between;
-                padding:20px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                color: white;
-                .title_header_con2{
-                    display: flex;
-                    gap: 5px;
-                    align-items: center;
-                    p{
-                        font-size: 18px;
-                        font-weight: 600;
-                    }
-                    .icon_item_activity{
-                        font-size: 30px;
-                        font-weight: 700;
-                    }
-                     
-                }
-                .open_close_con2{
-                    .icon_open_close_nft_page{
-                        font-size: 30px;
-                        color: white;
-                    }
-                }
-
-            }
             .body_con2{
                 padding: 10px 0;
                 .filter_body_con2{
@@ -693,172 +916,199 @@
             }
         }
     }
-    .nft_detail_page_container3{
-        width: 100%;
-        background: black;
-        padding: 20px;
-        .nft_detail_page_con3{
-            background: black;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            box-shadow:
-            2px 2px 2px rgba(0, 0, 0, 0.2), 
-            -2px -2px 2px rgba(255, 255, 255, 0.2), 
-            -2px 2px 2px rgba(0, 0, 0, 0.2),  
-            2px 2px 2px rgba(255, 255, 255, 0.2);
-            .header_con3{
-                width: 100%;
-                background-color: #2b2b36;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding:20px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                .title_con3{
-                    display: flex;
-                    gap: 5px;
-                    align-items: center;
-                    color: white;
-                    p{
-                        font-size: 18px;
-                        font-weight: 600;
-                    }
-                    .icon_nft_detail_page{
-                        font-size: 30px;
+    .nft_detail_page_container3 {
+  width: 100%;
+  background: black;
+  padding: 20px;
 
-                    }
-                }
-                .open_close_con3{
-                    display: flex;
-                    align-items: center;
-                    .icon_open_close_nft_page{
-                        font-size: 30px;
-                        color: white;
-                    }
-                }
-            }
-            .body_container3{
-                width: 100%;
-                background: black;
-                display: grid;
-                grid-template-columns: repeat(12,1fr);
-                gap: 20px;
-                padding: 20px;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
+  .nft_detail_page_con3 {
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+      2px 2px 2px rgba(0, 0, 0, 0.2),
+      -2px -2px 2px rgba(255, 255, 255, 0.2),
+      -2px 2px 2px rgba(0, 0, 0, 0.2),
+      2px 2px 2px rgba(255, 255, 255, 0.2);
 
-                .item_nft_con3{
-                    grid-column: span 3;
-                    background: white;
-                    border-radius: 10px;
+    .header_con3 {
+      width: 100%;
+      background-color: #2b2b36;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: white;
 
-                    img{
-                        width: 100%;
-                        height: 200px;
-                        background-size: cover;
-                        border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;
-                    }
-                    .detail_nft_con3{
-                        display: flex;
-                        flex-direction: column;
-                        color: black;
-                        
-                        .info_con3{
-                            padding: 10px;
-                            h3{
-                                font-size: 18px;
-                            }
-                            h4{
-                                font-size: 16px;
-                            }
-                            p {
-                                font-size: 12px;
-                                font-weight: 500;
-                                color: grey;
-                                padding: 6px
-                                
-                                
-                            };
-                        }
-                        .btn_buy_cart_con3{
-                            display: none;
-                        }
-                    }
-                }
-                .item_nft_con3:hover{
-                    grid-column: span 3;
-                    background: white;
-                    border-radius: 10px;
+       &.closed {
+        border-radius: 20px; /* For closed state */
+      }
 
-                    img{
-                        width: 100%;
-                        height: 200px;
-                        background-size: cover;
-                        border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;
-                    }
-                    .detail_nft_con3{
-                        display: flex;
-                        flex-direction: column;
-                        color: black;
-                        
-                        .info_con3{
-                            padding: 10px;
-                            h3{
-                                font-size: 18px;
-                            }
-                            h4{
-                                font-size: 16px;
-                            }
-                            p {
-                               display: none
-                                
-                            };
-                        }
-                        
-                        .btn_buy_cart_con3{
-                            display: grid;
-                            grid-template-columns: repeat(4, 1fr);
-                                .buy_con3{
-                                    padding: 6px;
-                                    grid-column: span 3;
-                                    background: #2b2b36;
-                                    border-bottom-left-radius: 10px;
-                                    text-align: center;
-                                    color: white;
-                                    font-weight: 600;
-                                    font-size: 12px;
-                                    align-items: center;
-                                    border-right: 1px solid rgb(167, 167, 167);
-                                    
-                                }
-                                .buy_con3:hover{
-                                    background: red;
-                                }
-
-                                .cart_con3{
-                                    padding: 6px;
-                                    grid-column: span 1;
-                                    background: #2b2b36;
-                                    border-bottom-right-radius: 10px;
-                                    text-align: center;
-                                    color: white;
-                                    font-size: 12px;
-                                    font-weight: 600;
-                                    
-                                }
-                                .cart_con3:hover{
-                                    background: blue;
-                                }
-
-                        }
-                    }
-                }
-            }
-        }
+      /* For open state */
+      &:not(.closed) {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
         
-    }   
+    
+      .title_con3 {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        color: white;
+
+        p {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .icon_nft_detail_page {
+          font-size: 30px;
+        }
+      }
+
+      .open_close_con3 {
+        display: flex;
+        align-items: center;
+
+        .icon_open_close_nft_page {
+          font-size: 30px;
+          color: white;
+          transition: transform 0.3s ease;
+          
+          &.open {
+            transform: rotate(180deg); 
+          }
+        }
+      }
+    }
+
+    .body_container3 {
+      width: 100%;
+      background: black;
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      .item_nft_con3 {
+        flex: 0 0 auto;
+        width: 220px; 
+        background: white;
+        border-radius: 10px;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        .detail_nft_con3 {
+          display: flex;
+          flex-direction: column;
+          color: black;
+
+          .info_con3 {
+            padding: 10px;
+
+            h3 {
+              font-size: 18px;
+            }
+
+            h4 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 12px;
+              font-weight: 500;
+              color: grey;
+              padding: 6px;
+            }
+          }
+
+          .btn_buy_cart_con3 {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .detail_nft_con3 {
+            .info_con3 {
+              p {
+                display: none;
+              }
+            }
+
+            .btn_buy_cart_con3 {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+
+              .buy_con3 {
+                padding: 6px;
+                grid-column: span 3;
+                background: #2b2b36;
+                border-bottom-left-radius: 10px;
+                text-align: center;
+                color: white;
+                font-weight: 600;
+                font-size: 12px;
+                border-right: 1px solid rgb(167, 167, 167);
+              }
+
+              .buy_con3:hover {
+                background: red;
+              }
+
+              .cart_con3 {
+                padding: 6px;
+                grid-column: span 1;
+                background: #2b2b36;
+                border-bottom-right-radius: 10px;
+                text-align: center;
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+              }
+
+              .cart_con3:hover {
+                background: blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .body_container3::-webkit-scrollbar {
+      height: 8px; 
+    }
+
+    .body_container3::-webkit-scrollbar-track {
+      background: #2b2b36; 
+      border-radius: 10px; 
+    }
+
+    .body_container3::-webkit-scrollbar-thumb {
+      background: #323232;
+      border-radius: 10px; 
+    }
+
+    .body_container3::-webkit-scrollbar-thumb:hover {
+      background: #1c1c1c; 
+    }
+
+    /* Scrollbar for Firefox */
+    .body_container3 {
+      scrollbar-width: thin; 
+      scrollbar-color: #777 #2b2b36; 
+    }
+  }
+}
+
 }

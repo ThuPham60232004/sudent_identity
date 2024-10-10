@@ -132,7 +132,8 @@ import { RiBarChartHorizontalFill,RiLayout4Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
 import { IoMdMore,IoIosMore,IoMdCart } from "react-icons/io";
 import { BiSolidCommentDetail } from "react-icons/bi";
-import { FaChartLine } from "react-icons/fa6";
+import { FaChartLine,FaBarsProgress } from "react-icons/fa6";
+
 
 
 const NFTDetail = () => {
@@ -152,11 +153,67 @@ const NFTDetail = () => {
   const openBuyModal = () => setIsBuyModalOpen(true);
   const closeBuyModal = () => setIsBuyModalOpen(false);
 
+
+   const [isOpen_con2, setIsOpen_con2] = useState(false);
+
+  const toggleOpenClose_con2 = () => {
+    setIsOpen_con2(!isOpen_con2);
+  };
+
+const [isOpen_con3, setIsOpen_con3] = useState(false);
+ const toggleOpenClose_con3 = () => {
+    setIsOpen_con3(!isOpen_con3);
+  };
+
+const [isOpen_listing_right_con1, setIsOpen_listing_right_con1] = useState(false);
+ const toggleOpenClose_listing_right_con1 = () => {
+    setIsOpen_listing_right_con1(!isOpen_listing_right_con1);
+  };
+
+const [isOpen_offer_right_con1, setIsOpen_offer_right_con1] = useState(false);
+const toggleOpenClose_offer_right_con1 = () => {
+    setIsOpen_offer_right_con1(!isOpen_offer_right_con1);
+  };
+
+const [isOpen_price_history_right_con1, setIsOpen_price_history_right_con1] = useState(false);
+const toggleOpenClose_price_history_right_con1 = () => {
+    setIsOpen_price_history_right_con1(!isOpen_price_history_right_con1);
+  };
+
+
+const [isOpen_about_left_con1, setIsOpen_about_left_con1] = useState(false);
+const toggleOpenClose_about_left_con1 = () => {
+    setIsOpen_about_left_con1(!isOpen_about_left_con1);
+  };
+
+const [isOpen_detail_left_con1, setIsOpen_detail_left_con1] = useState(false);
+const toggleOpenClose_detail_left_con1 = () => {
+    setIsOpen_detail_left_con1(!isOpen_detail_left_con1);
+  };
+
 const dummyData = [
     {
       name: 'NFT Name 1',
       price: '0.17 ETH',
       lastSale: '0.13 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 2',
+      price: '0.25 ETH',
+      lastSale: '0.18 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 3',
+      price: '0.17 ETH',
+      lastSale: '0.13 WETH',
+      image: '../img/collection.png',
+    },
+    {
+      name: 'NFT Name 4',
+      price: '0.25 ETH',
+      lastSale: '0.18 WETH',
       image: '../img/collection.png',
     },
     {
@@ -209,18 +266,21 @@ const dummyData = [
               <div className="by_user_create_nft_con1">
                 <p>By <span><a href="#">88B223</a></span></p>
               </div>
+
               <div className="about_nft_detail_con1">
-                <div className="title_about_nft_detail_con1">
+                <div className={`title_about_nft_detail_con1 ${isOpen_about_left_con1 ? '' : 'closed'}`} >
                   <div className="title_about_con1_left">
                     <RiLayout4Fill/>
                   <p>About Gomble spacekids</p>
                   </div>
-                  <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+                  <div className="open_close_about_left_con1" onClick={toggleOpenClose_about_left_con1}>
+                  <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_about_left_con1 ? 'open' : 'closed'}`} />
                 </div>
+                </div>
+                {isOpen_about_left_con1 && (
                 <div className="des_nft_detail_con1">
                   <p>GOMBLE's PFP Collection: SpaceKids NFTs unlock exclusive benefits and access to some of the largest token allocations in GOMBLE’s universe. Dive into the dynamic gameplay and secure your place among the stars with these limited-edition NFTs. Don’t miss this last chance to power up your game and take your collection to new heights!</p>
                   <div className="hype_link_connect_con1">
-
                     <div className="item_link_connect_con1">
                       <TbWorld className="icon_link_hype"/>
                     </div>
@@ -233,18 +293,22 @@ const dummyData = [
                     <div className="item_link_connect_con1">
                       <IoMdMore className="icon_link_hype"/>
                     </div>
+                  </div>
                 </div>
-                </div>
-                
+                )}
               </div>
+
               <div className="detail_nft_con1">
                 <div className="title_detail_con1">
-                  <div className="title_detail">
+                  <div className={`title_detail ${isOpen_detail_left_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_con2 ? '10px 10px 0 0' : '10px' }}>
                     <BiSolidCommentDetail className="icon_BiSolidCommentDetail"/>
                     <p>Detail</p>
                   </div>
-                  <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+                  <div className="open_close_detail_left_con1" onClick={toggleOpenClose_detail_left_con1}>
+                  <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_detail_left_con1 ? 'open' : 'closed'}`} />
                 </div>
+                </div>
+                {isOpen_detail_left_con1 && (
                 <div className="content_detail_Con1">
                   <div className="item_content_con1">
                     <p>Contract Address</p>
@@ -271,6 +335,7 @@ const dummyData = [
                     <p>1%</p>
                   </div>
                 </div>
+                )}
               </div>
             </div>
           </div>
@@ -340,187 +405,225 @@ const dummyData = [
                 </div>
               </div>
             </div>
+
+
+
             <div className="price_history_right_con1">
-              <div className="title_price_history__con1">
+              <div className={`title_price_history__con1 ${isOpen_price_history_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_price_history_right_con1 ? '10px 10px 0 0' : '10px' }}>
                 <div className="title_price__con">
                   <FaChartLine/>
                   <p>Price history</p>
                 </div>
-                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+                <div className="open_close_price_history_right_con1" onClick={toggleOpenClose_price_history_right_con1}>
+                  <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_price_history_right_con1 ? 'open' : 'closed'}`} />
+                </div>
               </div>
+               {isOpen_price_history_right_con1 && (
               <div className="chart_price_history__con1">
                 <p>đây là biểu đồ</p>
               </div>
+               )}
             </div>
+
+
             <div className="listings_right_con1">
-              <div className="title_listing__con1">
+              <div className={`title_listing__con1 ${isOpen_listing_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_listing_right_con1 ? '10px 10px 0 0' : '10px' }}>
                 <div className="title__con">
                   <BsFillTagsFill/>
                 <p>Listings</p>
                 </div>
-                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
-              </div>
-              <div className="listing_value__con1">
-                <div className="listing_item_title__con1">
-                  <div className="price_and_usd_price">
-                    <p>Price</p>
-                  </div>
-                  <div className="quantity_list">
-                    <p>Quantity</p>
-                  </div>
-                  <div className="expiration_list">
-                    <p>Expiration</p>
-                  </div>
-                  <div className="from_list">
-                    <p>From</p>
-                  </div>
-                 <div className="action_list">
-                  <p>Action</p>
-                 </div>
+                <div className="open_close_listing_right_con1" onClick={toggleOpenClose_listing_right_con1}>
+                  <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_listing_right_con1 ? 'open' : 'closed'}`} />
                 </div>
-
-                 <div className="listing_item__con1">
-                  <div className="price_and_usd_price1">
-                    <p>0.13 ETH</p>
-                    <p>$316.62</p>
-                  </div>
-                  <div className="quantity_list">
-                    <p>1</p>
-                  </div>
-                  <div className="expiration_list">
-                    <p>In 12 minutes</p>
-                  </div>
-                  <div className="from_list">
-                    <a href="">DB64FF</a>
-                  </div>
-                  <div className="action_list">
-                    <button>Buy</button>
-                  </div>
-                </div>
+                
               </div>
+              {isOpen_listing_right_con1 && (
+              <div className="content_listing_table__con1">
+                <div className="title_table__con1">
+                  <p className="price_list_table__con1">Price</p>
+                  <p className="quantity_table__con1">Quantity</p>
+                  <p className="expiration_table__con1">Expiration</p>
+                  <p className="from_table__con1">From</p>
+                  <p className="action_table__con1"></p>
+                </div>
+                <div className="content_table__con1">
+                  <div className="price_list_table__con1">
+                    <p>0.1349 ETH</p>
+                    <p className="usd_price_table__con1">$328.24</p>
+                  </div>
+                  <p className="quantity_table__con1">1</p>
+                  <p className="expiration_table__con1">in 1 month</p>
+                  <a className="from_table__con1" href="#">Zerrosh</a>
+                  <button className="action_table__con1">Buy</button>
+                </div>
+                    <div className="content_table__con1">
+                  <div className="price_list_table__con1">
+                    <p>0.1349 ETH</p>
+                    <p className="usd_price_table__con1">$328.24</p>
+                  </div>
+                  <p className="quantity_table__con1">1</p>
+                  <p className="expiration_table__con1">in 1 month</p>
+                  <a className="from_table__con1" href="#">Zerrosh</a>
+                  <button className="action_table__con1">Buy</button>
+                </div>
+              </div>  
+              )}
             </div>
             <div className="offers_right_con1">
-              <div className="title">
-                <p>Offers</p>
-                <RiArrowDropDownLine/>
-              </div>
-              <div className="offer_con">
-                <div className="offer_item_title">
-                  <p>Price</p>
-                  <p>USD Price</p>
-                  <p>Quantity</p>
-                  <p>Floor difference</p>
-                  <p>Expiration</p>
-                  <p>From</p>
+              <div className={`title_right__con1 ${isOpen_offer_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_offer_right_con1 ? '10px 10px 0 0' : '10px' }}>
+                <div className="title_offer_con">
+                  <FaBarsProgress/>
+                   <p>Offers</p>
                 </div>
-                <div className="offer_item">
-                  <p>0.1101 WETH</p>
-                  <p>$267.99</p>
-                  <p>1</p>
-                  <p>13% below</p>
-                  <p>in 5 hours</p>
-                  <a href="#">YuraYara</a>
+                <div className="open_close_offer_right_con1" onClick={toggleOpenClose_offer_right_con1}>
+                  <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_offer_right_con1 ? 'open' : 'closed'}`} />
                 </div>
               </div>
+              {isOpen_offer_right_con1 && (
+              <div className="content_offer_table_con1">
+                <div className="title_content_offer_table__con1">
+                  <p className="price_offer__con1">Price</p>
+                  <p className="quantity_offer__con1">Quantity</p>
+                  <p className="floor_difference_offer__con1">Floor difference</p>
+                  <p className="exporation_offer__con1">Expiration</p>
+                  <p className="from_offer__con1">From</p>
+                </div>
+                <div className="offer_item_value__con1">
+                  <div className="price_offer__con1">
+                    <p className="price_offer_value_ofer">0.1241 WETH</p>
+                    <p className="price_usd_value_offer">$302.05</p>
+                  </div>
+                  <p className="quantity_offer__con1">1</p>
+                  <p className="floor_difference_offer__con1">13% below</p>
+                  <p className="exporation_offer__con1">in 5 hours</p>
+                  <a className="from_offer__con1" href="#">YuraYara</a>
+                </div>
+                 <div className="offer_item_value__con1">
+                  <div className="price_offer__con1">
+                    <p className="price_offer_value_ofer">0.1241 WETH</p>
+                    <p className="price_usd_value_offer">$302.05</p>
+                  </div>
+                  <p className="quantity_offer__con1">1</p>
+                  <p className="floor_difference_offer__con1">13% below</p>
+                  <p className="exporation_offer__con1">in 5 hours</p>
+                  <a className="from_offer__con1" href="#">YuraYara</a>
+                </div>
+                 <div className="offer_item_value__con1">
+                  <div className="price_offer__con1">
+                    <p className="price_offer_value_ofer">0.1241 WETH</p>
+                    <p className="price_usd_value_offer">$302.05</p>
+                  </div>
+                  <p className="quantity_offer__con1">1</p>
+                  <p className="floor_difference_offer__con1">13% below</p>
+                  <p className="exporation_offer__con1">in 5 hours</p>
+                  <a className="from_offer__con1" href="#">YuraYara</a>
+                </div>
+              </div>
+              )}
             </div>
           </div>
         
         </div>
       </div>
-      <div className="nft_detail_page_container2">
-        <div className="nft_detail_page_con2">
-          <div className="header_con2">
-            <div className="title_header_con2">
-                <PiArrowsDownUpBold className="icon_item_activity"/>
-                <p>Item Activity</p>
-              </div>
-              <div className="open_close_con2">
-                <RiArrowDropDownLine className="icon_open_close_nft_page"/>
-              </div>   
-        </div>
-        <div className="body_con2">
-          <div className="filter_body_con2">
-            <div className="title_filter_con2">
-              <p>Filter</p>
-              <RiArrowDropDownLine className="icon_dropdown_filter_con2"/>
-            </div>
-            <div className="filter_con2">
-              <div className="item_filter_con2">
-                <p>Sales</p>
-                <IoClose/>
-              </div>
-               <div className="item_filter_con2">
-                <p>Listings</p>
-                <IoClose/>
-              </div>
-              <p className="clear_all">Clear All</p>
-            </div>  
+   <div className="nft_detail_page_container2">
+      <div className="nft_detail_page_con2">
+        <div className={`header_con2 ${isOpen_con2 ? '' : 'closed'}`} style={{ borderRadius: isOpen_con2 ? '20px 20px 0 0' : '20px' }}>
+          <div className="title_header_con2">
+            <PiArrowsDownUpBold className="icon_item_activity" />
+            <p>Item Activity</p>
           </div>
-          <div className="content_con2">
-            <div className="title_item_activity_con2">
-              <p>Event</p>
-              <p>Price</p>
-              <p>From</p>
-              <p>To</p>
-              <p>Date</p>
-            </div>
-            <div className="item_activity_con2">
-              <div className="list_con2">
-                <BsFillTagsFill className="icon_list_con2"/>
-                 <p>List</p>
-              </div>
-              <p>0.1265 ETH</p>
-              <a href="#">YuraYuraGay</a>
-              <a href="#"></a>
-              <p>31m ago</p>
-            </div>
-            <div className="item_activity_con2">
-              <div className="list_con2">
-                <BsFillTagsFill className="icon_list_con2"/>
-                 <p>List</p>
-              </div>
-              <p>0.1265 ETH</p>
-              <a href="#">YuraYuraGay</a>
-              <a href="#">YuraYuraGay</a>
-              <p>31m ago</p>
-            </div>
+          <div className="open_close_con2" onClick={toggleOpenClose_con2}>
+            <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_con2 ? 'open' : 'closed'}`} />
           </div>
         </div>
-        </div>
-        
+
+        {isOpen_con2 && (
+          <div className="body_con2">
+            <div className="filter_body_con2">
+              <div className="title_filter_con2">
+                <p>Filter</p>
+                <RiArrowDropDownLine className="icon_dropdown_filter_con2" />
+              </div>
+              <div className="filter_con2">
+                <div className="item_filter_con2">
+                  <p>Sales</p>
+                  <IoClose />
+                </div>
+                <div className="item_filter_con2">
+                  <p>Listings</p>
+                  <IoClose />
+                </div>
+                <p className="clear_all">Clear All</p>
+              </div>
+            </div>
+            <div className="content_con2">
+              <div className="title_item_activity_con2">
+                <p>Event</p>
+                <p>Price</p>
+                <p>From</p>
+                <p>To</p>
+                <p>Date</p>
+              </div>
+              <div className="item_activity_con2">
+                <div className="list_con2">
+                  <BsFillTagsFill className="icon_list_con2" />
+                  <p>List</p>
+                </div>
+                <p>0.1265 ETH</p>
+                <a href="#">YuraYuraGay</a>
+                <a href="#"></a>
+                <p>31m ago</p>
+              </div>
+              <div className="item_activity_con2">
+                <div className="list_con2">
+                  <BsFillTagsFill className="icon_list_con2" />
+                  <p>List</p>
+                </div>
+                <p>0.1265 ETH</p>
+                <a href="#">YuraYuraGay</a>
+                <a href="#">YuraYuraGay</a>
+                <p>31m ago</p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-      <div className="nft_detail_page_container3">
-        <div className="nft_detail_page_con3">
-          <div className="header_con3">
+    </div>
+     <div className="nft_detail_page_container3">
+      <div className="nft_detail_page_con3">
+        <div className={`header_con3 ${isOpen_con3 ? '' : 'closed'}`} style={{ borderRadius: isOpen_con3 ? '20px 20px 0 0' : '20px' }}>
           <div className="title_con3">
-            <RiLayoutGrid2Line className="icon_nft_detail_page"/>
+            <RiLayoutGrid2Line className="icon_nft_detail_page" />
             <p>More from this collection</p>
           </div>
-          <div className="open_close_con3">
-             <RiArrowDropDownLine className="icon_open_close_nft_page"/>
+          <div className="open_close_con3" onClick={toggleOpenClose_con3}>
+            <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_con3 ? 'open' : 'closed'}`} />
           </div>
         </div>
-        <div className="body_container3">
-          {/* có thể lướt ngang */}
-          {dummyData.map((nft, index) => (
-          <div key={index} className="item_nft_con3">
-            <img src={nft.image} alt="" />
-            <div className="detail_nft_con3">
-              <div className="info_con3">
-                <h3>{nft.name}</h3>
-                <h4>{nft.price}</h4>
-                <p>Last sale : {nft.lastSale}</p>
+
+        {isOpen_con3 && (
+          <div className="body_container3">
+            {/* Scrollable container */}
+            {dummyData.map((nft, index) => (
+              <div key={index} className="item_nft_con3">
+                <img src={nft.image} alt="" />
+                <div className="detail_nft_con3">
+                  <div className="info_con3">
+                    <h3>{nft.name}</h3>
+                    <h4>{nft.price}</h4>
+                    <p>Last sale: {nft.lastSale}</p>
+                  </div>
+                  <div className="btn_buy_cart_con3">
+                    <div className="buy_con3">Buy</div>
+                    <div className="cart_con3">Cart</div>
+                  </div>
+                </div>
               </div>
-              <div className="btn_buy_cart_con3">
-                <div className="buy_con3">Buy</div>
-                <div className="cart_con3">Cart</div>
-              </div>
-            </div>
+            ))}
           </div>
-          ))}
-        </div>
-        </div>
+        )}
       </div>
+    </div>
     </div>
   );
 };
