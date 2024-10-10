@@ -33,10 +33,10 @@ const Home = () => {
          <div className="trendinglist_home_page">
         <TrendingList/>
       </div>
-
+{/* 
      <div className="NFTGallery_home_page">
        <NFTGallery/>  
-      </div>
+      </div> */}
         
       <div className="SubscriptionPlans_home_page">
         <SubscriptionPlans/>

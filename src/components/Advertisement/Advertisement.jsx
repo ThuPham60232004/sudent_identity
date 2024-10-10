@@ -35,27 +35,25 @@ const Advertisement = () => {
             </div>
             <div className='Advertisement_container_two'>
                 <div className="Advertisement_con">
-                     <div className="Advertisement_picture_container_one">
-                    <div className='Advertisement_picture1_container'>
-                        <img
-                            src='https://cafefcdn.com/thumb_w/640/203337114487263232/2022/9/12/photo1662974015465-1662974015547433647874.jpg'
-                            alt='picture_1_advertisement'
-                            className='picture_1_advertisement'
-                        />
-                        <div className='Advertisement_picture_border'>
-                            <div className="Advertisement_picture_border_detail">
-                                <h6>0xba073...18c7</h6>
-                                <h5>PUNKS 2: BIZ Collector's</h5>
+                    <div className="Advertisement_picture_container_one">
+                        <div className='Advertisement_picture1_container'>
+                            <img
+                                src='https://cafefcdn.com/thumb_w/640/203337114487263232/2022/9/12/photo1662974015465-1662974015547433647874.jpg'
+                                alt='picture_1_advertisement'
+                                className='picture_1_advertisement'
+                            />
+                            <div className='Advertisement_picture_border'>
+                                <div className="Advertisement_picture_border_detail">
+                                    <h6>0xba073...18c7</h6>
+                                    <h5>PUNKS 2: BIZ Collector's</h5>
+                                </div>
+                                <div className="Advertisement_picture_border_detail">
+                                    <h6>Price</h6>
+                                    <h5>0.002 ETH</h5>
+                                </div>
                             </div>
-                            <div className="Advertisement_picture_border_detail">
-                                <h6>Price</h6>
-                                <h5>0.002 ETH</h5>
-                            </div>
-                       
                         </div>
-       
-                </div>
-                </div>
+                    </div>
                     <div className="Advertisement_picture_container_two">
                         <div className='Advertisement_picture2_container'>
                         <img

@@ -1,48 +1,55 @@
 import React from 'react'
 import './Connective.css'
-import { AiOutlineGlobal } from "react-icons/ai";
-import { CiTwitter } from "react-icons/ci";
-import { TbBrandDiscord } from "react-icons/tb";
+
+import { FaTwitter,FaDiscord } from "react-icons/fa";
+import { GiWorld } from "react-icons/gi";
 import { BsTelegram } from "react-icons/bs";
 const Connective = () => {
   return (
     <div className='ConnectiveContainer'>
-        <div className='ConnectiveWebsite'>
-            <div className='ConnectiveiconWebsite'>
-                <AiOutlineGlobal className='iconConnective'/>
+        <div className="ConnectiveContainer_group">
+            <div className='Connective__con'>
+            <div className="icon_connect_con">
+                <GiWorld className='iconConnective'/> 
             </div>
+          
             <div className='Connectivetext'>
                 <h3>Website</h3>
                 <h5>www.fintech.com</h5>
             </div>
         </div>
-        <div className='ConnectiveTwitter'>
-            <div className='ConnectiveiconTwitter'>
-                <CiTwitter className='iconConnective'/>
+        <div className='Connective__con'>
+            <div className="icon_connect_con">
+                 <FaTwitter className='iconConnective'/>
             </div>
+          
             <div className='Connectivetext'>
                 <h3>Twitter</h3>
                 <h5>www.fintech.com</h5>
             </div>
         </div>
-        <div className='ConnectiveDiscord'>
-            <div className='ConnectiveiconDiscord'>
-                <TbBrandDiscord className='iconConnective'/>
+        <div className='Connective__con'>
+            <div className="icon_connect_con">
+                 <FaDiscord className='iconConnective'/>
             </div>
+         
             <div className='Connectivetext'>
                 <h3>Discord</h3>
                 <h5>www.fintech.com</h5>
             </div>
         </div>
-        <div className='ConnectiveTelegram'>
-            <div className='ConnectiveiconTelegram'>
+        <div className='Connective__con'>
+            <div className="icon_connect_con">
                 <BsTelegram className='iconConnective'/>
             </div>
+              
             <div className='Connectivetext'>
                 <h3>Telegram</h3>
                 <h5>www.fintech.com</h5>
             </div>
         </div>
+        </div>
+        
     </div>
   )
 }

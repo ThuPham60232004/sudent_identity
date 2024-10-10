@@ -1,22 +1,96 @@
 .ConnectiveContainer{
-    background-color: black;
-    color: aliceblue;
+    width: 100%;
     display: flex;
-    padding: 0 70px;
-    gap: 90px;
+    align-items: center;
     justify-content: center;
 }
-.iconConnective{
-    width: 70px;
-    height: 70px;
+.ConnectiveContainer_group{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    color: white;
 }
-.ConnectiveWebsite,
-.ConnectiveTwitter,
-.ConnectiveDiscord,
-.ConnectiveTelegram{
+.Connective__con{
+    grid-column: span 3;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
 }
 .Connectivetext{
-   padding: 13px 0 0 13px;
+    display: flex;
+    flex-direction: column;
+}
+.Connectivetext h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.Connectivetext h5{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(114, 114, 114);
+}
+
+.icon_connect_con{
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    padding: 5px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.icon_connect_con:hover{
+    box-shadow: 0 0 5px cyan, 
+    0 0 25px cyan;
+}
+
+.iconConnective{
+    font-size: 30px;
+    color: black;
+
+}
+
+@media (max-width: 874px) {
+    .ConnectiveContainer_group{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+
+}
+   .Connective__con {
+    margin: 0 auto;
+    grid-column: span 6;
+   }
+   .Connectivetext h3{
+    font-size: 16px;
+}
+.Connectivetext h5{
+    font-size: 12px;
+}
+   .icon_connect_con{
+    width: 40px;
+    height: 40px;
+ 
+    
+}
+}
+
+@media (max-width: 430px) {
+    .ConnectiveContainer_group{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+    padding: 10px;
+
+}
+   .Connective__con {
+    grid-column: span 6;
+   }  
 }

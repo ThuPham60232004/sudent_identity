@@ -1,4 +1,4 @@
-.NFTCreation_CN h1{
+/* .NFTCreation_CN h1{
   padding-top: 30px;
 }
 .NFTCreation_CN h5{
@@ -84,4 +84,144 @@
 
 .add-trait-btn {
   margin-top: 10px;
+} */
+
+
+
+.NFTCreation_CN{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  padding: 30px;
+}
+.title_nft_CN{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title_nft_CN h1{
+  font-size: 40px;
+}
+.title_nft_CN p{
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.content_create_nft_CN{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.left_create_nft_CN{
+  width: 50%;
+  padding: 20px;
+}
+
+.media-upload{
+  width: 100%;
+  height: 500px;
+  border: 2px dashed white;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.upload-box{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.icon_upload_media_upload{
+  font-size: 30px;
+}
+.upload-box h4{
+  font-size: 12px;
+}
+.upload-box a{
+  text-decoration: none;
+  font-size: 12px;
+}
+.upload-box p{
+  font-size: 12px;
+}
+
+.right_create_nft_CN{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+}
+.create_collection_nft_CN{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.create_collection_nft_CN h3{
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+.create_collection_nft_CN p{
+  font-size: 16px;
+  color: white;
+  font-size: 500;
+
+}
+.create_collection_nft_CN a{
+  text-decoration: none;
+}
+.create_collection__con{
+background: rgb(27, 27, 27);
+padding: 10px;
+display: flex;
+align-items: center;
+gap: 10px;
+border-radius: 10px;
+}
+.create_collection__con p{
+  color: white;
+}
+.add_btn_collection{
+  padding: 10px;
+  background: rgb(54, 53, 53);
+  border-radius: 10px;
+}
+.icon_add_collection{
+  font-size: 20px;
+}
+.nft-form{
+  display: flex;
+  flex-direction: column;
+  background: gray;
+  gap: 20px;  
+}
+.form-group{
+  display: flex;
+    align-items: center;
+}
+.form-group input{
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 100%;
+   
+}
+.form-group label{
+  position: absolute;
+  margin-left: 10px;
+  color: black;
+  font-weight: 600;
+
 }

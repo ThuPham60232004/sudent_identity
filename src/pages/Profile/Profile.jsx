@@ -13,6 +13,7 @@ const Profile = () => {
     const { item } = useContext(ItemContext);
     const navigate = useNavigate();
     const location = useLocation();
+
     useEffect(() => {
         if (location.pathname === '/Dashboard/Profile') {
             navigate('ActiveListings');
@@ -31,19 +32,17 @@ const Profile = () => {
     const toggleMore = () => {
         setIsExpanded(!isExpanded);
     };
+
   return (
     <div className="profile_page">
         <div className="header_profile">
             <div className="bg_user_profile">
-
+                <img className='avatar_user_profile' src="https://th.bing.com/th/id/OIP.y2ItE7NCQBrsTDtkhCdr3wHaEK?rs=1&pid=ImgDetMain" alt="" /> 
                <div className="bg__user">
-                    <img src="https://dxagroup.io/wp-content/uploads/Blog/CuratingthePerfectNFTArtCollectionExpertTips/cacurating-the-perfect-nft-art-collection-expert-tips-10.webp" alt="" />
-               </div> 
-                
+                     <img src="https://dxagroup.io/wp-content/uploads/Blog/CuratingthePerfectNFTArtCollectionExpertTips/cacurating-the-perfect-nft-art-collection-expert-tips-10.webp" alt="" />
+               </div>
             </div>
-            
             <div className="con_profile">
-
             </div>
 
             <div className="name_user_and_feature">
@@ -66,7 +65,7 @@ const Profile = () => {
                 </div>
             </div>
             <div className="link_account_profile">
-                <h4><span><FaEthereum className='icon_ether'/></span>hjbsddhwhsbf....</h4>
+                <h4><span><FaEthereum className='icon_ether'/></span> hjbsddhwhsbf....</h4>
                 <p>Joined September 2024</p>
             </div>
         </div>   
@@ -106,7 +105,7 @@ const Profile = () => {
              onMouseLeave={handleMouseLeaveMore}
              onClick={toggleMore}>
                 <p>More <span><RiArrowDropDownLine className='icon_profile_page'/></span></p>
-            </div>
+        </div>
             {isExpanded && (
                 <div className="choose_item_more">
                     <div className="choose_item">
@@ -167,12 +166,12 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <div className="display_items_container">
+            <div className="display_items_container_page">
             <Outlet/>
             </div>
             
         </div>
-    
+
   )
 }
 

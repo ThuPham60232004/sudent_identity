@@ -1,191 +1,191 @@
-
-.GuideContainer{
+ .GuideContainer{
     width: 100%;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 60px;
-    background: black;
-
-}
-.GuideContainer h1 {
     color: white;
-    font-size: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+ .STEP_GUIDE{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+ }
+ .flip-card1,
+ .flip-card2,
+ .flip-card3,
+ .flip-card4{
+    grid-column: span 3;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+    
+ }
+ .flip-card1{
+    border: 2px solid aqua;
+ }
+  .flip-card1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+ }
+  .flip_card_con1{
+    background: aqua;
+    border-radius: 10px;
+    padding: 5px;
+ }
+ .number_step_card1 h3{
+    background: aqua;
+   }
+
+ .flip-card2{
+    border: 2px solid rgb(0, 255, 55);
+ }
+  .flip-card2:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgb(0, 255, 55),
+    0 0 25px rgb(0, 255, 55);
+ }
+  .flip_card_con2{
+    background: rgb(0, 255, 55);
+    border-radius: 10px;
+    padding: 5px;
+ }
+.number_step_card2 h3{
+    background: rgb(0, 255, 55);
+   }
+
+ .flip-card3{
+    border: 2px solid rgb(255, 153, 0);
+ }
+  .flip-card3:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgb(255, 153, 0),
+    0 0 25px rgb(255, 153, 0);
+ }
+ .flip_card_con3{
+    background: rgb(255, 153, 0);
+    border-radius: 10px;
+    padding: 5px;
+ }
+.number_step_card3 h3{
+    background: rgb(255, 153, 0);
+   }
+
+
+ .flip-card4 {
+    border: 2px solid rgb(255, 0, 136);
+ }
+  .flip-card4:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgb(255, 0, 136),
+    0 0 25px rgb(255, 0, 136);
+ }
+
+  .flip_card_con4{
+    background: rgb(255, 0, 136);
+    border-radius: 10px;
+    padding: 5px;
+ }
+   .number_step_card4 h3{
+    background: rgb(255, 0, 136) ;
+   }
+
+.number_step_card1 h3,
+.number_step_card2 h3,
+.number_step_card3 h3,
+  .number_step_card4 h3{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
     font-weight: 800;
+ }
 
-}
-.STEP_GUIDE{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 20px;
-}
-.flip-card1,
-.flip-card2,
-.flip-card3,
-.flip-card4{
-    width: 50%;
-    height: 100%;
-    background: transparent;
-    perspective: 1000px;
-}
-
-.flip-card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-.flip-card1:hover .flip-card-inner,
-.flip-card2:hover .flip-card-inner,
-.flip-card3:hover .flip-card-inner,
-.flip-card4:hover .flip-card-inner{
-    transform: rotateY(180deg);
-}
-
-.flip-card-front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+ .flip_card_con{
+    background: black;
     border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 50px rgba(247, 241, 241, 0.5);
-}
-
-.flip-card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+    padding: 20px;
+    height: 200px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 30px rgba(247, 241, 241, 0.5);
-}
-.flip-card-front{
-    background: white;
-     color: #000;
-     display: flex;
-     flex-direction: column;
-     gap: 15px;
-}
-
-.flip-card-front h2 {
-    font-size: 16px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-.flip-card-back {
-    height: 100%;
-    background: orange;
-    color: #000;
-    display: flex;
-     flex-direction: column;
     gap: 20px;
-    padding: 10px 20px 20px;
-    transform: rotateY(180deg);
-}
-.content_step_back {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    text-align: start;
-}
+    
+ }
 
-.content_step_back h2 {
-    font-size: 14px;
-    font-weight: 900;
-}
-.GuideContainer_Header_STEP{
-    width: 100%;
+ .number_step_card1,
+ .number_step_card2,
+ .number_step_card3,
+ .number_step_card4{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-   padding: 20px 20px 0;
-}
-.GuideContainer_Header_STEP_back{
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding-top: 10px;
-  
-}
-.title_step{
-    width: 70%;
-    font-weight: 600;
-    color: gray;
-}
-.title_step_back{
-    color: #000;
-    font-weight: 900;
-    text-align: start;
+    gap: 10px;
 }
 
-.icon_step{
-    width: 30%;
-    text-align: end;
-}
-.icon_step_back{
-    width: 30%;
-    text-align: end;
-    font-size: 20px;
-}
-.icon_step,
-.icon_step_back{
+ .icon_guide_step{
     font-size: 50px;
-}
+ }
+ .content_step_guide{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .title_content_step{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
 
-.icon_arrow_step{
-    font-size: 25px;
-}
-.icon_move_back{
-    width: 100%;
-    background: gray;
-    border-radius: 0 0 10px 10px;
-    padding: 10px;
-}
-.flip-card1 .flip-card-front {
-    background: #FFDDC1; 
-}
+ .content_step_guide h2{
+    font-size: 16px;
+ }
+ .content_step_guide p{
+    font-size: 13px;
+ }
 
-.flip-card1 .flip-card-back {
-    background: #FF7F50; 
-}
 
-.flip-card2 .flip-card-front {
-    background: #C1FFD7; 
-}
 
-.flip-card2 .flip-card-back {
-    background: #32CD32; 
-}
 
-.flip-card3 .flip-card-front {
-    background: #C1E7FF; 
-}
+ @media ( max-width:1094px) {
+     .STEP_GUIDE{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+ }
+  .flip-card1,
+  .flip-card2,
+  .flip-card3,
+  .flip-card4{
+    grid-column: span 6;
+ }
+ }
 
-.flip-card3 .flip-card-back {
-    background: #1E90FF;
-}
+ @media(max-width:580px){
+     .STEP_GUIDE{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+ }
+ .flip-card1,
+ .flip-card2,
+ .flip-card3,
+  .flip-card4{
+    grid-column: span 12;
+ }
+ .flip-card_con1,
+ .flip-card_con2,
+ .flip-card_con3,
+ .flip_card_con4{
+    height: 180px;
+ }
+ .icon_guide_step{
+    font-size: 40px;
+ }
 
-.flip-card4 .flip-card-front {
-    background: #F6C1FF; 
-}
-
-.flip-card4 .flip-card-back {
-    background: #8A2BE2; 
-}
-
+ .number_step_card1 h3,
+ .number_step_card2 h3,
+ .number_step_card3 h3,
+ .number_step_card4 h3{
+    font-size: 16px;
+ }
+ }
