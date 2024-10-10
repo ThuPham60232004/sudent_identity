@@ -1,0 +1,116 @@
+.offers-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    max-width: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .offers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .offers-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .offers-filter .filter-icon {
+    font-size: 24px;
+  }
+  
+  .offers-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .offers-actions span {
+    margin-right: 10px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #1e90ff;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+  .settings-icon {
+    font-size: 24px;
+  }
+  
+  .offers-body {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .offers-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .offers-section-title {
+    font-size: 16px;
+  }
+  
+  .offers-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offers-empty img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .offers-empty span {
+    font-size: 14px;
+    color: #888;
+  }
+  

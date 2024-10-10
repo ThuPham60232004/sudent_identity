@@ -10,11 +10,6 @@ import { LuLayoutPanelLeft } from "react-icons/lu";
 import "./Profile.css"
 import { ItemContext } from '../../context/ItemContext';
 const Profile = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const toggleMore = () => {
-        setIsExpanded(!isExpanded);
-    };
     const { item } = useContext(ItemContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -23,21 +18,36 @@ const Profile = () => {
             navigate('ActiveListings');
         }
     }, [location.pathname, navigate]);
+    const [isExpanded, setIsExpanded] = useState(false);
+    
+    const handleMouseEnterMore = () => {
+        setTimeout(() => setIsExpanded(true), 200);
+    };
 
+    const handleMouseLeaveMore = () => {
+        setTimeout(() => setIsExpanded(false), 1000);
+    };
+
+    const toggleMore = () => {
+        setIsExpanded(!isExpanded);
+    };
   return (
     <div className="profile_page">
-        <div className="navbar_profile">
-            <p>navbar ở đây</p>
-        </div>
         <div className="header_profile">
             <div className="bg_user_profile">
-                <img className='avatar_user_profile' src="./img/collection.png" alt="" /> 
+
                <div className="bg__user">
-                    <img src="./img/bg.png" alt="" />
-               </div>  
+                    <img src="https://dxagroup.io/wp-content/uploads/Blog/CuratingthePerfectNFTArtCollectionExpertTips/cacurating-the-perfect-nft-art-collection-expert-tips-10.webp" alt="" />
+               </div> 
+                
             </div>
-            <div className="con_profile"></div>
+            
+            <div className="con_profile">
+
+            </div>
+
             <div className="name_user_and_feature">
+                
                 <div className="name_user">
                     <h2>Name</h2>
                 </div>
@@ -91,7 +101,10 @@ const Profile = () => {
                     Activity
                 </NavLink>
             </div>
-            <div className="choose_item" onClick={toggleMore}>
+            <div className="choose_item" 
+             onMouseEnter={handleMouseEnterMore} 
+             onMouseLeave={handleMouseLeaveMore}
+             onClick={toggleMore}>
                 <p>More <span><RiArrowDropDownLine className='icon_profile_page'/></span></p>
             </div>
             {isExpanded && (

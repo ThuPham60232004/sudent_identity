@@ -1,0 +1,122 @@
+.created-container {
+    display: flex;
+    background-color: #181818;
+    color: white;
+  }
+  
+  .filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #111;
+  }
+  
+  .filter-sidebar h3 {
+    margin-bottom: 15px;
+  }
+  
+  .filter-sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #222;
+    border: none;
+    color: white;
+  }
+  
+  .created-items {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .items-header {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .item-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .item-quantity {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .item-image-created {
+    border-radius: 5px;
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+}
+
+.filter-sidebar-search{
+    border-radius: 10px;
+}
+  .items-grid h4 {
+    margin: 15px 0 5px;
+    font-size: 16px;
+  }
+  
+  .items-grid p {
+    font-size: 14px;
+    color: #aaa;
+  }
+  .collected-img-card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 300px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .collected-img-content {
+    position: relative;
+  }
+  
+  .collected-img-picture {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .collected-img-details {
+    margin-top: 10px;
+  }
+  
+  .collected-img-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .collected-img-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  .collected-img-floor, .collected-img-volume {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  
+  .collected-img-volume span:last-child {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  

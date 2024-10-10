@@ -1,0 +1,139 @@
+.hidden-hidden-container {
+    display: flex;
+    background-color: #181818; 
+    color: #e0e0e0; 
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hidden-hidden-sidebar {
+    width: 25%; 
+    padding: 20px;
+    background-color: #202020; 
+    border-right: 1px solid #333;
+}
+
+.hidden-filter-section h3,
+.hidden-collection-section h3 {
+    font-size: 16px;
+    color: #f5f5f5; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.hidden-filter-section div,
+.hidden-collection-section div {
+    margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    color: #bbb;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+label:hover {
+    color: #fff; 
+}
+
+.hidden-search-input {
+    width: 100%;
+    padding: 8px;
+    background-color: #2b2b2b; 
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.hidden-search-input:focus {
+    outline: none;
+    border-color: #00aaff;
+}
+
+.hidden-collection-list {
+    margin-top: 10px;
+}
+
+.hidden-collection-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #242424;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hidden-collection-item:hover {
+    background-color: #303030; 
+}
+
+.hidden-collection-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #555; 
+}
+
+.hidden-collection-item span {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.hidden-hidden-main {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #181818; 
+}
+
+.hidden-item-card {
+    background-color: #232323; 
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hidden-item-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hidden-item-card img {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.hidden-item-info h4 {
+    font-size: 18px;
+    color: #f5f5f5;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.hidden-item-info h4:hover {
+    color: #00aaff; 
+}
+
+.hidden-item-info p {
+    font-size: 14px;
+    color: #888;
+}
+
+.hidden-item-info p:hover {
+    color: #fff; 
+}

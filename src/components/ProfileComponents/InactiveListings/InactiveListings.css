@@ -1,0 +1,70 @@
+.listings-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    max-width: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .listings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .listings-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .listings-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .listings-status {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .listings-cancel {
+    color: #1e90ff;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .info-icon {
+    font-size: 16px;
+  }
+  
+  .listings-body {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .empty-listings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .empty-listings img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .empty-listings span {
+    font-size: 14px;
+    color: #888;
+  }
+  
