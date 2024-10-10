@@ -17,7 +17,7 @@ import { FaBell } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
 import { MdLogout } from "react-icons/md";
-
+import { Link } from 'react-router-dom';
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -56,7 +56,7 @@ const Dashboard = () => {
         <div className={`HomePageSideBar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
           <div className="logo_web_bars">
             <div className="logo_sidebar">
-              {!isSidebarCollapsed && <p>FINTECH</p>}
+              {!isSidebarCollapsed && <p><Link to='/' style={{textDecoration:"none",color:"white"}}>FINTECH</Link></p>}
             </div>
             <div className="bars_sidebar">
               <FaBars className="icon_bars_sidebar" onClick={toggleSidebar} />
