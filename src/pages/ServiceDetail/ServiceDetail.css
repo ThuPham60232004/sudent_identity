@@ -1,0 +1,125 @@
+.ServiceDetail{
+    background-color: black;
+    color: white;
+}
+.ServiceDetailHeader{
+    display: flex;
+    gap: 5px;
+}
+.ServiceDetailHeaderText{
+    padding: 60px;
+    margin-top: 200px;
+    width: 50%;
+}
+.ServiceDetailHeaderText h1{
+    font-size: 50px;
+}
+.ServiceDetailHeaderText h4{
+    color: gray;
+}
+.ServiceDetailHeaderImg{
+    width: 50%;
+    
+}
+.connect-container {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .connect-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tech-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 320px;
+  }
+  
+  .tech-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .tech-card span {
+    font-size: 16px;
+    color: white;
+  }
+  .learn-container {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .learn-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .learn-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .learn-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 320px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .learn-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .learn-icon {
+    font-size: 40px;
+    color: #00BFFF;
+    margin-right: 10px;
+  }
+  
+  .learn-content {
+    text-align: left;
+  }
+  
+  .learn-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .learn-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #ccc;
+  }
+  

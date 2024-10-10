@@ -1,5 +1,6 @@
 import React from 'react';
-import './Services.css'; // Link to your CSS file
+import { useNavigate } from 'react-router-dom';
+import './Services.css'; 
 
 const Services = () => {
   const services = [
@@ -23,14 +24,18 @@ const Services = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/service/${id}`);
+  };
+
   return (
     <div className="services-container">
-             <button className='button_services'>View more</button>
       <h1>Our Services</h1>
-
       <div className="services-grid">
         {services.map(service => (
-          <div className="service-card" key={service.id}>
+          <div className="service-card" key={service.id} onClick={() => handleClick(service.id)}>
             <img src={service.image} alt={service.title} className="service-image" />
             <div className="service-details">
               <h2>{service.title}</h2>
@@ -40,7 +45,6 @@ const Services = () => {
           </div>
         ))}
       </div>
-     
     </div>
   );
 };

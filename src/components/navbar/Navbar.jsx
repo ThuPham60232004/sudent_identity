@@ -106,6 +106,7 @@ const Navbar = () => {
             {showDropdownCreate && (
               <div className="dropdown">
                 <Link to='/CreatePage'>NFT & Collection</Link>
+                <Link to='/ServiceDetail'>Fintech Document</Link>
               </div>
             )}
           </div>

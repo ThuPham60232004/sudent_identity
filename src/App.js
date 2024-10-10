@@ -42,6 +42,8 @@ import InactiveListings from "./components/ProfileComponents/InactiveListings/In
 import OfferMade from "./components/ProfileComponents/OfferMade/OfferMade.jsx";
 import OffersReceived from "./components/ProfileComponents/OffersReceived/OffersReceived.jsx";
 import Created from"./components/ProfileComponents/Created/Created.jsx"
+import ServiceDetail from "./pages/ServiceDetail/ServiceDetail.jsx";
+import ServiceD from "./components/ServiceD/ServiceD.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -64,6 +66,8 @@ function App() {
           <Route path="/Account" element={<Account/>} />
           <Route path="/ContactUs" element={<ContactUs/>} />
           <Route path="/Subscription" element={<SubscriptionPage/>} />
+          <Route path="/ServiceDetail" element={<ServiceDetail/>} />
+          <Route path="/service/:id" element={<ServiceD/>} />
         {/* DASHBOARD----------------------------------------------------------- */}
           <Route path="/Dashboard" element={<Dashboard />}>
               <Route path="HomeDashboard" element={<HomeDashboard />} />
