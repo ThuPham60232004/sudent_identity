@@ -6,7 +6,7 @@
     // background: black;
     .nft_detail_page_container1{
         background: black;
-        padding: 20px;
+        padding:10px 20px;
         display: grid;
         grid-template-columns: repeat(12,1fr);
         gap: 10px;
@@ -176,13 +176,12 @@
                             gap: 5px;
                             padding: 10px 20px;
                             color: white;
-                            &.closed {
-                                border-bottom-left-radius: 10px;
-                                border-bottom-right-radius: 10px; /* For closed state */
-                            }
 
-                            /* For open state */
+                            &.closed {
+                             
+                            }
                             &:not(.closed) {
+                              
                                 border-bottom-left-radius: 10px;
                                 border-bottom-right-radius: 10px;
                             }
@@ -763,7 +762,7 @@
     .nft_detail_page_container2 {
   background: black;
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
 
   .nft_detail_page_con2 {
     background: black;
@@ -919,7 +918,7 @@
     .nft_detail_page_container3 {
   width: 100%;
   background: black;
-  padding: 20px;
+  padding:10px 20px;
 
   .nft_detail_page_con3 {
     background: black;

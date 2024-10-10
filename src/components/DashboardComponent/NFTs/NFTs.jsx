@@ -13,10 +13,10 @@ const NFTs = () => {
   const [items, setItems] = useState([
     {
       rank: 10,
-      name: "egg",
+      name: "Space Doodle",
       floorPrice: "0.14 ETH",
       volume: "6 ETH",
-      item: "1",
+      collection: "Sprotolady #4270",
       imageUrl: "https://png.pngtree.com/png-clipart/20190618/original/pngtree-cute-q-version-cartoon-character-image-q-version-cartoon-character-cute-png-image_3946095.jpg", 
     },
     {
@@ -24,7 +24,23 @@ const NFTs = () => {
       name: "DeGods",
       floorPrice: "2.24 ETH",
       volume: "73.8 ETH",
-      item: "10",
+      collection: "Sprotolady #4270",
+      imageUrl: "https://img.lovepik.com/png/20231105/Cute-cartoon-characters-cute-avatar-expressions-avatar-set_497508_wh860.png", 
+    },
+    {
+      rank: 10,
+      name: "egg",
+      floorPrice: "0.14 ETH",
+      volume: "6 ETH",
+      collection: "Sprotolady #4270",
+      imageUrl: "https://png.pngtree.com/png-clipart/20190618/original/pngtree-cute-q-version-cartoon-character-image-q-version-cartoon-character-cute-png-image_3946095.jpg", 
+    },
+    {
+      rank: 11,
+      name: "DeGods",
+      floorPrice: "2.24 ETH",
+      volume: "73.8 ETH",
+      collection: "Sprotolady #4270",
       imageUrl: "https://img.lovepik.com/png/20231105/Cute-cartoon-characters-cute-avatar-expressions-avatar-set_497508_wh860.png", 
     },
   ]);
@@ -68,7 +84,7 @@ const NFTs = () => {
   return (
     <div className="nfts-container">
       <div className="nfts-header">
-        <p>{filteredItems.length} items</p>
+        <p>{filteredItems.length} Items</p>
         <div className="nfts-controls">
           <select onChange={(e) => setFilterCollection(e.target.value)}>
             <option value="All">All Collections</option>
@@ -85,7 +101,7 @@ const NFTs = () => {
           </select>
           <div className="nfts-icons">
             <FaTh className="icon" />
-            <FaBars className="icon" />
+            <FaBars className="icon" /> 
             <FaFilter className="icon" />
           </div>
         </div>
@@ -99,13 +115,32 @@ const NFTs = () => {
               <div className="nfts-gallery-item-image">
                 <img src={item.imageUrl} alt={item.name} />
               </div>
+
               <div className="nfts-gallery-item-info">
-                <div className="nfts-gallery-item-rank">  <h4>Rank:</h4> {item.rank}</div>
-                <div className="nfts-gallery-item-floorPrice">  <h4>FloorPrice:</h4>{item.floorPrice}</div>
-                <div className="nfts-gallery-item-volume">  <h4>Volume:</h4>{item.volume}</div>
-                <div className="nfts-gallery-item-owners"> <h4>Item:</h4>{item.item}</div>
-              </div>
+                  <div className="nft_rank_collection_group">
+                    <div className="nfts-gallery-item-rank">
+                      <p>Rank</p>
+                      <h4>{item.rank}</h4>
+                    </div>
+                    <div className="nfts-gallery-item-collection">
+                      <h4>{item.collection}</h4>
+                    </div>
+                  </div>
+                <div className="nfts-gallery-item-name">
+                <h4>{item.name}</h4>
+                </div>
+                <div className="nft_price_volume_group">
+                  <div className="nfts-gallery-item-floorPrice">
+                  <p>Floor price</p>
+                  <h4>{item.floorPrice}</h4>
+                </div>
+                <div className="nfts-gallery-item-volume">
+                  <p>Volume</p>
+                  <h4>{item.volume}</h4>
+                </div>
+                </div>
             </div>
+          </div>
           ))
         )}
       </div>

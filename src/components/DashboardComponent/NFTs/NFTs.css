@@ -10,6 +10,9 @@
   margin-bottom: 20px;
   color: #ffffff;
 }
+.nfts-header p{
+  font-weight: 600;
+}
 
 .nfts-controls {
   display: flex;
@@ -18,9 +21,9 @@
 
 select {
   padding: 10px;
-  border: 1px solid #555;
+
   border-radius: 5px;
-  background-color: #1e1e1e;
+  background-color: #444444;
   color: white;
   margin-right: 20px;
   cursor: pointer;
@@ -51,10 +54,14 @@ select:hover {
 .nfts-gallery-item {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   background: #1e1e1e;
   color: white;
   transition: transform 0.2s ease;
+   box-shadow:
+      2px 2px 2px rgba(0, 0, 0, 0.2),
+      -2px -2px 2px rgba(255, 255, 255, 0.2),
+      -2px 2px 2px rgba(0, 0, 0, 0.2),
+      2px 2px 2px rgba(255, 255, 255, 0.2);
 }
 
 .nfts-gallery-item:hover {
@@ -69,24 +76,35 @@ select:hover {
 }
 
 .nfts-gallery-item-info {
-  padding: 15px;
-}
-
-.nfts-gallery-item-info h4 {
-  margin: 0;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-.nfts-gallery-item-rank,
-.nfts-gallery-item-floorPrice,
-.nfts-gallery-item-volume,
-.nfts-gallery-item-owners {
-  margin-bottom: 5px;
+  padding: 20px;
   display: flex;
-  gap: 6px;
-  font-size: 16px;
+  flex-direction: column;
+  gap: 10px;
 }
+
+p{
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+.nft_price_volume_group,
+.nft_rank_collection_group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nfts-gallery-item-rank{
+  display: flex;
+  gap:5px;
+  align-items: center;
+}
+
+.nfts-gallery-item-volume,
+.nfts-gallery-item-floorPrice{
+  display: flex;
+  flex-direction: column;
+}
+
 
 .loading-spinner {
   color: white;

@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { FaXmark } from "react-icons/fa6";
 
 const ShareNFTModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -13,10 +14,8 @@ const ShareNFTModal = ({ isOpen, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-x">
-        <button className="close-button" onClick={onClose}>
-          &times;
-        </button>
-        <h3>SHARE THIS NFT</h3>
+          <h3>SHARE THIS NFT</h3>
+          <FaXmark className="close-button" onClick={onClose}/>
         </div>
         
         <div className="icons-container">
