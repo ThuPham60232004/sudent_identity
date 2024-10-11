@@ -219,13 +219,14 @@
                             flex-direction: column;
                             gap: 5px;
                             padding: 20px;
+                            color: white;
                             .item_content_con1{
                                 display: flex;
                                 justify-content: space-between;
-                                color: white;
                                 p{
                                     font-size: 16px;
                                     font-weight: 500;
+                                    color: white;
                                 }
                                 a{
                                     text-decoration: none;
@@ -303,6 +304,7 @@
                                 p{
                                     font-size: 14px;
                                     font-weight: 600;
+                                    color: white;
                                 }
                         }
                         .favorite_nft__con1{
@@ -312,6 +314,7 @@
                                 p{
                                     font-size: 14px;
                                     font-weight: 600;
+                                    color: white;
                                 }
                         }
                     }
@@ -337,6 +340,7 @@
                          p{
                                 font-size: 16px;
                                 font-weight: 600;
+                                color: white;
                             }
                         .time_sale_on__con1{
                             display: flex;
@@ -479,11 +483,14 @@
                             display: flex;
                             align-items: center;
                             gap: 10px;
+                             
                         }
                         p{
                             font-size: 16px;
                             font-weight: 700;
+                            color: white;
                         }
+                       
                         .open_close_price_history_right_con1{
 
                                 .icon_open_close_nft_page{
@@ -501,6 +508,9 @@
                         padding: 20px;
                         height: 100px;
                         color: white;
+                        p{
+                            color: white;
+                        }
                     }
                 }
                 .listings_right_con1{
@@ -594,6 +604,7 @@
                             align-items: center;
                             p{
                                 font-size: 13px;
+                                color: white;
                             }
                             a{
                                 text-decoration: none;
@@ -722,6 +733,7 @@
                             align-items: center;
                             p{
                                 font-size: 13px;
+                                color: white;
                             }
                             a{
                                 text-decoration: none;

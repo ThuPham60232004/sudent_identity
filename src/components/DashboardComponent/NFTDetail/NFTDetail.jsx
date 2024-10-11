@@ -1,6 +1,6 @@
 
 import React,{useState} from "react";
-import "./NFTDetail.scss";
+import "./NFTDetail.scss";  
 import { FaEye, FaHeart, FaShareAlt } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
 import { CiShare1 } from "react-icons/ci";

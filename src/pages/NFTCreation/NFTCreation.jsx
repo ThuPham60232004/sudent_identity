@@ -6,53 +6,6 @@ import { MdAdd } from "react-icons/md";
 
 const NFTCreation = () => {
   return (
-    // <div className='NFTCreation_CN'>
-    //   <div className="nft-creation-container">
-    //     <div>
-    //       <h1>Create an NFT</h1>
-    //       <h5>Once your item is minted, you will not be able to change any of its information</h5>
-          // <div className="media-upload">
-          //   <div className="upload-box">
-          //     <p>Drag and drop media</p>
-          //     <p><a href="#">Browse files</a></p>
-          //     <p>Max size: 50MB</p>
-          //     <p>JPG, PNG, GIF, SVG, MP4</p>
-          //   </div>
-          // </div>
-    //     </div>
-    //     <div className="form-section">
-    //       <div className="collection-section">
-    //         <button className="create-collection-btn">+ Create a new collection</button>
-    //         <p>Not all collections are eligible. <a href="#">Learn more</a></p>
-    //       </div>
-          // <form className="nft-form">
-          //   <div className="form-group">
-          //     <label>Name *</label>
-          //     <input type="text" placeholder="Name your NFT" />
-          //   </div>
-          //   <div className="form-group">
-          //     <label>Supply *</label>
-          //     <input type="number" defaultValue={1} />
-          //   </div>
-          //   <div className="form-group">
-          //     <label>Description</label>
-          //     <textarea placeholder="Enter a description"></textarea>
-          //   </div>
-          //   <div className="form-group">
-          //     <label>External link</label>
-          //     <input type="text" placeholder="https://collection.io/item/123" />
-          //   </div>
-          //   <div className="form-group">
-          //     <label>Traits</label>
-          //     <button className="add-trait-btn">+ Add trait</button>
-          //   </div>
-          //   <button type="submit" className="create-btn">Create</button>
-          // </form>
-    //     </div>
-    //   </div>
-    // </div>
-
-
     <div className="NFTCreation_CN">
       <div className="title_nft_CN">
           <h1>Create an NFT</h1>
@@ -76,34 +29,41 @@ const NFTCreation = () => {
               <h3>Collection*</h3>
               <div className="create_collection__con">
                 <div className="add_btn_collection">
-                  <MdAdd className='icon_add_collection'/>
+                  <button className='btn_add_new_collection'><MdAdd className='icon_add_collection'/></button>
                 </div>
                 <p>Create a new collection</p>
               </div>
-              <p>Not all collections are eligibe. <span><a href="#">Learn more</a></span></p>
+              <p className='note_add_collection'>Not all collections are eligibe. <span><a href="#">Learn more</a></span></p>
             </div>
             <form className="nft-form">
-              <div className="form-group">
-                <input type="text" />
-                <label htmlFor="">Name your NFT</label>
+              <div className="form_group_nft">
+                <input type="text" placeholder='Name your NFT' />
+                <label>Name*</label>
               </div>
-              <div className="form-group">
+              <div className="form_group_nft">
+                <input type="number" defaultValue={1}/>
                 <label>Supply *</label>
-                <input type="number" />
+                
               </div>
-              <div className="form-group">
+              <div className="form_group_nft">
+                 <textarea placeholder='Enter a description'></textarea>
                 <label>Description</label>
-                <textarea></textarea>
+               
               </div>
-              <div className="form-group">
+              <div className="form_group_nft">
+                 <input type="text" placeholder='http://colletion.io/item/123'/>
                 <label>External link</label>
-                <input type="text" />
+               
               </div>
-              <div className="form-group">
+              <div className="form_group_nft_trait">
                 <label>Traits</label>
-                <button className="add-trait-btn">+ Add trait</button>
+                <p>Traits describe attributes of your item. They appear as filters inside your collection page and are also listed out inside your item page.</p>
+                <div className="add_trait_group">
+                  <button className="add-trait-btn">+ Add trait</button>
+                </div>
+                
               </div>
-              <button type="submit" className="create-btn">Create</button>
+              <button type="submit" className="create-btn_nft">Create</button>
           </form>
         </div>
       </div>
