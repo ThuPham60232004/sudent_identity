@@ -1,4 +1,4 @@
-.swap-sidebar{
+/* .swap-sidebar{
     display: flex;
     background-color: black;
     color: white;
@@ -188,4 +188,245 @@
 }
 .routeBox_box:hover{
     border: 1.5px solid #5252b7;
+} */
+
+
+
+.swap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swap_container{
+    width: 80%;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.swapBox{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+     box-shadow:
+      3px 3px 3px rgba(0, 0, 0, 0.2),
+      -3px -3px 3px rgba(255, 255, 255, 0.2),
+      -3px 3px 3px rgba(0, 0, 0, 0.2),
+      3px 3px 3px rgba(255, 255, 255, 0.2);
+}
+.swap_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swap_title h3{
+    font-size: 30px;
+    font-weight: 800;
+}
+.swap_slippage{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.swap_slippage h6{
+    font-size: 16px;
+
+}
+.icon_setting_swap{
+    font-size: 25px;
+}
+
+.swapInput{
+     background: rgb(39, 38, 38);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+
+}
+.swapInput:hover{
+    border: 1.5px solid #777777;
+    
+}   
+
+.swapInput input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+
+}
+.swapInput_input_con2{
+    background: rgb(74, 74, 74);
+    font-weight: 600;
+    color: white;
+}
+.swapInput_con1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swapInput_con2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.swapInput_con2 h4{
+    font-size: 16px;
+
+}
+.swapInput_total_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swapInput_Total{
+    display: flex;
+}
+
+.swapInput_icon{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.swapInput_icon{
+    font-size: 20px;
+}
+
+.icon_wallet_swap{
+    font-size: 20px;
+}
+.select_swapInput_con2{
+ display: flex;
+}
+.select_swap{
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    padding: 10px;
+    margin: 0;
+ background: rgb(57, 57, 57);
+ 
+}
+.swapInput_total_container{
+     background: rgb(39, 38, 38);
+    padding: 20px;
+    border-radius: 10px;
+}
+.swapInput_total_container h4{
+    font-weight: 600;
+}
+.swapInput_Total{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.swapInput_Total h4{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.swap_button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.swap_btn1{
+    width: 70%;
+}
+.swap_button1{
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    background: rgb(70, 70, 198);
+    border-radius: 10px;
+
+}
+
+.swap_button1:hover,
+.swap_button2:hover{
+    background: white;
+    color: black;
+}
+.swap_btn2{
+    width: 30%;
+}
+.swap_button2{
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    background: rgb(70, 70, 198);
+    border-radius: 10px;
+}
+
+.routesBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:
+      3px 3px 3px rgba(0, 0, 0, 0.2),
+      -3px -3px 3px rgba(255, 255, 255, 0.2),
+      -3px 3px 3px rgba(0, 0, 0, 0.2),
+      3px 3px 3px rgba(255, 255, 255, 0.2);
+}
+
+.routeBox_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+     background: rgb(39, 38, 38);
+     padding: 20px;
+     border-radius: 10px;
+}
+.routeBox_box:hover{
+    border: 1.5px solid #777777;
+}
+.routeBox_box_fullheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.routeBox_box_icon{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.routeBox_box_best{
+    background-color: rgba(172, 255, 47, 0.273);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.routeBox_box_nameSwap img,
+.routeBox_box_icon img{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.routeBox_box_fullfooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.routeBox_box_nameSwap{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.routeBox_box_icongas_full{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
