@@ -44,6 +44,9 @@ import OffersReceived from "./components/ProfileComponents/OffersReceived/Offers
 import Created from"./components/ProfileComponents/Created/Created.jsx"
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail.jsx";
 import ServiceD from "./components/ServiceD/ServiceD.jsx";
+import ERC721Info from "./pages/ERC721Info/ERC721Info.jsx";
+import ERC1155 from "./pages/ERC1155/ERC1155.jsx";
+import BEPERC20 from "./pages/BEPERC20/BEPERC20.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -100,6 +103,10 @@ function App() {
           <Route path="analytics" element={<AnalyticsDetailCollection />} />
           <Route path="activity" element={<ActivityDetailCollection />} />
           </Route>
+
+          <Route path="/ERC721Info" element={<ERC721Info />} />
+          <Route path="/ERC1155" element={<ERC1155 />} />
+          <Route path="/BEPERC20" element={<BEPERC20 />} />
       </Routes>
     </BrowserRouter>
   );

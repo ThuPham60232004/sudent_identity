@@ -1,0 +1,62 @@
+.erc721-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: auto;
+    max-width: 1200px;
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .erc721-logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .erc721-content h1, .erc721-content h4 {
+    text-align: center;
+  }
+  
+  .erc721-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+  }
+  
+  .erc721-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .erc721-application, .erc721-projects {
+    margin-top: 40px;
+  }
+  
+  .erc721-application ul, .erc721-projects ul {
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+  
+  .erc721-application ul li, .erc721-projects ul li {
+    margin: 10px 0;
+  }
+  
+  .erc721-application h2, .erc721-projects h2 {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  h4, h1 {
+    color: #ffcc00;
+  }
+  
