@@ -47,6 +47,7 @@ import ServiceD from "./components/ServiceD/ServiceD.jsx";
 import ERC721Info from "./pages/ERC721Info/ERC721Info.jsx";
 import ERC1155 from "./pages/ERC1155/ERC1155.jsx";
 import BEPERC20 from "./pages/BEPERC20/BEPERC20.jsx";
+import AllCollection from "./pages/AllCollection/AllCollection.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -107,7 +108,9 @@ function App() {
           <Route path="/ERC721Info" element={<ERC721Info />} />
           <Route path="/ERC1155" element={<ERC1155 />} />
           <Route path="/BEPERC20" element={<BEPERC20 />} />
+          <Route path="/AllCollection" element={<AllCollection />} />
       </Routes>
+
     </BrowserRouter>
   );
 }

@@ -123,8 +123,7 @@ const Navbar = () => {
             </div>
             {showDropdownExplore && (
               <div className="dropdown">
-                <Link to='/'>All NFTs</Link>
-                <Link to=''>All Collections</Link>
+                <Link to='/AllCollection'>All Collections</Link>
                 <Link to='/Dashboard'>Dashboard</Link>
                 <Link to='/Subscription'>Subscription</Link>
               </div>

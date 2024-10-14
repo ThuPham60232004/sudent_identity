@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import "./Dashboard.css";
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet,useLocation,useNavigate } from 'react-router-dom';
 import HomeIcon from "@mui/icons-material/Home";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import CollectionsIcon from "@mui/icons-material/Collections"; 
@@ -21,13 +21,19 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-
+  const navigate = useNavigate();
+  const location = useLocation();
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  useEffect(() => {
+    if (location.pathname === '/Dashboard') {
+        navigate('HomeDashboard');
+    }
+}, [location.pathname, navigate]);
 
  const items = [
   { icon: <HomeIcon style={{ width: '20px', height: '20px' }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
