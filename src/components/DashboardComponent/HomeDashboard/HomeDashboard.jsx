@@ -1,15 +1,16 @@
-import React from 'react'
-import { useState } from 'react';
+import React,{useState, useContext } from 'react'
 import { RiArrowDropDownLine,RiUserAddFill } from "react-icons/ri";
 import { FaBell ,FaChartLine,FaCartArrowDown} from "react-icons/fa";
 import { IoBagCheckSharp } from "react-icons/io5";
 import { IoMdSearch } from "react-icons/io";
 import { GrFormPrevious,GrFormNext } from "react-icons/gr";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
+import { ItemContext } from '../../../context/ItemContext';
 import "./HomeDashboard.scss"
-
+import { useNavigate } from 'react-router-dom';
 const HomeDashboard = () => {
+  const navigate = useNavigate();
+  const { setItem } = useContext(ItemContext);
     const data = [
     { name: 'Level 1', value: 4000 },
     { name: 'Level 2', value: 3000 },
@@ -18,6 +19,15 @@ const HomeDashboard = () => {
     { name: 'Level 5', value: 1890 },
   ];
 
+  const handleNftClick = (nft) => {
+    setItem(nft); 
+    navigate('/CollectionDetailPage/overview'); 
+};
+
+const handleTrendingClick = (item) => {
+    setItem(item); 
+    navigate('/CollectionDetailPage/overview');
+};
 
 const topProducts = [
   { id: 1, name: "Product A", popularity: 85, sales: '80%' },
@@ -109,10 +119,9 @@ const topProducts = [
 ];
 
 
-// phân trang
 
 const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage_nft = 5; // Số lượng item hiển thị trên mỗi trang
+  const itemsPerPage_nft = 5;
 
   const totalItems = nftData.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage_nft);
@@ -133,7 +142,6 @@ const [currentPage, setCurrentPage] = useState(1);
   const indexOfFirstItem = indexOfLastItem - itemsPerPage_nft;
   const currentItems = nftData.slice(indexOfFirstItem, indexOfLastItem);
 
-//////////
 
 
 const trendingNowData = [
@@ -345,7 +353,7 @@ const trendingNowData = [
           </div>
           <div className="content_trending_now_con">
         {trendingNowData.slice(currentIndex, currentIndex + itemsPerPage).map(item => (
-          <div className="trending_now_group_db" key={item.id}>
+          <div className="trending_now_group_db" key={item.id} onClick={() => handleTrendingClick(item)}>
             <img src={item.imgSrc} alt={item.name} />
             <div className="detail_trending_now_group">
               {/* <p>{item.id}</p> */}
@@ -391,7 +399,7 @@ const trendingNowData = [
           <p className="view">View</p>
         </div>
         {currentItems.map((nft, index) => (
-          <div className="item_nft" key={index}>
+          <div className="item_nft" key={index} onClick={() => handleNftClick(nft)}>
             <p className="stt">{nft.stt}</p>
             <p className="collection">{nft.collectionType}</p>
             <img className="image" src={nft.image} alt={nft.name} />
