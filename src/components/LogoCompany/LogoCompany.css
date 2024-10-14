@@ -1,17 +1,23 @@
-.scroll-images {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    gap: 100px;
-    background-color: black;
-    filter: grayscale(100%);
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .scroll-images img {
-    width: 200px;
-    height: auto;
-  }
-  
+
+
+.scroll-images{
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.image_company{
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.image_company img{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  object-fit: cover;
+}

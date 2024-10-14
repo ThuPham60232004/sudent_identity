@@ -1,4 +1,4 @@
-.SubscriptionBox {
+/* .SubscriptionBox {
     border: 1px solid var(--icons-color);
     padding: 2rem;
     border-radius: 1rem;
@@ -116,4 +116,140 @@ button:hover {
   
     --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color),
     -0.3rem -0.3rem 1rem var(--shadow-dark-color);
+} */
+
+
+.Subscription_page{
+    width: 100%;
+}
+
+.subscription_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.subscription_container h2{
+    font-size: 50px;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.subscription_about{
+    width: 100%;
+    display: flex;
+    padding: 0 40px;
+
+}
+.left_subscription_about{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.left_subscription_about h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+.left_subscription_about h3{
+    color: aqua;
+    font-size: 25px;
+}
+.left_subscription_about p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.detail_left_subscription_about_group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.detail_left_subscription_about_con{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.icon_detail_left_subscription_about_con{
+    color: aqua;
+}
+
+.right_subscription_about{
+    width: 50%;
+}
+
+
+
+
+
+.Subscription_box{
+    width: 100%;
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.Subscription_box_group{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+.Subscription_box_box{
+    grid-column: span 1;
+}
+
+
+
+
+
+
+
+.powerful_feature_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 100px;
+}
+.powerful_feature_box h2{
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+.powerful_feature_box p{
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    padding:0 100px;
+    color: gray;
+    margin-bottom: 30px;
+}
+.powerful_feature_box_con{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.powerful_feature_card{
+    grid-column: span 4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: .5px solid rgb(48, 48, 48);
+}
+.powerful_feature_card p{
+    color: rgb(149, 149, 149);
+    text-align: start;
+    padding: 0;
+    margin: 0;
+}
+.icon_feature{
+    font-size: 30px;
 }

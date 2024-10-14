@@ -1,122 +1,260 @@
-.ct-about-container {
-    background-color: #111;
-    padding: 60px 20px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .ct-about-title {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    padding: 20px;
-    background: linear-gradient(45deg, #e30b86, #0974ff);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .ct-about-description {
-    font-size: 1.2rem;
-    color: #ccc;
-    max-width: 700px;
-    margin: 0 auto 40px;
-  }
-  
-  .ct-about-info {
+
+
+  .ct-about-container1{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+    flex-direction: column;
   }
-  
-  .ct-about-card {
-    background-color: #1c1c1c;
-    padding: 30px;
-    border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+  .ct-about-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
   }
-  
-  .ct-about-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .ct-about-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #e30b86;
-  }
-  
-  .ct-about-card p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 10px;
-  }
-  
-  .ct-icon {
-    font-size: 3rem;
-    color: #00aaff;
-    margin-bottom: 15px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .ct-about-card:hover .ct-icon {
-    color: #ffcc00;
-  }
-  
-  .ct-about-card i {
-    margin-bottom: 15px;
-  }
-  
-  .ct-map-container {
-    background-color: #0c0c0c;
-    color: #fff;
+  .ct-about-title{
+    padding: 60px 0;
+    background: linear-gradient(45deg, #e30b86, #0974ff);
     text-align: center;
-    padding: 40px;
+    font-size: 50px;
+    font-weight: 900;
   }
-  
-  .ct-map-description {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #ccc;
-  }
-  
-  .ct-map-frame {
-    border: 0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  iframe {
-    border: none;
-  }
-  
-  .ct-team-container {
-    background-color: #111;
-    padding: 40px;
+  .ct-about-description{
+    font-size: 20px;
+    font-weight: 500;
     text-align: center;
+    padding: 30px 300px;
+    color: rgb(114, 114, 114);
+
   }
-  
-  .ct-team-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+
+  .ct-about-card h3{
+    color: white;
   }
-  
-  .ct-team-card {
-    background-color: #1c1c1c;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #ddd;
-  }
-  
-  .ct-team-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
- 
+
+
+.hex-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 0 150px;
+}
+
+.hex-column {
+  grid-column: span 3;
+}
+
+.hex {
+  width: 100%;
+  height: 260px;
+  background-color: #f1f1f1;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hex-inner {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hex-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.hex-icon {
+  font-size: 28px;
+  color: #333;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  padding: 0 10px;
+}
+
+.hex:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 1);
+  transform: scale(1.05); 
+}
+
+
+
+
+.ct-about-paragraphs{
+  width: 100%;
+  display: flex;
+  padding: 40px;
+
+}
+.left_paragraphs{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.left_paragraphs h3{
+  font-size: 50px;
+  color: white;
+  font-weight: 800;
+  padding-left: 10px;
+}
+.left_paragraphs p{
+  font-size: 16px;
+  font-weight: 500;
+  color: #969696;
+
+}
+.right_paragraphs{
+  width: 50%;
+}
+
+.ct-about-info{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 20px;
+  padding: 0 150px;
+  margin-top: 20px;
+}
+.ct-about-card{
+  grid-column: span 4;
+  background: rgb(20, 20, 20);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.ct-about-card:hover{
+  background: rgb(25, 24, 24);
+}
+
+.icon_about-info{
+  font-size: 30px;
+  color: #e30b86;
+}
+
+
+
+
+
+
+.ct-team-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 60px;
+  margin-bottom: 20px;
+}
+.ct-team-container h2{
+  font-size:40px;
+  font-weight: 800;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.ct-team-grid{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 60px;
+}
+.ct-team-card{
+  grid-column: span 1;
+  background: rgb(17, 17, 17);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  box-shadow:  0 0 2px gray;
+}
+.ct-team-image{
+width: 100%;
+padding: 0 30px;
+}
+.ct-team-image img{
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+.ct-team-card h3{
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+.ct-team-card p{
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.ct-social-icons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.ct-icon{
+  font-size: 20px;
+  color: rgb(107, 107, 107);
+}
+.ct-icon:hover{
+  color: white;
+}
+
+.ct-join-us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ct-join-us:hover{
+  background: #343434;
+}
+
+
+.ct-company{
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.image_company{
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.image_company img{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  object-fit: cover;
+}
