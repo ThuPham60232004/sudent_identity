@@ -130,7 +130,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="navbar-item"><Link to=''>About</Link></div>
+          <div className="navbar-item"><Link to='/AboutUs'>About</Link></div>
           <div className="navbar-item"><Link to='/ContactUs'>Contact Us</Link></div>
         </div>
 

@@ -1,0 +1,122 @@
+.ct-about-container {
+    background-color: #111;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .ct-about-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(45deg, #e30b86, #0974ff);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .ct-about-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  
+  .ct-about-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  
+  .ct-about-card {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ct-about-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .ct-about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e30b86;
+  }
+  
+  .ct-about-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .ct-icon {
+    font-size: 3rem;
+    color: #00aaff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .ct-about-card:hover .ct-icon {
+    color: #ffcc00;
+  }
+  
+  .ct-about-card i {
+    margin-bottom: 15px;
+  }
+  
+  .ct-map-container {
+    background-color: #0c0c0c;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .ct-map-description {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .ct-map-frame {
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  .ct-team-container {
+    background-color: #111;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .ct-team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .ct-team-card {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ddd;
+  }
+  
+  .ct-team-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+ 
