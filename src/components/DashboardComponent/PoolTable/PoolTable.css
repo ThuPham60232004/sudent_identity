@@ -1,5 +1,6 @@
 .farm-table-cointainer{
     display: flex;
+ margin: 20px;
 }
 .farm-table-sideBar{
     width: 15%;
@@ -66,10 +67,12 @@
   
   .staking-info {
     font-size: 14px;
+    font-weight: 600;
     color: #666;
     text-align: center;
     padding: 10px;
     background-color: black;
+    border: 1px solid gray;
     border-radius: 5px;
   }
   
@@ -96,4 +99,10 @@
     font-size: 16px;
     width: 100%;
     cursor: pointer;
+    margin: 0;
+
+  }
+  .approve-btn:hover{
+    background: rgb(53, 53, 101);
+    color: white;
   }

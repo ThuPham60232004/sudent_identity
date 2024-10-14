@@ -1,27 +1,27 @@
 .deals-container {
     display: flex;
-    color: #e0e0e0;
-    height: 100vh;
     font-family: 'Roboto', sans-serif;
   }
   
   .deals-sidebar {
+    padding: 10px;
     width: 20%;
-    background-color: #202020;
-    padding: 20px;
     display: flex;
+    gap: 5px;
     flex-direction: column;
+    background: rgb(35, 35, 35);
   }
   
   .deal-tab {
     background: none;
     border: none;
     color: #aaa;
-    padding: 10px;
+    padding: 10px 20px;
+    margin: 0;
     text-align: left;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 10px;
+    font-weight: 500;
     transition: color 0.3s ease, background-color 0.3s ease;
   }
   
@@ -32,13 +32,13 @@
   
   .deal-tab.active {
     color: #fff;
-    background-color: #444;
+    background-color: #302f2f;
     border-radius: 8px;
   }
   
   .deals-main {
     width: 80%;
-    padding: 20px;
+    padding: 10px 20px;
   }
   
   .deals-header {
@@ -49,7 +49,7 @@
   }
   
   .deals-header h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
   }
   
@@ -67,11 +67,12 @@
     padding: 8px;
     font-size: 14px;
     cursor: pointer;
+    margin: 0;
   }
   
   .deals-filters select:focus {
     outline: none;
-    border-color: #00aaff; 
+    border-color: #888888; 
   }
   
   .deal-button {
@@ -83,6 +84,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 0;
   }
   
   .deal-button:hover {
@@ -92,9 +94,10 @@
   .deals-content {
     background-color: #242424;
     border-radius: 8px;
-    padding: 50px;
+    padding: 100px 0;
     text-align: center;
     color: #888;
+    border: 1px solid rgb(60, 60, 60);
     font-size: 16px;
   }
   

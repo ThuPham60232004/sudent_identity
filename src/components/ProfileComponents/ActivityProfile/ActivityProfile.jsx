@@ -13,28 +13,31 @@ const ActivityProfile = () => {
     <div className="activity-container">
       <div className="filter-sidebar">
         <div className="filter-title">Event Type</div>
-        <button className="filter-button active">All</button>
-        <button className="filter-button">Sales</button>
-        <button className="filter-button">Deals accepted</button>
-        <button className="filter-button">Listings</button>
-        <button className="filter-button">Offers</button>
-        <button className="filter-button">Collection offers</button>
-        <button className="filter-button">Deal offers</button>
-        <button className="filter-button">Transfers</button>
+        <div className="filter_group">
+          <button className="filter-button active">All</button>
+          <button className="filter-button">Sales</button>
+          <button className="filter-button">Deals accepted</button>
+          <button className="filter-button">Listings</button>
+          <button className="filter-button">Offers</button>
+          <button className="filter-button">Collection offers</button>
+          <button className="filter-button">Deal offers</button>
+          <button className="filter-button">Transfers</button>
+        </div>
+        
       </div>
       <div className="activity-table">
         <div className="table-header">
-          <div className="header-item">Item</div>
-          <div className="header-item">Price</div>
-          <div className="header-item">Rarity</div>
-          <div className="header-item">Quantity</div>
-          <div className="header-item">From</div>
-          <div className="header-item">To</div>
-          <div className="header-item">Time</div>
+          <div className="header-item_1">Item</div>
+          <div className="header-item_2">Price</div>
+          <div className="header-item_3">Rarity</div>
+          <div className="header-item_4">Quantity</div>
+          <div className="header-item_5">From</div>
+          <div className="header-item_6">To</div>
+          <div className="header-item_7">Time</div>
         </div>
         {activities.map((activity, index) => (
           <div className="table-row" key={index}>
-            <div className="table-item">
+            <div className="table-item_1">
               <span className="item-event">{activity.event}</span>
               <div className="item-details">
                 <img src={activity.img} alt={activity.item} className="item-image" />
@@ -44,12 +47,12 @@ const ActivityProfile = () => {
                 </div>
               </div>
             </div>
-            <div className="table-item">{activity.price}</div>
-            <div className="table-item">{activity.rarity}</div>
-            <div className="table-item">{activity.quantity}</div>
-            <div className="table-item">{activity.from}</div>
-            <div className="table-item">{activity.to}</div>
-            <div className="table-item">{activity.time}</div>
+            <div className="table-item_2">{activity.price}</div>
+            <div className="table-item_3">{activity.rarity}</div>
+            <div className="table-item_4">{activity.quantity}</div>
+            <div className="table-item_5">{activity.from}</div>
+            <div className="table-item_6">{activity.to}</div>
+            <div className="table-item_7">{activity.time}</div>
           </div>
         ))}
       </div>

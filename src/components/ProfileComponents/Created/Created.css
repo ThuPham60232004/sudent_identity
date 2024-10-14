@@ -1,122 +1,127 @@
-.created-container {
-    display: flex;
-    background-color: #181818;
-    color: white;
-  }
-  
-  .filter-sidebar {
-    width: 250px;
-    padding: 20px;
-    background-color: #111;
-  }
-  
-  .filter-sidebar h3 {
-    margin-bottom: 15px;
-  }
-  
-  .filter-sidebar input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #222;
-    border: none;
-    color: white;
-  }
-  
-  .created-items {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .items-header {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .item-card {
-    background-color: #222;
-    border-radius: 10px;
-    padding: 15px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .item-quantity {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #007bff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
-  
-  .item-image-created {
-    border-radius: 5px;
-    width: 100%; 
-    height: 250px; 
-    object-fit: cover; 
+.create_contaner_parent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  gap:10px;
+}
+.collected-img-card{
+  width: 100%;
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 20px;
+}
+.collected-img-content{
+  grid-column: span 3;
+  border-radius: 10px;
+  box-shadow:
+      2px 2px 2px rgba(0, 0, 0, 0.2),
+      -2px -2px 2px rgba(255, 255, 255, 0.2),
+      -2px 2px 2px rgba(0, 0, 0, 0.2),
+      2px 2px 2px rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+}
+.collected-img-picture{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin: 0;
+}
+.collected-img-details{
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.filter-sidebar-search{
-    border-radius: 10px;
+.collected-img-details h2{
+  font-size: 20px;
 }
-  .items-grid h4 {
-    margin: 15px 0 5px;
-    font-size: 16px;
-  }
-  
-  .items-grid p {
-    font-size: 14px;
-    color: #aaa;
-  }
-  .collected-img-card {
-    background-color: #1e1e1e;
-    border-radius: 15px;
-    padding: 15px;
-    max-width: 300px;
-    color: white;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .collected-img-content {
-    position: relative;
-  }
-  
-  .collected-img-picture {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .collected-img-details {
-    margin-top: 10px;
-  }
-  
-  .collected-img-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .collected-img-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-  }
-  
-  .collected-img-floor, .collected-img-volume {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-  }
-  
-  .collected-img-volume span:last-child {
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
+
+.collected-img-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collected-img-volume,
+.collected-img-floor{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.collected-img-floor h4,
+.collected-img-volume h4{
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(96, 96, 96);
+}
+.collected-img-floor p,
+.collected-img-volume p{
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.filter_search_created_con2{
+  border-top: 0.5px solid rgb(48, 48, 48);
+  border-bottom:0.5px solid rgb(48, 48, 48); 
+  padding: 10px 0;
+}
+.creater_container_con3{
+  width: 100%;
+  display: flex;
+}
+.sidebar_created_container_left_con3{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.created-items{
+  width: 75%;
+  padding: 10px;
+
+
+}
+.items-header{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+.items-grid{
+  width: 100%;
+    display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+  padding: 10px;
+}
+.item-card{
+  grid-column: span 1;
+   box-shadow:
+      2px 2px 2px rgba(0, 0, 0, 0.2),
+      -2px -2px 2px rgba(255, 255, 255, 0.2),
+      -2px 2px 2px rgba(0, 0, 0, 0.2),
+      2px 2px 2px rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+}
+.item-image-created{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin: 0;
+}
+.content_item_card_created{
+  padding:20px ;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+

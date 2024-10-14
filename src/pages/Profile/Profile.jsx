@@ -42,8 +42,6 @@ const Profile = () => {
                      <img src="https://dxagroup.io/wp-content/uploads/Blog/CuratingthePerfectNFTArtCollectionExpertTips/cacurating-the-perfect-nft-art-collection-expert-tips-10.webp" alt="" />
                </div>
             </div>
-            <div className="con_profile">
-            </div>
 
             <div className="name_user_and_feature">
                 
@@ -104,26 +102,27 @@ const Profile = () => {
              onMouseEnter={handleMouseEnterMore} 
              onMouseLeave={handleMouseLeaveMore}
              onClick={toggleMore}>
-                <p>More <span><RiArrowDropDownLine className='icon_profile_page'/></span></p>
+                <p>More</p>
+                <RiArrowDropDownLine className='icon_profile_page_more'/>
         </div>
             {isExpanded && (
                 <div className="choose_item_more">
-                    <div className="choose_item">
+                    <div className="choose_item_more_con">
                         <NavLink to="OffersReceived" className={({ isActive }) => isActive ? "active" : ""}>
                         OffersReceived
                         </NavLink>
                     </div>
-                    <div className="choose_item">
+                    <div className="choose_item_more_con">
                         <NavLink to="ActiveListings" className={({ isActive }) => isActive ? "active" : ""}>
                         ActiveListings
                         </NavLink>
                     </div>
-                    <div className="choose_item">
+                    <div className="choose_item_more_con">
                         <NavLink to="InactiveListings" className={({ isActive }) => isActive ? "active" : ""}>
                         InactiveListings
                         </NavLink>
                     </div>
-                    <div className="choose_item">
+                    <div className="choose_item_more_con">
                         <NavLink to="Hiddens" className={({ isActive }) => isActive ? "active" : ""}>
                             Hiddens
                         </NavLink>
@@ -131,7 +130,7 @@ const Profile = () => {
                 </div>
             )}
         </div>
-            <div className="filter_search_profile">
+            {/* <div className="filter_search_profile">
                 <div className="bo_loc_fabar">
                     <FaBars className='icon_profile_page'/>
                 </div>
@@ -144,8 +143,8 @@ const Profile = () => {
                     <RiArrowDropDownLine className='icon_profile_page'/>
                 </div>
                 <div className="search_profile">
-                    <input type="text" className='search_input_profile' />
-                    <IoMdSearch className='icon_profile_page'/>
+                    <input type="text" className='search_input_profile' placeholder='Searching for..'/>
+                    <IoMdSearch className='icon_search_profile_page'/>
                 </div>
                 <div className="recently_received">
                     <p>Recently received</p>
@@ -165,7 +164,7 @@ const Profile = () => {
                         <LuLayoutPanelLeft className='icon_profile_page'/>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="display_items_container_page">
             <Outlet/>
             </div>
