@@ -94,6 +94,7 @@
     box-shadow: 1px 1px 2px rgb(107, 103, 103);
     background: black;
     color: white;
+    padding: 15px;
 }
 .btn_register:hover{
     background: rgb(57, 57, 57);
@@ -129,9 +130,6 @@
 .text_register{
     margin-top: 40px;
 }
-
-
-
 .right_container_register{
     grid-column: span 6;
     background-image: url('../../../public/img/bg_login.jpg');
@@ -170,6 +168,7 @@
     color: white;
     border-radius: 20px;
     box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    padding: 15px;
 }
 .btn_login_page_register:hover{
     background: white;

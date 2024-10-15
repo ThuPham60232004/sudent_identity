@@ -58,11 +58,10 @@ const Account = () => {
                 <p> nguyễn văn a</p>
                 <p> tp.hcm</p>
                  <div className="btn">
-                <button>Follow</button>
-                <button>Message</button>
+                <button className='btnAccount'>Follow</button>
+                <button className='btnAccount'>Message</button>
             </div>
-            </div>
-           
+            </div> 
   </div>
       
       <div className="social">
@@ -124,13 +123,9 @@ const Account = () => {
             <div className="info_title">
              <p>Johnatan Smith Johnatan Smith Johnatan Smith</p>
             </div>
-      </div>
-
-          
+      </div>      
         </div>
-
        </div>
- 
  </div>
      
   )

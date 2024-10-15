@@ -109,11 +109,12 @@
 
 
 .btn_login{
-
+    padding: 15px;
     border-radius: 20px;
     box-shadow: 1px 1px 2px rgb(107, 103, 103);
     background: black;
     color: white;
+    font-weight: 600px;
 }
 .btn_login:hover{
      background: rgb(57, 57, 57);
@@ -198,8 +199,10 @@
     color: white;
     border-radius: 20px;
     box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    padding: 15px;
 }
 .btn_register_page_login:hover{
     background: white;
     color: black;
+
 }

@@ -15,12 +15,10 @@
 
 
 }
-
 .text_wellcome {
 
  padding-top: 25px;
  line-height: 30px;
- 
 }
 
 .text_wellcome h4 {
@@ -33,7 +31,7 @@
 
 .auth {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  justify-content: center;
   align-items: center;
 margin-left: auto;
   
@@ -111,8 +109,7 @@ margin-top: 10px;
   width: 100%;
 }
 
-button{
- 
+.btnAccount{
   font-size:1rem;
   margin: 20px;
   background-color: black;

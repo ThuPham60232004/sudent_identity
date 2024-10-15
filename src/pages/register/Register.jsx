@@ -20,21 +20,17 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate phone number or email
     if (emailOrPhone.length !== 10 || isNaN(emailOrPhone)) {
       toast.error('Số điện thoại phải đủ 10 ký tự và là số.');
       return;
     }
 
-    // Validate password match
     if (password !== confirmPassword) {
       toast.error('Mật khẩu và xác nhận mật khẩu không trùng khớp.');
       return;
     }
 
     try {
-      // Registration logic (e.g., API call)
       setError(null);
       toast.success('Registration successful!');
       navigate('/login');
