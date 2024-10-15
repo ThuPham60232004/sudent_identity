@@ -18,6 +18,8 @@ import { IoSearchSharp } from "react-icons/io5";
 import ShareNFTModal from "../../components/DashboardComponent/ShareNFTModal/ShareNFTModal";
 import { MdLogout } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { FaCircle } from "react-icons/fa";
+
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -34,7 +36,11 @@ const Dashboard = () => {
         navigate('HomeDashboard');
     }
 }, [location.pathname, navigate]);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
  const items = [
   { icon: <HomeIcon style={{ width: '20px', height: '20px' }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
   { icon: <ShowChartIcon style={{ width: '20px', height: '20px' }} />, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
@@ -79,14 +85,33 @@ const Dashboard = () => {
                 onClick={item.onClick}
               >
                  <div 
-        className="item_sidebar_group" 
-        style={{ backgroundColor: item.text === 'Home' ? 'black' : '', color: item.text === 'Home' ? 'white' : 'black' }} // Thay đổi màu chữ cho Home
-      >
+                    className="item_sidebar_group" 
+                    style={{ backgroundColor: item.text === 'Home' ? 'black' : '', color: item.text === 'Home' ? 'white' : 'black' }}
+                  >
                   <div className="HomePageSideBarItemIcon">{item.icon}</div>
                   {!isSidebarCollapsed && <div className="HomePageSideBarItemText"><p>{item.text}</p></div>}
                 </div>
               </NavLink>
             ))}
+
+          <div className="vote-container">
+                <div className="vote-header" onClick={toggleDropdown}>
+                  <div className="vote-header-icon">
+                    <HowToVoteIcon/>
+                    <span>Vote</span>
+                  </div>
+                  <div className="arrow-icon">{isOpen ? '▲' : '▼'}</div>
+                </div>
+                {isOpen && (
+                  <div className="vote-content">
+                    <ul>
+                     <NavLink style={{ width: '20px', height: '20px',textDecoration:'none' }}   to="/Dashboard/Explore" className={({ isActive }) => isActive ? "active" : ""}><li><FaCircle /> Explore</li></NavLink> 
+                     <NavLink style={{ width: '20px', height: '20px',textDecoration:'none' }}  to="/Dashboard/VoteWithCryptic" className={({ isActive }) => isActive ? "active" : ""}><li><FaCircle /> Vote with cryptic</li></NavLink>
+                      <NavLink style={{ width: '20px', height: '20px',textDecoration:'none' }}  to="/Dashboard/CreateProposal" className={({ isActive }) => isActive ? "active" : ""}><li><FaCircle /> Create proposal</li></NavLink>
+                    </ul>
+                  </div>
+                )}
+              </div>
           </div>
         </div>
 

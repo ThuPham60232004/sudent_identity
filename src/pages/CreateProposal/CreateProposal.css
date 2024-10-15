@@ -1,0 +1,95 @@
+.create-proposal-container {
+    background-color: #1b1b1b;
+    padding: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .vote-container-dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.vote-header-dark-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.votes-info-dark-theme {
+    display: flex;
+    align-items: center;
+}
+  
+.vote-icon-dark-theme {
+    width: 50px;
+    margin-right: 10px;
+}
+  .all-proposals-btn {
+    background-color: #f5a623;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  
+  .actions-section {
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .action-box {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .token-select, .action-select, .dst-address-input, .raw-amount-input, .title-input, .description-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #444;
+    color: white;
+  }
+  
+  .description-input {
+    height: 100px;
+    resize: none;
+  }
+  
+  .add-action-btn, .create-proposal-btn {
+    background-color: #f5a623;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-action-btn:hover, .create-proposal-btn:hover {
+    background-color: #e6931a;
+  }
+  

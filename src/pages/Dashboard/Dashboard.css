@@ -183,3 +183,58 @@
   background-size: cover;
 }
 
+.vote-container {
+  width: 200px;
+  background-color: #2b2b36;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.vote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vote-header span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.vote-content {
+  background-color: #2b2b36;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.vote-content ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.vote-content ul li {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #ccc;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.vote-content ul li:hover {
+  color: white;
+  cursor: pointer;
+  
+}
+
+.arrow-icon {
+  font-size: 14px;
+}
+
+.vote-header-icon{
+  display: flex;
+  gap: 10px;
+}

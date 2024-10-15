@@ -49,6 +49,10 @@ import ERC1155 from "./pages/ERC1155/ERC1155.jsx";
 import BEPERC20 from "./pages/BEPERC20/BEPERC20.jsx";
 import AllCollection from "./pages/AllCollection/AllCollection.jsx";
 import AboutUs from "./pages/AboutUs/ABOUTUS.jsx";
+import Explore from "./pages/Explore/Explore.jsx";
+import VoteWithCryptic from "./pages/VoteWithCryptic/VoteWithCryptic.jsx";
+import CreateProposal from "./pages/CreateProposal/CreateProposal.jsx";
+import TransferItem from "./components/DashboardComponent/TransferItem/TransferItem.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -73,6 +77,7 @@ function App() {
           <Route path="/Subscription" element={<SubscriptionPage/>} />
           <Route path="/ServiceDetail" element={<ServiceDetail/>} />
           <Route path="/service/:id" element={<ServiceD/>} />
+          <Route path="/Dashboard/NFTDetail/TransferItem" element={<TransferItem />} />
         {/* DASHBOARD----------------------------------------------------------- */}
           <Route path="/Dashboard" element={<Dashboard />}>
               <Route path="HomeDashboard" element={<HomeDashboard />} />
@@ -82,6 +87,9 @@ function App() {
               <Route path="NFTsPage" element={<NFTsPage />} />
               <Route path="PoolTable" element={<PoolTable />} />
               <Route path="SwapComponent" element={<SwapComponent />} />
+              <Route path="Explore" element={<Explore />} />
+              <Route path="VoteWithCryptic" element={<VoteWithCryptic />} />
+              <Route path="CreateProposal" element={<CreateProposal />} />
               {/* PROFILE DETAIL----------------------------------------------------------- */}
               <Route path="Profile" element={<Profile />}>
                 <Route path="ActiveListings" element={<ActiveListings />} />
@@ -95,6 +103,7 @@ function App() {
                 <Route path="OffersReceived" element={<OffersReceived />} />
                 <Route path="Hiddens" element={<Hiddens />} />
                 <Route path="Created" element={<Created />} />
+                
               </Route>
           </Route>
         {/* COLLECTION DETAIL----------------------------------------------------------- */}

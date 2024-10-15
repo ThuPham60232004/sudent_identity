@@ -19,9 +19,6 @@ import { TbWorld } from "react-icons/tb";
 import { IoMdMore,IoIosMore,IoMdCart } from "react-icons/io";
 import { BiSolidCommentDetail } from "react-icons/bi";
 import { FaChartLine,FaBarsProgress } from "react-icons/fa6";
-
-
-
 const NFTDetail = () => {
   const bids = [
     { name: "Esther Howard", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
@@ -38,7 +35,6 @@ const NFTDetail = () => {
   const closeModal = () => setIsModalOpen(false);
   const openBuyModal = () => setIsBuyModalOpen(true);
   const closeBuyModal = () => setIsBuyModalOpen(false);
-
 
    const [isOpen_con2, setIsOpen_con2] = useState(false);
 
@@ -162,6 +158,7 @@ const dummyData = [
                   <div className="open_close_about_left_con1" onClick={toggleOpenClose_about_left_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_about_left_con1 ? 'open' : 'closed'}`} />
                 </div>
+                
                 </div>
                 {isOpen_about_left_con1 && (
                 <div className="des_nft_detail_con1">
@@ -234,12 +231,9 @@ const dummyData = [
                 <a href="#">Gomble spacekids</a>
                 <div className="action__con1">
                   <FaHandshake/>
-                  {/* <Link onClick={openModal} className="nft-icon share-icon">
-                    <IoShare />
-                  </Link> */}
                   <IoShare onClick={openModal}/>
                   <ShareNFTModal isOpen={isModalOpen} onClose={closeModal} />
-                  <IoIosMore/>
+                  <Link to='./TransferItem' style={{textDecoration:"none", color:"white"}}><IoMdSend/></Link>
                 </div>
               </div>
               <div className="name_nft_con1">
