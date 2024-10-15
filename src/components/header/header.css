@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: auto; /* Chiều cao mặc định cho desktop */
+  height: auto; 
  padding: 50px 50px 20px 50px; 
   background: rgb(0, 0, 0);
 }
@@ -11,9 +11,22 @@
   width: 100%;
   height: auto;
 }
+.header_button{
+  background-color: aliceblue;
+  color: black;
+  padding: 10px 10px;
+  margin-top: 8px;
+  border-radius: 10px;
+  text-align: center;
+  width: 195px;
+}
+.header_button:hover{
+  background: linear-gradient(45deg, #e30b86, #0974ff);
+  color: white;
 
+}
 .left_content_header {
-  width: 50%; /* Chiếm 50% chiều rộng trên desktop */
+  width: 50%; 
   height: 100%;
   margin: auto;
   display: flex;

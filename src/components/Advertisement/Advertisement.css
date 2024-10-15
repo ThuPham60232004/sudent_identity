@@ -178,12 +178,9 @@ padding: 10px;
 
 }
 
-
 @media (max-width: 953px) {
     .Container_Adv{
     width: 100%;
-
- 
 }
     .Advertisement_containertext{
     width:100%;
