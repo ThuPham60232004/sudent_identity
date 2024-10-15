@@ -1,6 +1,4 @@
 import React from "react";
-
-import Subscription from "../../components/Subscription/Subscription";
 import "./SubscriptionPage.css";
 import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
@@ -13,13 +11,13 @@ import { RiSecurePaymentFill } from "react-icons/ri";
 import { FaStopwatch } from "react-icons/fa";
 
 const SubscriptionPage = () => {
-    const subscriptionArray = [
+   const subscriptionArray = [
         {
-            plan: "STARTER",
-            price: "$5/Month",
-            popular: "",
-            service: ["Automated Reporting", "Faster Processing", "Customization"],
-            info: "Literally, you probably haven't heard of them jean short."
+        plan: "STARTER",
+        price: "$5/Month",
+        popular: "",
+        service: ["Automated Reporting", "Faster Processing", "Customization"],
+        info: "Literally, you probably haven't heard of them jean short."
         },
         {
             plan: "STARTER",
@@ -43,6 +41,13 @@ const SubscriptionPage = () => {
             info: "Literally, you probably haven't heard of them jean short."
         },
         {
+            plan: "STARTER",
+            price: "$5/Month",
+            popular: "",
+            service: ["Automated Reporting", "Faster Processing", "Customization"],
+            info: "Literally, you probably haven't heard of them jean short."
+        },
+         {
             plan: "STARTER",
             price: "$5/Month",
             popular: "",
@@ -101,7 +106,7 @@ const SubscriptionPage = () => {
                  <h2>Subscription</h2>
                 <div className="subscription_about">
                     <div className="left_subscription_about">
-                        <h4>Any Contract Any Chain</h4>
+                        <h4>ANY CONTRACT ANY CHAIN</h4>
                         <h3>Deploy on any EVM compatible chain</h3>
                         <p>Its simple, easy, secured to deploy smart contracts on any EVM compatible chains you want. The Marketplace contract will manage market functionality whereas ERC-721, ERC-1155 contracts will manage minting of NFTs.</p>
                         <div className="detail_left_subscription_about_group">
@@ -109,7 +114,7 @@ const SubscriptionPage = () => {
                             <HiBadgeCheck className="icon_detail_left_subscription_about_con"/>
                             <p>700+ support of all EVM Chains with the fastest RPC</p>
                             </div>
-                            <div className="detail_left_subscription_about_con">
+                            <div className="detail_left_subscription_about_con1">
                                 <HiBadgeCheck className="icon_detail_left_subscription_about_con"/>
                                 <p>Add any EMV chains except the built-in chains.</p>
                             </div>
@@ -125,34 +130,54 @@ const SubscriptionPage = () => {
                     </div>
                 </div>
 
-                <div className="Subscription_box">
-                    <div className="Subscription_box_info">
-                        <h1>Subscription</h1>
-                        <p>Pricing to fit the needs of any company size.</p>
-                    </div>
-                    <div className="Subscription_box_group">
-                         <div className="Subscription_box_box">
-                        {subscriptionArray.map((el, i) => (
-                            <Subscription key={i} i={1} el={el} />
-                        ))}
-                    </div>
-                    </div>
-                   
-                </div>
+           <div className="Subscription_container">
+      <div className="Subscription_box">
+        <div className="Subscription_box_info">
+          <div className="logo_Subscription_box_info">
+            <h2>FINTECH</h2>
+          </div>
+          <div className="des_Subscription_box_info">
+            <p>
+              Meet the PUNKS! Everyone’s favorite misfit crew of collectors, rebels,
+              and crypto degens from the metaverse. A project by Pixel Vault.
+            </p>
+          </div>
+        </div>
+
+        <div className="Subscription_box_group">
+          {subscriptionArray.map((sub, index) => (
+            <div key={index} className="Subscription_box_box">
+                <h3>{sub.plan}</h3>
+              <div className="Subscription_box_card">
+                <h2>{sub.price}</h2>
+                <ul>
+                  {sub.service.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                  <p>{sub.info}</p>
+              </div>
+             
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+                
 
 
                <div className="powerful_feature_box">
             <h2>Powerful features</h2>
-            <p>We provide NFT marketplace services that enable users to establish a feature-rich NFT marketplace on several blockchain networks like Ethereum, BNB, Polygon, Avalanche, Tezos, and others.</p>
+            <h4>We provide NFT marketplace services that enable users to establish a feature-rich NFT marketplace on several blockchain networks like Ethereum, BNB, Polygon, Avalanche, Tezos, and others.</h4>
 
             <div className="powerful_feature_box_con">
                 {featuresData.map((feature) => (
                     <div key={feature.id} className="powerful_feature_card">
                         <div className="icon_feature">
                             {feature.icon}
-                            </div>
+                        </div>
                         <h3>{feature.title}</h3>
-                        <p>{feature.content}</p>
+                        <p className="content_feature_powerful_Card">{feature.content}</p>
                     </div>
                 ))}
             </div>
