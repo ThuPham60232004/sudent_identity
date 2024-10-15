@@ -13,12 +13,11 @@
 }
 
 .wallet-login_modal {
-    background-color: #000000;
+    background-color: white;
     border-radius: 12px;
     width: 90%;
     max-width: 550px;
     height: auto;
-    padding: 1rem 3rem 3rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: relative;
     display: flex;
@@ -28,25 +27,25 @@
 
 .close_modal {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    height: 50px;
-    margin-bottom: 20px;
+    justify-content: end;
 }
 
-.close_modal h2{
-    color: white;
+.wallet-login_modal h2{
+    color: black;
+    font-size: 26px;
+    font-weight: 800;
+    padding-left: 20px;
+    text-align: center;
 }
 .close-btn_modal {
-    background: none;
-    border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #e5e5e5;
-    text-align: end;
-    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: 800;
+    background: transparent;
+    padding: 10px 20px;
+    
 }
 
 .close-btn_modal:hover {
@@ -54,89 +53,83 @@
 }
 
 .login-options_modal {
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    margin-bottom: 20px; /* Space below the login options */
-    padding-bottom: 10px; /* Space for the scrollbar */
-    gap: 1rem; /* Space between wallet options */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 20px 50px;
 }
 
+.wallet-option_modal_paraswap,
+.wallet-option_modal_coinbase,
+.wallet-option_modal_walletconnect,
+.wallet-option_modal_trust,
+.wallet-option_modal_metamask,
 .wallet-option_modal {
     display: flex;
+    width: 100%;
+    gap: 10px;
     align-items: center;
-    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
-    background: #000000;
     border: 1px solid white;
     border-radius: 10px;
-    margin: 0 auto;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+
+.wallet-option_modal_paraswap p,
+.wallet-option_modal_coinbase p,
+.wallet-option_modal_walletconnect p,
+.wallet-option_modal_trust p,
+.wallet-option_modal_metamask p{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wallet-option_modal_metamask {
+      background: linear-gradient(135deg, #ffd901, #ff0101); 
+}
+
+.wallet-option_modal_trust{
+    background: linear-gradient(135deg, #009dff, #f40982); 
+}
+.wallet-option_modal_walletconnect{
+    background: linear-gradient(135deg, #ff06c9, #770315); 
+}
+.wallet-option_modal_coinbase{
+background: linear-gradient(135deg, #088edb, #c50821); 
+}
+.wallet-option_modal_paraswap{
+background: linear-gradient(135deg, #080bcf, #0cbaa3); 
 }
 
 .wallet-option_modal:hover {
-    background-color: #232323;
+    background-color: #161616;
 }
 
 .icon_modal {
     width: 40px;
     height: 40px;
-    /* Center icon */
-   
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    background: transparent;
 }
-
-.login-input_modal {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-    text-align: start;
-  
-}
-
-.login-input_modal:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-
-.login-btn_modal {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
+.wallet-option_modal p{
+    font-size: 16px ;
     color: white;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    cursor: pointer;
-    text-align: start;
-    transition: background-color 0.3s;
 }
 
-.login-btn_modal:hover {
-    background-color: #0056b3;
-}
-
-.divider {
-    margin: 15px 0;
-    font-size: 14px;
-    color: #666;
-    text-align: center; /* Center the divider */
-}
 
 .connect-wallet-btn_modal {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background-color: #28a745; /* Green for connect button */
+    background-color: #28a745;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -149,7 +142,7 @@
     margin: auto 0;
 }
 
-/* Responsive Design */
+
 @media (max-width: 500px) {
     .wallet-login_modal {
         width: 90%;

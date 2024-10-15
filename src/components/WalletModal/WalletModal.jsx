@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Web3Modal from "web3modal";
 import { Web3Provider } from '@ethersproject/providers';
@@ -28,53 +29,41 @@ const WalletModal = ({ onClose, onConnect }) => {
     };
 
     
+    
     return (
         <div className="modal-overlay_modal" onClick={onClose}>
             <div className="wallet-login_modal" onClick={(e) => e.stopPropagation()}>
                 <div className="close_modal">
-                    <h2>Sign in</h2>
                     <button className="close-btn_modal" onClick={onClose}>✕</button>
                 </div>
+                   <h2>CONNECT YOUR WALLET</h2>
                 
                 <div className="login-options_modal">
-                    <div className="wallet-option_modal" onClick={connectWallet}>
-                        <img src='https://forum.zeroqode.com/uploads/default/original/2X/4/401498d7adfbb383fea695394f4f653ea4e7c9a7.png' alt="MetaMask" className="icon_modal" />
+                    <div className="wallet-option_modal_metamask" onClick={connectWallet}>
+                        <img src='https://altcoinsbox.com/wp-content/uploads/2023/03/metamask-logo.webp' alt="MetaMask" className="icon_modal" />
+                        <p>MetaMask Wallet</p>
                     </div>
-                    <div className="wallet-option_modal" onClick={connectWallet}>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5AsJoB6E5HdBs6ClI0rKXYSkfK_imGv5LbA&s' alt="TrustWallet" className="icon_modal" />
-                    </div>
-                    <div className="wallet-option_modal" onClick={connectWallet}>
+                    <div className="wallet-option_modal_trust" onClick={connectWallet}>
+                        <img src='https://www.yadawallets.com/wp-content/uploads/2020/10/trust-wallet-logo.png' alt="TrustWallet" className="icon_modal" />
+                        <p>Trust Wallet</p>
+                    </div> 
+                     <div className="wallet-option_modal_walletconnect" onClick={connectWallet}>
                         <img src='https://chainbroker.io/_next/image/?url=https%3A%2F%2Fstatic.chainbroker.io%2Fmediafiles%2Fprojects%2Fwalletconnect%2Fwalletconnect.jpeg&w=2560&q=75' alt="WalletConnect" className="icon_modal" />
-                    </div>
-                    <div className="wallet-option_modal" onClick={connectWallet}>
+                        <p>WalletConnect</p>
+                    </div> 
+                     <div className="wallet-option_modal_coinbase" onClick={connectWallet}>
                         <img src='https://static-00.iconduck.com/assets.00/coinbase-icon-2048x2048-oq45l9cy.png' alt="Coinbase" className="icon_modal" />
+                        <p>Coinbase</p>
                     </div>
-                    <div className="wallet-option_modal" onClick={connectWallet}>
+                    <div className="wallet-option_modal_paraswap" onClick={connectWallet}>
                         <img src='https://spiritswap.finance/_next/static/media/paraSwap.b94e1099.png' alt="ParaSwap" className="icon_modal" />
+                        <p>ParaSwap</p>
                     </div>
                 </div>
-
-                <input
-                    type="email"
-                    placeholder="Email address"
-                    className="login-input_modal"
-                />
-                
-                <button className="login-btn_modal">
-                    Phone number
-                </button>
-                <button className="login-btn_modal">
-                   Passkey
-                </button>
-                
-                <span className="divider">or</span>
-
-                <button className="connect-wallet-btn_modal" onClick={connectWallet}>
-                    Connect a Wallet
-                </button>
             </div>
         </div>
     );
 };
 
 export default WalletModal;
+

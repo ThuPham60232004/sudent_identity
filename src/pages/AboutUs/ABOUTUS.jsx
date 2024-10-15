@@ -131,6 +131,7 @@ const AboutUs = () => {
                   <div className="left_paragraphs">
                     <h3>PIXEL VAULT CORE COLLECTION</h3>
                     <p>The Pixel Vault Core Collection consists of 146 concept characters including two special mints collaboratively designed by project creatives, Chris Wahl and Odious. The collection reflects its broad reach, which includes 16 PUNKS, 48 crossover variations, and 80 Inhabitants Core Identities</p>
+                    <button className='btn_created_nft_about_paragraphs'>Created NFTS</button>
                   </div>
                   <div className="right_paragraphs">
                     <img src="http://localhost:3000/img/punk.png" alt="" />
@@ -142,20 +143,34 @@ const AboutUs = () => {
                     <div className="ct-about-card">
                         <FaPhoneVolume className='icon_about-info'/>
                         <h3>Contact Phone Number</h3>
-                        <p>+444 555 666 777</p>
-                        <p>+222 222 222 333</p>
+                        <div className="content_about_info">
+                          <ul>
+                            <li>444 555 666 777</li>
+                            <li>222 222 222 333</li>
+                          </ul>
+                        </div>
+                        
                     </div>
                     <div className="ct-about-card">
                         <MdAttachEmail className='icon_about-info'/>
                         <h3>Our Email Address</h3>
-                        <p>admin@gmail.com</p>
-                        <p>example@gmail.com</p>
+                        <div className="content_about_info">
+                          <ul>
+                            <li>admin@gmail.com</li>
+                            <li>example@gmail.com</li>
+                          </ul>
+                        </div>
+                       
                     </div>
                     <div className="ct-about-card">
                         <FaLocationDot className='icon_about-info'/>
                         <h3>Our Location</h3>
-                        <p>5678 Bangla Main Road, cities 580</p>
-                        <p>GBnagle, example 54786</p>
+                        <div className="content_about_info">
+                            <ul>
+                              <li>5678 Bangla Main Road, cities 580</li>
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div> 
             </div>
