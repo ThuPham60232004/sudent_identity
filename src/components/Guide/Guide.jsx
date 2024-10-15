@@ -3,8 +3,8 @@ import './Guide.css'
 import { IoArrowRedoSharp } from "react-icons/io5";
 const Guide = () => {
   return (
-    
-    <div className='GuideContainer'>
+    <div className="GuideContainer_parent">
+        <div className='GuideContainer'>
             <h1>HOW TO CREATE NFT</h1>
         <div className="STEP_GUIDE">
             <div className="flip-card1">
@@ -66,6 +66,8 @@ const Guide = () => {
             </div>
         </div>
     </div>
+    </div>
+    
   )
 }
 

@@ -90,20 +90,20 @@
 }
 
 .wallet-option_modal_metamask {
-      background: linear-gradient(135deg, #ffd901, #ff0101); 
+      background: linear-gradient(135deg, #ff0101, #ff9501); 
 }
 
 .wallet-option_modal_trust{
-    background: linear-gradient(135deg, #009dff, #f40982); 
+    background: linear-gradient(135deg, #ff8000, #fbff08); 
 }
 .wallet-option_modal_walletconnect{
-    background: linear-gradient(135deg, #ff06c9, #770315); 
+    background: linear-gradient(135deg, #e2ff06, #19e50b); 
 }
 .wallet-option_modal_coinbase{
-background: linear-gradient(135deg, #088edb, #c50821); 
+background: linear-gradient(135deg, #06f039, #0bc8e6); 
 }
 .wallet-option_modal_paraswap{
-background: linear-gradient(135deg, #080bcf, #0cbaa3); 
+background: linear-gradient(135deg, #0bbff6, #0720df); 
 }
 
 .wallet-option_modal:hover {

@@ -16,10 +16,10 @@ const Header = () => {
       <div className="content3_header">
           <p>Create a <span className="bold-text">Full-Functional NFT Marketplace,</span> customize the storefront, and list unlimited NFTs. </p>
       </div>
+
       <Link to='/CreatePage' style={{textDecoration:"none", color:"white"}}>
       <div className='header_button'>
-       
-       <h3>Create Collection</h3>
+       <h3>Create MarketPlace</h3>
      </div></Link>
      
     </div>

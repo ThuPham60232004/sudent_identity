@@ -27,47 +27,30 @@ const Home = () => {
       </div>
     
     <div className="body_home_page">
-        <div className="header_home_page">
          <Header/>
-      </div>
-         <div className="trendinglist_home_page">
         <TrendingList/>
-      </div>
+        <SubscriptionPlans/>
+        <Introduce/>
+        <Advertisement/>
+        <LogoCompany/>
+        <Services/>
+        <GuideNFT/>
+        <ERC_Contract/>
+        <Connective/>
+
 {/* 
      <div className="NFTGallery_home_page">
        <NFTGallery/>  
       </div> */}
-        
-      <div className="SubscriptionPlans_home_page">
-        <SubscriptionPlans/>
-      </div>
-      <div className="ERC_Contract_home_page">
-         <ERC_Contract/>
-      </div>
-   
-      <div className="Advertisement_home_page">
-        <Advertisement/>
-      </div>      
-     <div className="LogoCompany_home_page">
-         <LogoCompany/>
-      </div>
-      <div className="LogoCarousel_home_page">
+
+      {/* <div className="LogoCarousel_home_page">
         <LogoCarousel/>
-      </div> 
-      <div className="Services_home_page">
-         <Services/>
-      </div>
-     <div className="GuideNFT_home_page">
-         <GuideNFT/>
-      </div>
-      <div className="Introduce_home_page">
-         <Introduce/>
-      </div> 
-       <Connective/>
-      </div> 
-        <br/><br/><br/><br/>
+      </div>  */}
+
+
       <div className="footer_home_page">
         <Footer/>
+      </div>
       </div>
   </div>
 

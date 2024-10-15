@@ -12,19 +12,24 @@
   height: auto;
 }
 .header_button{
-  background-color: aliceblue;
-  color: black;
+  
+   background: linear-gradient(45deg, #e30b86, #0974ff);
+  color: white;
   padding: 10px 10px;
   margin-top: 8px;
   border-radius: 10px;
   text-align: center;
-  width: 195px;
+  font-size: 13px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: background 0.4s ease, transform 0.4s ease;
 }
-.header_button:hover{
-  background: linear-gradient(45deg, #e30b86, #0974ff);
-  color: white;
+.header_button:hover {
+  background: linear-gradient(45deg, #0974ff, #e30b86); 
+  transform: scale(1.05); 
+}
 
-}
 .left_content_header {
   width: 50%; 
   height: 100%;
@@ -76,7 +81,7 @@
 
 
 .right_content_header {
-  width: 40%; /* Chiếm 40% chiều rộng trên desktop */
+  width: 40%; 
   margin: auto;
 }
 

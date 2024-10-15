@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import './Advertisement.css'
+import { ItemContext } from "../../context/ItemContext";
+import { useNavigate, Link } from 'react-router-dom';
 const Advertisement = () => {
+    const { setItem } = useContext(ItemContext);
+    const navigate = useNavigate();
+
+    const handleClick = (item) => {
+        setItem(item);
+        navigate("/CollectionDetailPage", { state: { item } });
+    }
   return (
     <div className='Advertisement'>
         <div className='Container_Adv'>
@@ -30,7 +39,11 @@ const Advertisement = () => {
                     </div>
                 </div>
                 <div className='Advertisement_button'>
-                    <h3>CREATE  MARKETPLACE</h3>
+                    <button className="btn_explore_create_marketplace">
+                        <Link to='/CreatePage' className='link_to_create_collection'>
+                            Create MarketPlace
+                        </Link>
+                    </button>
                 </div>
             </div>
             <div className='Advertisement_container_two'>

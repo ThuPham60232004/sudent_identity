@@ -2,6 +2,7 @@
     width: 100%;
     background-color: black;
     display: flex;
+    padding: 0 40px;
 }
 .IntroduceText{
     width: 50%;
@@ -16,7 +17,7 @@
 }
 
 .IntroduceText p{
-    color: white;
+    color: rgb(199, 198, 198);
     line-height: 30px;
 
 }
@@ -47,35 +48,18 @@
     color: white;
 }
 
-.button_intro{
-    width: 100%;
-}
-  .Introducetext_btn {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-button.Introducebutton {
-    box-shadow:  0 0 5px cyan,
-    0 0 23px cyan;
-}
-button.Introducebutton a{
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
 
-}
- button.Introducebutton:hover {
-    box-shadow:  0 0 5px cyan, 0 0 25px cyan,0 0 50px cyan;
- }
 .IntroduceImg{
     width: 50%;
-    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
 }
+
 .IntroduceImg1 {
     width: 90%;
-    background-size: cover;
+    object-fit: cover;
     
 }
 

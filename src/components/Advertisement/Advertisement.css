@@ -9,6 +9,7 @@
     width: 90%;
     padding: 0 20px;
     display: flex;
+    flex-direction: row-reverse;
     margin: 0 auto;
 }
 
@@ -27,14 +28,16 @@
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 .Advertisement_container_one ul {
 
     color: #f82170;
 }
 .Advertisement_container_one h1{
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 30px;
     color: white;
 }
 .Advertisement_container_one ul {
@@ -49,43 +52,56 @@
 }
 .Advertisement_containertext{
     display: flex;
-    width:95%;
-    background-color: #f82170;
+    width:100%;
+    background-color: #ff0a64;
     border-radius: 10px;
     gap: 10px;
-    padding: 10px 40px;
+    padding: 10px;
     align-items: center;
 }
 .Advertisement_containertext_con {
     width: 25%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 10px;
     text-align: center;
 }
 .Advertisement_containertext h3{
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 700;
     color: white;
 }
 .Advertisement_containertext h5 {
-    font-size: 10px;
+    font-size: 12px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
 }
-
 
 .Advertisement_button{
-    background-color: aliceblue;
-    color: black;
-    padding: 10px 20px;
-    margin-top: 8px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.btn_explore_create_marketplace{
+    background: linear-gradient(45deg, #d1610a, #ff0984);
+    padding: 10px 30px;
     border-radius: 10px;
-    text-align: center;
-    width: 200px;
+    width: 60%;
+    transition: background 0.4s ease, transform 0.4s ease;
 }
-.Advertisement_button h3{
-font-size: 12px;
+
+.btn_explore_create_marketplace:hover {
+  background: linear-gradient(45deg, #ff0909, #e30b86); 
+  transform: scale(1.05); 
 }
+.btn_explore_create_marketplace .link_to_create_collection{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
 
 .Advertisement_container_two{
 width: 50%;
@@ -99,6 +115,8 @@ padding: 10px;
     justify-content: center;
 
 }
+
+
 .Advertisement_picture1_container{
     width: 100%;
     display: flex;
@@ -136,6 +154,11 @@ padding: 10px;
     width: 45%;
     background-size: cover;
     border-radius: 15px;
+    transition: transform 0.3s ease; 
+}
+.Advertisement_picture_container_two:hover,
+.Advertisement_picture_container_one:hover{
+    transform: translateY(-10px);
 }
 .Advertisement_picture_container_two{
     border: 2px solid rgb(230, 83, 15);
@@ -143,6 +166,7 @@ padding: 10px;
     width: 45%;
     border-radius: 15px;
     background-size: cover;
+     transition: transform 0.3s ease; 
 
 }
 .Advertisement_picture_border {

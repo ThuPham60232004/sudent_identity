@@ -98,6 +98,11 @@ p{
   gap:5px;
   align-items: center;
 }
+.nfts-gallery-item-name h4,
+.nfts-gallery-item-collection h4,
+.nfts-gallery-item-rank h4{
+  color: white;
+}
 
 .nfts-gallery-item-volume,
 .nfts-gallery-item-floorPrice{
