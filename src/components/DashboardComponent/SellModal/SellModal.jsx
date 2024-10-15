@@ -24,14 +24,14 @@ const SellModal = ({ isOpen, onClose }) => {
               <p className="modal-item-description">Shooting Zombie</p>
             </div>
           </div>
-
-          <div className="modal-section">
+        <div className="modal-section_group">
+          <div className="modal-section1">
             <label># of items</label>
             <input type="number" value="1" min="1" max="100" className="modal-input"/>
             <p className="items-available">100 available</p>
           </div>
 
-          <div className="modal-section">
+          <div className="modal-section2">
             <label>Set a price per item</label>
             <div className="modal-price-input">
               <input type="number" placeholder="Starting price" className="modal-input" />
@@ -40,6 +40,8 @@ const SellModal = ({ isOpen, onClose }) => {
               </select>
             </div>
           </div>
+        </div>
+          
 
           <div className="modal-section">
             <label>Duration</label>
@@ -54,10 +56,22 @@ const SellModal = ({ isOpen, onClose }) => {
           </div>
 
           <div className="modal-summary">
-            <p>Total price: -- ETH</p>
-            <p>OpenSea fee: 2.5%</p>
-            <p>Creator earnings: 0%</p>
-            <p>Total potential earnings: -- ETH</p>
+            <div className="modal-summary_buymodal_box">
+               <p>Total price:</p>
+               <h2>-- ETH</h2>
+            </div>
+            <div className="modal-summary_buymodal_box">
+               <p>OpenSea fee:</p>
+               <h2>2.5%</h2>
+            </div>
+            <div className="modal-summary_buymodal_box">
+               <p>Creator earnings:</p>
+               <h2>0%</h2>
+            </div>
+             <div className="modal-summary_buymodal_box">
+               <p>Total potential earnings:</p>
+               <h2>-- ETH</h2>
+            </div>
           </div>
 
           <div className="modal-actions">

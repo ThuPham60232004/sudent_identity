@@ -19,6 +19,7 @@ import { TbWorld } from "react-icons/tb";
 import { IoMdMore,IoIosMore,IoMdCart } from "react-icons/io";
 import { BiSolidCommentDetail } from "react-icons/bi";
 import { FaChartLine,FaBarsProgress } from "react-icons/fa6";
+import TransferItem from "../TransferItem/TransferItem";
 const NFTDetail = () => {
   const bids = [
     { name: "Esther Howard", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
@@ -28,6 +29,8 @@ const NFTDetail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
   const [isSellModalOpen, setIsSellModalOpen] = useState(false);
+  const [isTransferOpen, setIsTransferOpen] = useState(false);
+
 
   const openSellModal = () => setIsSellModalOpen(true);
   const closeSellModal = () => setIsSellModalOpen(false);
@@ -35,6 +38,9 @@ const NFTDetail = () => {
   const closeModal = () => setIsModalOpen(false);
   const openBuyModal = () => setIsBuyModalOpen(true);
   const closeBuyModal = () => setIsBuyModalOpen(false);
+
+   const openTransfer = () => setIsTransferOpen(true);
+  const closeTransfer = () => setIsTransferOpen(false);
 
    const [isOpen_con2, setIsOpen_con2] = useState(false);
 
@@ -143,7 +149,7 @@ const dummyData = [
             <div className="description_nft_con1">
               <div className="title_con1">
                 <RiBarChartHorizontalFill className="icon_RiBarChartHorizontalFill"/>
-                <p>Description</p>
+                <p className="title_main_box">Description</p>
               </div>
               <div className="by_user_create_nft_con1">
                 <p>By <span><a href="#">88B223</a></span></p>
@@ -153,7 +159,7 @@ const dummyData = [
                 <div className={`title_about_nft_detail_con1 ${isOpen_about_left_con1 ? '' : 'closed'}`} >
                   <div className="title_about_con1_left">
                     <RiLayout4Fill/>
-                  <p>About Gomble spacekids</p>
+                  <p className="title_main_box">About Gomble spacekids</p>
                   </div>
                   <div className="open_close_about_left_con1" onClick={toggleOpenClose_about_left_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_about_left_con1 ? 'open' : 'closed'}`} />
@@ -185,7 +191,7 @@ const dummyData = [
                 <div className="title_detail_con1">
                   <div className={`title_detail ${isOpen_detail_left_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_detail_left_con1 ? '0' : '0 0 10px 10px' }}>
                     <BiSolidCommentDetail className="icon_BiSolidCommentDetail"/>
-                    <p>Detail</p>
+                    <p className="title_main_box">Detail</p>
                   </div>
                   <div className="open_close_detail_left_con1" onClick={toggleOpenClose_detail_left_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_detail_left_con1 ? 'open' : 'closed'}`} />
@@ -233,7 +239,9 @@ const dummyData = [
                   <FaHandshake/>
                   <IoShare onClick={openModal}/>
                   <ShareNFTModal isOpen={isModalOpen} onClose={closeModal} />
-                  <Link to='./TransferItem' style={{textDecoration:"none", color:"white"}}><IoMdSend/></Link>
+                  <IoMdSend onClick={openTransfer}/>
+                  <TransferItem isOpen={isTransferOpen} onClose={closeTransfer}/>
+                  {/* <Link to='./TransferItem' style={{textDecoration:"none", color:"white"}}><IoMdSend/></Link> */}
                 </div>
               </div>
               <div className="name_nft_con1">
@@ -296,7 +304,7 @@ const dummyData = [
               <div className={`title_price_history__con1 ${isOpen_price_history_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_price_history_right_con1 ? '10px 10px 0 0' : '10px' }}>
                 <div className="title_price__con">
                   <FaChartLine/>
-                  <p>Price history</p>
+                  <p className="title_main_box">Price history</p>
                 </div>
                 <div className="open_close_price_history_right_con1" onClick={toggleOpenClose_price_history_right_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_price_history_right_con1 ? 'open' : 'closed'}`} />
@@ -314,7 +322,7 @@ const dummyData = [
               <div className={`title_listing__con1 ${isOpen_listing_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_listing_right_con1 ? '10px 10px 0 0' : '10px' }}>
                 <div className="title__con">
                   <BsFillTagsFill/>
-                <p>Listings</p>
+                <p className="title_main_box">Listings</p>
                 </div>
                 <div className="open_close_listing_right_con1" onClick={toggleOpenClose_listing_right_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_listing_right_con1 ? 'open' : 'closed'}`} />
@@ -357,7 +365,7 @@ const dummyData = [
               <div className={`title_right__con1 ${isOpen_offer_right_con1 ? '' : 'closed'}`} style={{ borderRadius: isOpen_offer_right_con1 ? '10px 10px 0 0' : '10px' }}>
                 <div className="title_offer_con">
                   <FaBarsProgress/>
-                   <p>Offers</p>
+                   <p className="title_main_box">Offers</p>
                 </div>
                 <div className="open_close_offer_right_con1" onClick={toggleOpenClose_offer_right_con1}>
                   <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_offer_right_con1 ? 'open' : 'closed'}`} />
@@ -414,7 +422,7 @@ const dummyData = [
         <div className={`header_con2 ${isOpen_con2 ? '' : 'closed'}`} style={{ borderRadius: isOpen_con2 ? '20px 20px 0 0' : '20px' }}>
           <div className="title_header_con2">
             <PiArrowsDownUpBold className="icon_item_activity" />
-            <p>Item Activity</p>
+            <p className="title_main_box">Item Activity</p>
           </div>
           <div className="open_close_con2" onClick={toggleOpenClose_con2}>
             <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_con2 ? 'open' : 'closed'}`} />
@@ -478,7 +486,7 @@ const dummyData = [
         <div className={`header_con3 ${isOpen_con3 ? '' : 'closed'}`} style={{ borderRadius: isOpen_con3 ? '20px 20px 0 0' : '20px' }}>
           <div className="title_con3">
             <RiLayoutGrid2Line className="icon_nft_detail_page" />
-            <p>More from this collection</p>
+            <p className="title_main_box">More from this collection</p>
           </div>
           <div className="open_close_con3" onClick={toggleOpenClose_con3}>
             <RiArrowDropDownLine className={`icon_open_close_nft_page ${isOpen_con3 ? 'open' : 'closed'}`} />

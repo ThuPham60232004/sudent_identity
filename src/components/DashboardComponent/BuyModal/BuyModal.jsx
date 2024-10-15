@@ -15,62 +15,72 @@ const BuyModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
-        <div className="modal-header">
+      <div className="modal-content_buymodal">
+        <div className="modal-header_buymodal">
           <h2>Make an offer</h2>
-          <button onClick={onClose} className="close-btn">✕</button>
+          <button onClick={onClose} className="close-btn_buymodal">✕</button>
         </div>
-        <div className="modal-body">
-          <div className="nft-info">
-            <img src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=465&dpr=1&s=none" alt="NFT" className="nft-modal-image" />
-            <div>
+        <div className="modal-body_buymodal">
+          <div className="nft-info_buymodal">
+            <img src="https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=465&dpr=1&s=none" alt="NFT" className="nft-modal-image_buymodal" />
+            <div className='nft-name_buymodal'>
               <h3>LEONARD</h3>
               <p>Shooting Zombie</p>
             </div>
           </div>
 
-          <div className="modal-balance">
-            <div className="balance-row">
-              <span>Balance</span>
-              <strong>0 ETH</strong>
+          <div className="modal-balance_buymodal">
+            <div className="balance-row_buymodal">
+              <p>Balance</p>
+              <h2>0 ETH</h2>
             </div>
-            <div className="balance-row">
-              <span>Floor price</span>
-              <strong>--</strong>
+            <div className="balance-row_buymodal">
+              <p>Floor price</p>
+              <h2>--</h2>
             </div>
-            <div className="balance-row">
-              <span>Best offer</span>
-              <strong>--</strong>
+            <div className="balance-row_buymodal">
+              <p>Best offer</p>
+              <h2>--</h2>
             </div>
           </div>
 
-          <div className="modal-inputs">
-            <label htmlFor="price">Price</label>
-            <div className="price-input-container">
+          <div className="modal-inputs_buymodal">
+           <div className="price_quantity_buymodal">
+            <div className="input-container_buymodal">
+               <label htmlFor="price">Price</label>
               <input type="text" id="price" placeholder="ETH" />
             </div>
+            <div className="input-container_buymodal">
+              <label htmlFor="quantity">Quantity</label>
+              <input type="number" id="quantity" min="1" defaultValue="1" />
+            </div>
+           </div>
+            
 
-            <label htmlFor="quantity">Quantity</label>
-            <input type="number" id="quantity" min="1" defaultValue="1" />
-
-            <label htmlFor="duration">Duration</label>
-            <div className="duration-container">
-              <DatePicker
+          <div className="input-duration-container_buymodal">
+               <label htmlFor="duration">Duration</label>
+            <div className="duration-container_buymodal">
+              <div className="date-picker-input_buymodal">
+                 <DatePicker
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
                 dateFormat="MMM d, yyyy"
-                className="date-picker-input"
+                className="icon-date-picker-input_buymodal"
               />
+              </div>
+             
               <input
                 type="time"
                 value={selectedTime}
                 onChange={handleTimeChange}
-                className="time-picker-input"
+                className="time-picker-input_buymodal"
               />
             </div>
+            </div>
+           
           </div>
 
-          <button className="make-offer-btn">Make offer</button>
+          <button className="make-offer-btn_buymodal">Make offer</button>
         </div>
       </div>
     </div>
