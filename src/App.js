@@ -114,7 +114,6 @@ function App() {
           <Route path="analytics" element={<AnalyticsDetailCollection />} />
           <Route path="activity" element={<ActivityDetailCollection />} />
           </Route>
-
           <Route path="/ERC721Info" element={<ERC721Info />} />
           <Route path="/ERC1155" element={<ERC1155 />} />
           <Route path="/BEPERC20" element={<BEPERC20 />} />

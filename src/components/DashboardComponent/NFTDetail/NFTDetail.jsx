@@ -3,8 +3,6 @@ import React,{useState} from "react";
 import "./NFTDetail.scss";  
 import { FaEye, FaHeart, FaShareAlt } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
-import { CiShare1 } from "react-icons/ci";
-import { Link } from "react-router-dom";
 import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
 import BuyModal from "../BuyModal/BuyModal";
 import SellModal from "../SellModal/SellModal";
@@ -20,12 +18,7 @@ import { IoMdMore,IoIosMore,IoMdCart } from "react-icons/io";
 import { BiSolidCommentDetail } from "react-icons/bi";
 import { FaChartLine,FaBarsProgress } from "react-icons/fa6";
 import TransferItem from "../TransferItem/TransferItem";
-const NFTDetail = () => {
-  const bids = [
-    { name: "Esther Howard", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
-    { name: "Robert Fox", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
-    { name: "Bessie Cooper", avatar: "https://png.pngtree.com/png-clipart/20230108/original/pngtree-nft-avatar-vector-element-png-image_8887536.png", bid: "2.65 ETH", time: "3 hours ago" },
-  ];
+const NFTDetail = ({ item }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false);
   const [isSellModalOpen, setIsSellModalOpen] = useState(false);
@@ -110,18 +103,6 @@ const dummyData = [
       lastSale: '0.18 WETH',
       image: '../img/collection.png',
     },
-    {
-      name: 'NFT Name 3',
-      price: '0.17 ETH',
-      lastSale: '0.13 WETH',
-      image: '../img/collection.png',
-    },
-    {
-      name: 'NFT Name 4',
-      price: '0.25 ETH',
-      lastSale: '0.18 WETH',
-      image: '../img/collection.png',
-    },
   ];
 
 
@@ -138,12 +119,12 @@ const dummyData = [
                   <CiHeart/>
                 </div>     
               </div>
-              <img src="../img/collection.png" alt="" />
+              <img src={item.imageSrc} alt="description" />
               <div className="item_img_detail_con1">
-                <img src="../img/collection.png" alt="" />
-                <img src="../img/collection.png" alt="" />
-                <img src="../img/collection.png" alt="" />
-                <img src="../img/collection.png" alt="" />
+              <img src={item.smallImageSrc} alt="description" />
+              <img src={item.smallImageSrc} alt="description" />
+              <img src={item.smallImageSrc} alt="description" />
+              <img src={item.smallImageSrc} alt="description" />
               </div>
             </div>
             <div className="description_nft_con1">
@@ -234,7 +215,7 @@ const dummyData = [
           <div className="right_detail_page_con1_main">
             <div className="info_nft_right_con1">
               <div className="action_con1">
-                <a href="#">Gomble spacekids</a>
+              <a href="#">{item.nftName}</a>
                 <div className="action__con1">
                   <FaHandshake/>
                   <IoShare onClick={openModal}/>
@@ -245,8 +226,8 @@ const dummyData = [
                 </div>
               </div>
               <div className="name_nft_con1">
-                <h3>GOMBLE - SpaceKids: Pill</h3>
-                <p>Owner by <span><a href="#">DB64FF</a></span></p>
+              <h3>{item.nftName}</h3>
+              <p>Owner by <span><a href="#">{item.creator}</a></span></p>
               </div>
               <div className="view_nft_con1">
                 <div className="view_nft__con1">
@@ -255,14 +236,14 @@ const dummyData = [
                 </div>
                 <div className="favorite_nft__con1">
                   <FaHeart/>
-                  <p>2 Favorite</p>
+                  <p>{item.likes}</p>
                 </div>
                
               </div>
             </div>
             <div className="sale_nft_right_con1">
               <div className="time_sale__con1">
-                <p>Sale ends October 8, 2024 at 10:53 PM </p>
+                <p>{item.endDate} </p>
                 <div className="time_sale_on__con1">
                    <div className="time_con">
                   <p className="value_time_con">00</p>
@@ -284,7 +265,7 @@ const dummyData = [
               </div>
               <div className="price__con1">
                 <p>Current price</p>
-                <h4>0.13 ETH <span>$316.62</span></h4>
+                <h4>{item.price}<span>$316.62</span></h4>
                 
               </div>
               <div className="buy__con1">
