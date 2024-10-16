@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .subsubscription_parent {
     width: 90%;
