@@ -14,11 +14,10 @@ const ERC_Contract = () => {
         navigate('/BEPERC20')
     }
   return (
-    <div>
+    <div className='ERC_Contract_parent' >
         <div className='ERC_Contract'>
             <h1 class="neon-text">PIXEL VAULT FOUNDER'S DAO</h1>
             <div className='ERC_Contract_Containt'>
-
                 <div className='ERC_Contract_One' onClick={handleClickERC721}>
                     <div className="img_erc">
                           <img

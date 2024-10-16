@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&family=Lilita+One&family=Oswald:wght@200..700&display=swap');
 .header {
   width: 100%;
   height: auto; 
@@ -12,9 +13,7 @@
   height: auto;
 }
 .header_button{
-  
    background: linear-gradient(45deg, #e30b86, #0974ff);
-  color: white;
   padding: 10px 10px;
   margin-top: 8px;
   border-radius: 10px;
@@ -24,6 +23,12 @@
   margin: 0 auto;
   margin-top: 10px;
   transition: background 0.4s ease, transform 0.4s ease;
+}
+.header_button h3{
+  font-family: "Oswald", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  
 }
 .header_button:hover {
   background: linear-gradient(45deg, #0974ff, #e30b86); 
@@ -41,9 +46,9 @@
 }
 
 .content1_header p {
-  font-family: "Inter", Sans-serif;
+    font-family: "Oswald", sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: white;
@@ -51,9 +56,10 @@
 
 .content2_header p {
   color: white;
-  font-family: "Outfit", Sans-serif;
+  font-family: "Lilita One", sans-serif;
   font-size: 50px; /* Kích thước chữ lớn trên desktop */
   font-weight: 800;
+  letter-spacing: 2px;
   line-height: 1.2em;
   text-align: center;
 }
@@ -62,21 +68,33 @@
   background: linear-gradient(45deg, #e30b86, #0974ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+   font-family: "Oswald", sans-serif;
   background-clip: text;
 }
 
+.gradient-text1 {
+  background: linear-gradient(45deg, #e30b86, #0974ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+    font-family: "Lilita One", sans-serif;
+  background-clip: text;
+}
 .content3_header p {
   text-align: center;
   color: white;
-  font-family: "Inter", Sans-serif;
+   font-family: "Oswald", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 1.8em;
 }
 
 .bold-text {
-  font-weight: 700;
+  font-weight: 500;
   font-style: italic;
+  color: rgb(183, 183, 183);
+   font-family: "Oswald", sans-serif;
 }
 
 

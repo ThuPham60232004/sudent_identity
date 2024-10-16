@@ -9,14 +9,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="container_footer">
      <div className="footer-col footer-about-us">
-  <h3>
-    <img src="./img/collection.png" alt="Company Logo" className="logo" /> FINTECH
-  </h3>
-  <p>
-    We are a company that provides top-notch services in the field of web and mobile development.
-    We strive to deliver the best quality for our clients.
-  </p>
-</div>
+        <div className="logo_website">
+          <img src="./img/collection.png" alt="Company Logo" className="logo" /> 
+          <h3>FINTECH</h3>
+        </div>
+        <p>We are a company that provides top-notch services in the field of web and mobile development.<br/>We strive to deliver the best quality for our clients.</p>
+      </div>
         <div className="footer-col footer-pages">
           <h4>Pages</h4>
           <ul>

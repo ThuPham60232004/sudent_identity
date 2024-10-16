@@ -19,19 +19,19 @@ const Services = () => {
       id: 1,
       title: 'Basic Service',
       description: 'Describe important details like price, value, length of service, and why it’s unique. Or use these sections to showcase different key values of your products or services.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCn4J-orJKNNq23d_D1aF0wchyzif78zhbhg&s',
+      image: 'https://nft-react-next.netlify.app/_next/static/media/1.4078788b.jpg',
     },
     {
       id: 2,
       title: 'Intermediate Service',
       description: 'Describe important details like price, value, length of service, and why it’s unique. Or use these sections to showcase different key values of your products or services.',
-      image: 'https://cdn.prod.website-files.com/60cc3f7e46fc805c3c8a1bf7/65007f9a673f95a41ba13e4b_eth%20to%20Base.jpg',
+      image: 'https://nft-react-next.netlify.app/_next/static/media/2.17000322.jpg',
     },
     {
       id: 3,
       title: 'Advanced Service',
       description: 'Describe important details like price, value, length of service, and why it’s unique. Or use these sections to showcase different key values of your products or services.',
-      image: 'https://th.bing.com/th/id/OIP.n8httTbaeM5ewQvOh9OeZAHaEK?rs=1&pid=ImgDetMain',
+      image: 'https://nft-react-next.netlify.app/_next/static/media/3.83b3b017.jpg',
     },
    
   ];
@@ -40,7 +40,7 @@ const Services = () => {
     <div className="services-container-parent">
       <div className="services-container">
         <div className="title_services">
-          <h1>Our Services</h1>
+          <h1>OUR SERVICES</h1>
           <div className="view_all_service">
              <button className="btn_explore_all_service">
                         <Link to='/AllCollection' className='link_to_all_service'>

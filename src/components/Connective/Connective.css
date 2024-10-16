@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: repeat(12,1fr);
     gap: 20px;
+    padding: 40px 0;
     color: white;
 }
 .Connective__con{
@@ -25,11 +26,13 @@
 .Connectivetext h3{
     font-size: 18px;
     font-weight: 700;
+    font-family: "Oswald", sans-serif;
 }
 .Connectivetext h5{
     font-size: 14px;
     font-weight: 500;
     color: rgb(114, 114, 114);
+    font-family: "Oswald", sans-serif;
 }
 
 .icon_connect_con{

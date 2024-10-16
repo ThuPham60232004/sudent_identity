@@ -11,7 +11,7 @@ const Header = () => {
         <p>THIS ITEM WAS FEATURED ON <span className="gradient-text">FINTECH</span></p>
       </div>
       <div className="content2_header">
-        <p>Meet Powerful Of <span className="gradient-text">NFT Marketplace</span> WordPres Plugin</p>
+        <p>Meet Powerful Of <span className="gradient-text1">NFT Marketplace</span> WordPres Plugin</p>
       </div>
       <div className="content3_header">
           <p>Create a <span className="bold-text">Full-Functional NFT Marketplace,</span> customize the storefront, and list unlimited NFTs. </p>

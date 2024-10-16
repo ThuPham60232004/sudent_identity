@@ -32,11 +32,11 @@ const Home = () => {
         <SubscriptionPlans/>
         <Introduce/>
         <Advertisement/>
-        <LogoCompany/>
         <Services/>
         <GuideNFT/>
         <ERC_Contract/>
         <Connective/>
+           <LogoCompany/>
 
 {/* 
      <div className="NFTGallery_home_page">

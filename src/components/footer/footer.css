@@ -15,17 +15,28 @@
 
 .footer-about-us {
   grid-column: span 3; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.logo_website{
+  display: flex;
+  gap:10px;
 }
 .footer-about-us h3 {
   display: flex;
+  font-size: 20px;
   align-items: center; 
+  font-family: "Oswald", sans-serif;
 }
 
+
 .footer-about-us .logo {
-  margin-right: 10px; 
   width: 30px; 
   height: auto;
   border-radius: 50px; 
+  padding: 0;
+  margin: 0;
 }
 .footer-pages {
   grid-column: span 2; 
@@ -54,12 +65,17 @@
 .footer-col h4 {
   font-size: 18px;
   margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  color: white;
 }
 
 .footer-col p {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  font-family: "Oswald", sans-serif;
+  color: #cfcdcd;
+
 }
 
 .footer-col ul {
@@ -69,6 +85,7 @@
 
 .footer-col ul li {
   margin-bottom: 8px;
+
 }
 
 .footer-col ul li a {
@@ -79,6 +96,7 @@
   font-size: 14px;
   font-weight: 400;
   margin: auto 0;
+    font-family: "Oswald", sans-serif;
 }
 
 .footer-col ul li a:hover {
@@ -99,9 +117,12 @@
   border-radius: 4px;
    text-align: start;
   background-color: white; 
+    font-family: "Oswald", sans-serif;
+    outline: none;
 }
 .footer-input::placeholder{
   color: #3e3d3d;
+    font-family: "Oswald", sans-serif;
  
 }
 
@@ -113,7 +134,9 @@
   cursor: pointer;
   color: white;
   transition: all 0.3s ease; 
+    font-family: "Oswald", sans-serif;
   font-size: 16px;
+  font-weight: 600;
   width: 100%;
   height: 50px;
   box-shadow: 2px 2px 3px rgb(83, 82, 82);

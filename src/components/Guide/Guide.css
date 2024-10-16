@@ -2,6 +2,7 @@
    width: 100%;
    display: flex;
    justify-content: center;
+   padding: 20px 0;
 }
 .GuideContainer{
    width: 90%;
@@ -10,7 +11,7 @@
    align-items: center;
    gap: 20px;
    border: 2px solid rgb(35, 35, 35);
-   padding: 30px;
+   padding: 20px 30px;
    background-image: url("https://img2.thuthuatphanmem.vn/uploads/2019/01/20/background-den-va-dep_034512388.jpg");
   background-size: cover;
    border-radius: 10px;
@@ -25,12 +26,18 @@
 .left_step_guide h3{
    color: white;
    font-size: 24px;
-   font-weight: 800;
+     font-family: "Lilita One", sans-serif;
+    background: linear-gradient(45deg, #e30b86, #0974ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1PX;
 }
 .left_step_guide p{
    color: rgb(210, 208, 208);
    font-size: 13px;
    font-weight: 500;
+     font-family: "Oswald", sans-serif;
    line-height: 20px;
 }
 
@@ -44,18 +51,19 @@
    font-size: 16px;
    font-weight: 700;
    color: black;
+     font-family: "Oswald", sans-serif;
 }
 .btn_create_nft_step_guid{
    width: 80%;
    margin-top: 10px;
    padding: 10px 30px;
-   border-radius: 15px;
-   /* background: linear-gradient(45deg, #e30b86, #0974ff); */
-   background: white;
+   border-radius: 20px;
+   background: linear-gradient(45deg, #e30b86, #0974ff);
+   /* background: white; */
    transition: background 0.4s ease, transform 0.4s ease;
 }
 .btn_create_nft_step_guid:hover {
-  /* background: linear-gradient(45deg, #0974ff, #e30b86);  */
+  background: linear-gradient(45deg, #0974ff, #e30b86); 
   transform: scale(1.05); 
 }
 
@@ -64,9 +72,10 @@
    display: grid;
    grid-template-columns: repeat(12,1fr);
    gap: 30px;
-   background: rgb(244, 241, 241);
+   background: rgb(20, 20, 20);
    padding: 20px;
    border-radius: 10px;
+   border: 1px solid rgb(55, 55, 55);
 }
 
 .step_guide_box{
@@ -82,11 +91,12 @@
    align-items: center;
 }
 .title_step_guide_box h3{
-   color: black;
+   color: white;
    padding: 0;
    font-size: 20px;
    font-weight: 700;
    margin: 0;
+     font-family: "Oswald", sans-serif;
 }
 .icon_step_guide_box{
    display: flex;
@@ -95,12 +105,13 @@
    padding: 0;
 }
 .icon_step_guide_box{
-  color: black;
+  color: white;
    font-size: 26px;
 }
 
 .step_guide_box p{
-   color: rgb(87, 87, 87);
+   color: rgb(194, 194, 194);
    font-size: 14px;
    font-weight: 500;
+     font-family: "Oswald", sans-serif;
 }

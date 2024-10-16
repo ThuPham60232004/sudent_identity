@@ -20,9 +20,10 @@
 }
 
 .title_sub {
-    font-size: 30px;
-    font-weight: 800;
-    font-family: "Outfit", Sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+   font-family: "Lilita One", sans-serif;
     background: linear-gradient(45deg, #e30b86, #0974ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35,16 +36,19 @@
     border: 2px solid white;
     color: white;
     background: transparent;
+    transition: background 0.4s ease, transform 0.4s ease;
 }
 .btn_explore_all_collection .link_to_collection {
     color: white;
     text-decoration: none;
         font-size: 12px;
     font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
 }
 .btn_explore_all_collection:hover{
-    background: linear-gradient(45deg, #e30b86, #0974ff);
-     border: 2px solid black;
+
+     transform: scale(1.05);
 }
 
 
@@ -61,6 +65,11 @@
     border-radius: 10px;
     padding: 10px;
     border: 1px solid rgb(42, 42, 42);
+     transition: background 0.4s ease, transform 0.4s ease;
+}
+.subscription_con:hover{
+
+     transform: scale(1.05);
 }
 .bg_plan{
     width: 100%;
@@ -78,11 +87,13 @@
     font-size: 12px;
     color: rgb(99, 99, 99);
     font-weight: 400;
+     font-family: "Oswald", sans-serif;
 }
 .detail_plan_card h2{
     color: white;
     font-size: 14px;
     font-weight: 700;
+     font-family: "Oswald", sans-serif;
 }
 .detail_plan_grid{
     display: grid;
@@ -106,99 +117,16 @@
     font-size: 12px;
     color: rgb(99, 99, 99);
     font-weight: 600;
+     font-family: "Oswald", sans-serif;
 }
 .detail_plan_content_item p,
 .detail_plan_content p{
     font-size: 12px;
     color: white;
     font-weight: 700;
+     font-family: "Oswald", sans-serif;
 }
 .detail_plan_content_item p{
     text-align: center;
+     font-family: "Oswald", sans-serif;
 }
-/* 
-.subscription_con {
-    flex: 0 0 calc(25% - 10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.subscription_con:hover {
-    transform: scale(1.05);
-}
-
-.plans-grid {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    background: rgb(45, 45, 45);
-    border-radius: 10px;
-}
-
-.bg_plan {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.detail_plan_card {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 20px 20px;
-    gap: 5px;
-}
-
-.detail_plan_card p {
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.detail_plan_grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    gap: 5px;
-}
-
-.detail_plan_content {
-    grid-column: span 4;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.detail_plan_content h4 {
-    font-size: 12px;
-    color: gray;
-}
-
-.detail_plan_content p {
-    color: white;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-
-
-@media (max-width: 1030px) {
-    .subscription_con {
-        flex: 0 0 calc(33.33% - 10px);
-    } 
-}
-
-@media (max-width: 787px) {
-    .subscription_con {
-        flex: 0 0 calc(50% - 10px);
-    } 
-}
-
-@media (max-width: 586px) {
-    .subscription_con {
-        flex: 0 0 calc(100% - 5px);
-    } 
-    .title_sub{
-        font-size: 20px;
-    }
-} */

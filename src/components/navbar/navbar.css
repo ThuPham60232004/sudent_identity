@@ -45,13 +45,13 @@
 
 .logo_navbar {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
   align-items: center;
   justify-content: center;
 }
 
 .navbar-logo {
-  font-size: 24px;
+  font-size: 30px;
   color: transparent; 
   background: linear-gradient(45deg, #e30b86, #0974ff); 
   background-clip: text; 
@@ -59,12 +59,15 @@
   transition: color 0.3s ease; 
   font-weight: 800;
   letter-spacing: 1px;
+  font-family: "Oswald", sans-serif; 
 }
 
 .logo_navbar img {
   width: 40px; 
   height: auto;
   border-radius: 50px; 
+  margin: 0;
+  padding: 0;
 }
 .logo_navbar img:hover{
   padding: 2px;
@@ -81,6 +84,7 @@
 .menu_navbar a{
   text-decoration: none;
   color: white;
+  font-family: "Oswald", sans-serif; 
 }
 
 .navbar-item-wrapper {
@@ -97,11 +101,13 @@ align-items: center;
   padding: 7px 15px;
   border-radius: 10px;
 
+
 }
 
 .navbar-item,
 .navbar-item a{
   font-weight: 700;
+    font-family: "Oswald", sans-serif; 
 }
 .navbar-item a:hover,
 .navbar-item:hover {
@@ -154,12 +160,14 @@ align-items: center;
   width: 180px;
   height: 40px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color: white;
+    font-family: "Oswald", sans-serif; 
 }
 .connect-wallet-btn:hover{
-  box-shadow: 2px 2px 2px rgb(92, 92, 92);
+   background: linear-gradient(45deg, #1057b4, #960758); 
+  transform: scale(1.05); 
 }
 
 .navbar-bars {

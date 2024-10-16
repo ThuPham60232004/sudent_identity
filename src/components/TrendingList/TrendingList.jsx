@@ -1,9 +1,16 @@
 import React, { useState,useContext } from "react";
 import "./TrendingList.css"; 
 import { ItemContext } from "../../context/ItemContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from 'react-router-dom';
+
 const TrendingList = () => {
-  const { setItem } = useContext(ItemContext);
+    const { setItem } = useContext(ItemContext);
+    const navigate = useNavigate();
+
+    const handleClick = (item) => {
+        setItem(item);
+        navigate("/CollectionDetailPage", { state: { item } });
+    }
   const trendingData = [
     {
       rank: 1,
@@ -102,7 +109,6 @@ const TrendingList = () => {
       imageUrl: "https://img.lovepik.com/png/20231105/Cute-cartoon-characters-cute-avatar-expressions-avatar-set_497508_wh860.png", 
     },
   ];
-  const navigate = useNavigate();
 
   const handleItemClick = (item) => {
     setItem(item); 
@@ -111,6 +117,14 @@ const TrendingList = () => {
 
   return (
     <div className="trendinglist_container">
+      <div className="trendinglist_content">
+        <h3>TOP COLLECTION</h3>
+          <button className="btn_explore_all_collection">
+                        <Link to='/AllCollection' className='link_to_collection'>
+                            EXPLORE ALL TOP COLLECTIONS
+                        </Link>
+                    </button>
+      </div>
     <div className="trendinglist_body">
       {trendingData.map((item, index) => (
         <div key={index} className="trendinglist-col" onClick={() => handleItemClick(item)}>
