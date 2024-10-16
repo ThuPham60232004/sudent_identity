@@ -12,6 +12,7 @@
     color: white;
     padding: 50px 0;
     text-align: center;
+     font-family: "Oswald", sans-serif;
 }
 
 .subscription_about{
@@ -34,11 +35,13 @@
      background: linear-gradient(45deg, #ff5050, #3002fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+   font-family: "Oswald", sans-serif;
 }
 .left_subscription_about h3{
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 800;
+     font-family: "Oswald", sans-serif;
 }
 .left_subscription_about p{
     font-size: 16px;
@@ -46,6 +49,7 @@
     color: rgb(216, 217, 218);
     padding: 0;
     margin: 0;
+     font-family: "Oswald", sans-serif;
 }
 
 .detail_left_subscription_about_group{
@@ -74,6 +78,11 @@ border-bottom: 1px dashed rgb(124, 161, 195);
 
 .right_subscription_about{
     width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.right_subscription_about img{
+    width: 90%;
 }
 
 
@@ -93,6 +102,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     background: linear-gradient(45deg, #ff0095, #00d0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Oswald", sans-serif;
 }
 .powerful_feature_box h4{
     font-size: 13px;
@@ -100,7 +110,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     text-align: center;
     padding:0 100px;
     color: rgb(190, 190, 190);
-   
+   font-family: "Oswald", sans-serif;
     margin-bottom: 30px;
 }
 .powerful_feature_box_con{
@@ -118,18 +128,19 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     border-radius: 10px;
     border: 0.5px solid rgb(34, 34, 34);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    /* Thiết lập transition cho thuộc tính thay đổi khi hover */
+ 
 }
 
 .powerful_feature_card:hover {
-    transform: translateY(-10px); /* Di chuyển thẻ lên trên khi hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng */
-    background-color: rgb(27, 27, 27); /* Đổi màu nền khi hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    background-color: rgb(27, 27, 27); 
 }
 
 .powerful_feature_card h3{
     font-size: 18px;
     font-weight: 700;
+    font-family: "Oswald", sans-serif;
 }
 .content_feature_powerful_Card{
     color: rgb(194, 192, 192);
@@ -138,6 +149,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     font-weight: 400;
     padding: 0;
     margin: 0;
+    font-family: "Oswald", sans-serif;
     
 }
 .icon_feature{
@@ -180,6 +192,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     font-weight: 800;
     padding: 0;
     margin: 0;
+    font-family: "Oswald", sans-serif;
 }
 
 
@@ -187,6 +200,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     background: linear-gradient(45deg, #5085ff, #ff00ae);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "Oswald", sans-serif;
 }
 .Subscription_box_group{
     width: 100%;
@@ -221,8 +235,8 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .Subscription_box_card:hover {
-    transform: translateY(-10px) scale(1.05); /* Di chuyển lên và phóng to */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .Subscription_box_box h3{
@@ -232,6 +246,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     margin: 0;
     padding: 0;
     color: #ff00ae;
+    font-family: "Oswald", sans-serif;
 
 }
 .Subscription_box_card h2{
@@ -245,6 +260,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     background: rgb(243, 222, 241);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    font-family: "Oswald", sans-serif;
 } 
 .Subscription_box_card ul {
     padding: 10px 40px;
@@ -254,6 +270,7 @@ border-bottom: 1px dashed rgb(124, 161, 195);
 .Subscription_box_card li{
     font-size: 16px;
     font-weight: 600;
+    font-family: "Oswald", sans-serif;
 }
 .Subscription_box_card p{
     padding: 0 20px ;
@@ -261,4 +278,5 @@ border-bottom: 1px dashed rgb(124, 161, 195);
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
 }

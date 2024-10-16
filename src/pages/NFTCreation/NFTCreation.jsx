@@ -6,7 +6,8 @@ import { MdAdd } from "react-icons/md";
 
 const NFTCreation = () => {
   return (
-    <div className="NFTCreation_CN">
+    <div className="NFTCreation_CN_parent">
+      <div className="NFTCreation_CN">
       <div className="title_nft_CN">
           <h1>Create an NFT</h1>
           <p>Once your item is minted, you will not be able to change any of its information</p>
@@ -68,6 +69,8 @@ const NFTCreation = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

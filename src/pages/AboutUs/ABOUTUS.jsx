@@ -168,6 +168,7 @@ const AboutUs = () => {
                         <div className="content_about_info">
                             <ul>
                               <li>5678 Bangla Main Road, cities 580</li>
+                               <li>5678 Bangla Main Road, cities 580</li>
                             </ul>
                         </div>
                         

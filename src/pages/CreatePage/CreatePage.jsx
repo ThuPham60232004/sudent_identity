@@ -11,13 +11,9 @@ const CreatePage = () => {
     <div className="create-page">
    
       <div className="left-sectionn">
-        <div className="logo_created">
-          <img src="/img/background.jpg" alt="" />
          <h1>Create</h1>
-        </div>
         
         <div className="options1">
-
             <div className="option_created">
                 <div className="left_option">
                   <div className="lable_created">
@@ -26,11 +22,9 @@ const CreatePage = () => {
                   </div>
                   <p>A drop is the release of a new project. This usually happens on a specified date and time. Items will be revealed after they have been purchased.</p>
                 </div>
-                   <a href="/SmartContractForm">
-              <div className="right_option">
+                <a className='right_option' href="/SmartContractForm">
                   <FaLongArrowAltRight className='icon_arrow'/>
-                </div>
-              </a>
+                </a>
             </div>
 
             <div className="option_created">
@@ -41,12 +35,9 @@ const CreatePage = () => {
                   </div>
                  <p>Create a new NFT collection or add an NFT to an existing one. Your items will display immediately. List for sale when you're ready.</p>
               </div>
-
-                <a href="/NFTCreation">
-              <div className="right_option">
+              <a className='right_option' href="/NFTCreation">
                   <FaLongArrowAltRight className='icon_arrow'/>
-                </div>
-              </a>
+                </a>
             </div>
           </div>
         <a href="/learn-more" className="learn-more">Learn more</a>
@@ -57,7 +48,7 @@ const CreatePage = () => {
           src="https://blog.redbrick.vn/wp-content/uploads/2021/05/buc-tranh-noi-tieng-the-gioi-doart-4-1.jpg"
           alt="Featured Crowd"
         />
-        <span className="featured-text">Featured - Crowd</span>
+        {/* <span className="featured-text">Featured - Crowd</span> */}
       </div>
     </div>
     </div>
