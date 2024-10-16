@@ -44,7 +44,7 @@ const Services = () => {
           <div className="view_all_service">
              <button className="btn_explore_all_service">
                         <Link to='/AllCollection' className='link_to_all_service'>
-                            EXPLORE ALL HOT COLLECTIONS
+                            EXPLORE ALL SERVICES
                         </Link>
                     </button>
           </div>

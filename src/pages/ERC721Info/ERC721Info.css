@@ -2,8 +2,89 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.erc721-container{
+.blog_detail_erc721-container_parent{
+  padding: 20px 0;
   display: flex;
-  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.blog_detail_erc721-container_parent h2{
+  color: white;
+  font-size: 50px;  
+  font-family: "Oswald", sans-serif;
+}
+.erc721-container_body{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.erc721-container_container{
+width: 90%;
+display: flex;
+gap: 20px;
+padding: 0 20px;
+}
+
+.left_erc721-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 10px;
+  padding: 20px;
+}
+.erc721-logo{
+  width: 100%;
+  padding: 10px;
+}
+.erc721-logo img{
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+.erc721-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.title_content_erc{
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+    font-family: "Oswald", sans-serif;
+}
+.erc721-content ul li,
+.content_erc{
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.erc721-content img{
+
+  width: 60%;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+
+.erc721-content ul{
+  padding-left: 30px;
+}
+
+.content_erc_strong,
+.erc721-content ul li strong{
+   font-size: 16px;
+  color: rgb(242, 179, 5);
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
 }
