@@ -44,7 +44,6 @@ const Dashboard = () => {
  const items = [
   { icon: <HomeIcon style={{ width: '20px', height: '20px' }} />, text: "Home", path: "/Dashboard/HomeDashboard" },
   { icon: <ShowChartIcon style={{ width: '20px', height: '20px' }} />, text: "Live Pricing", path: "/Dashboard/BinanceChart" },
-  { icon: <ExploreIcon style={{ width: '20px', height: '20px' }} />, text: "NFT Detail", path: "/Dashboard/NFTDetail" },
   { icon: <CollectionsIcon style={{ width: '20px', height: '20px' }} />, text: "Create Collection", path: "/Dashboard/CreatePage" },
   { icon: <RiNftFill style={{ width: '20px', height: '20px' }} />, text: "NFTs", path: "/Dashboard/NFTsPage" },
   { icon: <DnsIcon style={{ width: '20px', height: '20px' }} />, text: "Farm", path: "/Dashboard/PoolTable" },

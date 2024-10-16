@@ -238,7 +238,6 @@ const dummyData = [
                   <FaHeart/>
                   <p>{item.likes}</p>
                 </div>
-               
               </div>
             </div>
             <div className="sale_nft_right_con1">
