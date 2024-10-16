@@ -36,7 +36,7 @@ const Home = () => {
         <GuideNFT/>
         <ERC_Contract/>
         <Connective/>
-           <LogoCompany/>
+           {/* <LogoCompany/> */}
 
 {/* 
      <div className="NFTGallery_home_page">
