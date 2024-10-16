@@ -1,198 +1,106 @@
- 
- .GuideContainer_parent{
+.GuideContainer_parent{
    width: 100%;
    display: flex;
-   padding: 30px 0;
    justify-content: center;
- }
- 
- .GuideContainer{
-    width: 80%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
- }
- .STEP_GUIDE{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 20px;
- }
- .flip-card1,
- .flip-card2,
- .flip-card3,
- .flip-card4{
-    grid-column: span 3;
-    border-radius: 10px;
-    padding: 5px;
-    transition: transform 0.3s ease;
-    
- }
- .flip-card1{
-    border: 2px solid aqua;
- }
-  .flip-card1:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan;
- }
-  .flip_card_con1{
-    background: aqua;
-    border-radius: 10px;
-    padding: 5px;
- }
- .number_step_card1 h3{
-    background: aqua;
-   }
-
- .flip-card2{
-    border: 2px solid rgb(0, 255, 55);
- }
-  .flip-card2:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 5px rgb(0, 255, 55),
-    0 0 25px rgb(0, 255, 55);
- }
-  .flip_card_con2{
-    background: rgb(0, 255, 55);
-    border-radius: 10px;
-    padding: 5px;
- }
-.number_step_card2 h3{
-    background: rgb(0, 255, 55);
-   }
-
- .flip-card3{
-    border: 2px solid rgb(255, 153, 0);
- }
-  .flip-card3:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 5px rgb(255, 153, 0),
-    0 0 25px rgb(255, 153, 0);
- }
- .flip_card_con3{
-    background: rgb(255, 153, 0);
-    border-radius: 10px;
-    padding: 5px;
- }
-.number_step_card3 h3{
-    background: rgb(255, 153, 0);
-   }
-
-
- .flip-card4 {
-    border: 2px solid rgb(255, 0, 136);
- }
-  .flip-card4:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 5px rgb(255, 0, 136),
-    0 0 25px rgb(255, 0, 136);
- }
-
-  .flip_card_con4{
-    background: rgb(255, 0, 136);
-    border-radius: 10px;
-    padding: 5px;
- }
-   .number_step_card4 h3{
-    background: rgb(255, 0, 136) ;
-   }
-
-.number_step_card1 h3,
-.number_step_card2 h3,
-.number_step_card3 h3,
-  .number_step_card4 h3{
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: black;
-    font-weight: 800;
- }
-
- .flip_card_con{
-    background: black;
-    border-radius: 10px;
-    padding: 20px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    
- }
-
- .number_step_card1,
- .number_step_card2,
- .number_step_card3,
- .number_step_card4{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+}
+.GuideContainer{
+   width: 90%;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   gap: 20px;
+   border: 2px solid rgb(35, 35, 35);
+   padding: 30px;
+   background-image: url("https://img2.thuthuatphanmem.vn/uploads/2019/01/20/background-den-va-dep_034512388.jpg");
+  background-size: cover;
+   border-radius: 10px;
+}
+.left_step_guide{
+   width: 25%;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   gap: 10px;
+}
+.left_step_guide h3{
+   color: white;
+   font-size: 24px;
+   font-weight: 800;
+}
+.left_step_guide p{
+   color: rgb(210, 208, 208);
+   font-size: 13px;
+   font-weight: 500;
+   line-height: 20px;
 }
 
- .icon_guide_step{
-    font-size: 50px;
- }
- .content_step_guide{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
- }
- .title_content_step{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
- }
+.created_nft_left_step_guide{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.btn_create_nft_step_guid .link_to_create_nft{
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: 700;
+   color: black;
+}
+.btn_create_nft_step_guid{
+   width: 80%;
+   margin-top: 10px;
+   padding: 10px 30px;
+   border-radius: 15px;
+   /* background: linear-gradient(45deg, #e30b86, #0974ff); */
+   background: white;
+   transition: background 0.4s ease, transform 0.4s ease;
+}
+.btn_create_nft_step_guid:hover {
+  /* background: linear-gradient(45deg, #0974ff, #e30b86);  */
+  transform: scale(1.05); 
+}
 
- .content_step_guide h2{
-    font-size: 16px;
- }
- .content_step_guide p{
-    font-size: 13px;
- }
+.right_step_guide{
+   width: 75%;
+   display: grid;
+   grid-template-columns: repeat(12,1fr);
+   gap: 30px;
+   background: rgb(244, 241, 241);
+   padding: 20px;
+   border-radius: 10px;
+}
 
+.step_guide_box{
+   grid-column:  span 6;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
 
+.title_step_guide_box{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.title_step_guide_box h3{
+   color: black;
+   padding: 0;
+   font-size: 20px;
+   font-weight: 700;
+   margin: 0;
+}
+.icon_step_guide_box{
+   display: flex;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+}
+.icon_step_guide_box{
+  color: black;
+   font-size: 26px;
+}
 
-
- @media ( max-width:1094px) {
-     .STEP_GUIDE{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 20px;
- }
-  .flip-card1,
-  .flip-card2,
-  .flip-card3,
-  .flip-card4{
-    grid-column: span 6;
- }
- }
-
- @media(max-width:580px){
-     .STEP_GUIDE{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 20px;
- }
- .flip-card1,
- .flip-card2,
- .flip-card3,
-  .flip-card4{
-    grid-column: span 12;
- }
- .flip-card_con1,
- .flip-card_con2,
- .flip-card_con3,
- .flip_card_con4{
-    height: 180px;
- }
- .icon_guide_step{
-    font-size: 40px;
- }
-
- .number_step_card1 h3,
- .number_step_card2 h3,
- .number_step_card3 h3,
- .number_step_card4 h3{
-    font-size: 16px;
- }
- }
+.step_guide_box p{
+   color: rgb(87, 87, 87);
+   font-size: 14px;
+   font-weight: 500;
+}
