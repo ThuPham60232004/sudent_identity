@@ -1,6 +1,6 @@
 
 import React,{useState} from "react";
-import "./NFTDetail.scss";  
+import "./NFTDetail.css";  
 import { FaEye, FaHeart, FaShareAlt } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
 import ShareNFTModal from "../ShareNFTModal/ShareNFTModal";
@@ -121,10 +121,10 @@ const dummyData = [
               </div>
               <img src={item.imageSrc} alt="description" />
               <div className="item_img_detail_con1">
-              <img src={item.smallImageSrc} alt="description" />
-              <img src={item.smallImageSrc} alt="description" />
-              <img src={item.smallImageSrc} alt="description" />
-              <img src={item.smallImageSrc} alt="description" />
+                <img src={item.smallImageSrc} alt="description" />
+                <img src={item.smallImageSrc} alt="description" />
+                <img src={item.smallImageSrc} alt="description" />
+                <img src={item.smallImageSrc} alt="description" />
               </div>
             </div>
             <div className="description_nft_con1">

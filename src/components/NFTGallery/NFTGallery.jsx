@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ItemContext } from "../../context/ItemContext";
 import { useNavigate } from 'react-router-dom';
-import './NFTGallery.scss';
+import './NFTGallery.css';
 
 const NFTGallery = () => {
   const { setItem } = useContext(ItemContext);

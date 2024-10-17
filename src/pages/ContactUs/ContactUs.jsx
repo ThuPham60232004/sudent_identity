@@ -12,34 +12,34 @@ import Footer from "../../components/footer/Footer.jsx"
 
 const ContactUs = () => {
   return (
-    <div>
+    <div className='ct-contact-us-container-parent'>
       <Navbar/>
-    <div className="contact_container">
-      <div className="about">
-        <div className="des_about">
+
+    <div className="ct-contact_container">
+      <h2>Contact Us</h2>
+
+      <div className="ct-contact-us-about">
+        <div className="left_contact_us_des__con">
           <h2>Building an open digital economy</h2>
-          <p>At OpenSea, we're excited about a brand new type of digital good called a non-fungible token, or NFT. NFTs have exciting new properties: they’re unique, provably scarce, tradeable, and usable across multiple applications. Just like physical goods, you can do whatever you want with them! You could throw them in the trash, gift them to a friend across the world, or go sell them on an open marketplace. But unlike physical goods, they're armed with all the programmability of digital goods.</p>
-          <p>A core part of our vision is that open protocols like Ethereum and interoperable standards like ERC-721 and ERC-1155 will enable vibrant new economies. We're building tools that allow consumers to trade their items freely, creators to launch new digital works, and developers to build rich, integrated marketplaces for their digital items.</p>
-          <p>We're proud to be the first and largest marketplace for NFTs.</p>
+          <p>At OpenSea, we're excited about a brand new type of digital good called a non-fungible token, or NFT. NFTs have exciting new properties: they’re unique, provably scarce, tradeable, and usable across multiple applications. Just like physical goods, you can do whatever you want with them! You could throw them in the trash, gift them to a friend across the world, or go sell them on an open marketplace. But unlike physical goods, they're armed with all the programmability of digital goods.
+            <br/>A core part of our vision is that open protocols like Ethereum and interoperable standards like ERC-721 and ERC-1155 will enable vibrant new economies. We're building tools that allow consumers to trade their items freely, creators to launch new digital works, and developers to build rich, integrated marketplaces for their digital items.
+            <br/>We're proud to be the first and largest marketplace for NFTs.
+          </p>
         </div>
-        <div className="img_about">
-          <img src="../img/about.jpg" alt="Hình" />
+        <div className="right_contact_us_des_con">
+          <img src="../img/about.jpg" alt="" />
         </div>
       </div>
 
-      <div className="logo_company">
-        <h1>Backed by top firms & industry leaders</h1>
-        <p>Who are helping us pave the way towards a brand new digital economy</p>
-          <LogoCarousel/>
-      </div>
       <div className="address_contact">
           <div className="location_contact">
-                  <CiLocationOn className='icon_location'/>
-                <div className="des_address">
-                  <h3>Location</h3>
-                  <p>20 Cooper Square, Neu York, NY 10003, USA</p>
-                </div>
+            <CiLocationOn className='icon_location'/>
+            <div className="des_address">
+              <h3>Location</h3>
+              <p>20 Cooper Square, Neu York, NY 10003, USA</p>
+            </div>
           </div>
+          
               <div className="location_contact">
                   <MdOutlineMailOutline className='icon_location'/>
                 <div className="des_address">

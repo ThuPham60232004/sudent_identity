@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShareNFTModal.scss";
+import "./ShareNFTModal.css";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";

@@ -6,7 +6,7 @@ import { IoMdSearch } from "react-icons/io";
 import { GrFormPrevious,GrFormNext } from "react-icons/gr";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { ItemContext } from '../../../context/ItemContext';
-import "./HomeDashboard.scss"
+import "./HomeDashboard.css"
 import { useNavigate } from 'react-router-dom';
 const HomeDashboard = () => {
   const navigate = useNavigate();
@@ -241,28 +241,28 @@ const trendingNowData = [
           <h3>Today's Sales</h3>
           <p>Sales Summary</p>
           <div className="sales_summary_container">
-            <div className="sales_summary_group1">
+            <div className="sales_summary_group">
               <FaChartLine className='icon_sale_summary'/>
               <h3>$5K</h3>
               <h4>Total Sales</h4>
               <p>+10% from yesterday</p>
             </div>
 
-             <div className="sales_summary_group2">
+             <div className="sales_summary_group">
               <FaCartArrowDown className='icon_sale_summary'/>
               <h3>500</h3>
               <h4>Total Order</h4>
               <p>+8% from yesterday</p>
             </div>
 
-             <div className="sales_summary_group3">
+             <div className="sales_summary_group">
               <IoBagCheckSharp className='icon_sale_summary'/>
               <h3>9</h3>
               <h4>Product Sold</h4>
               <p>+2% from yesterday</p>
             </div>
 
-             <div className="sales_summary_group4">
+             <div className="sales_summary_group">
               <RiUserAddFill className='icon_sale_summary'/>
               <h3>12</h3>
               <h4>New Customer</h4>
@@ -384,29 +384,29 @@ const trendingNowData = [
         <p>All NFT</p>
         <div className="search_nft_ccon">
           <input type="search" placeholder="Search.." />
-          <IoMdSearch className="icon" />
+          <IoMdSearch className="icon_search_all_nft_home_dashboard" />
         </div>
       </div>
 
       <div className="detail_table_nft_con">
         <div className="item_nft1">
-          <p className="stt">Stt</p>
-          <p className="collection">Collection</p>
-          <p className="image">Image</p>
-          <p className="name">Name</p>
-          <p className="floor_price">Floor price</p>
-          <p className="volume">Volume</p>
-          <p className="view">View</p>
+          <p className="stt_nft">Stt</p>
+          <p className="collection_nft">Collection</p>
+          <p className="image_nft">Image</p>
+          <p className="name_nft">Name</p>
+          <p className="floor_price_nft">Floor price</p>
+          <p className="volume_nft">Volume</p>
+          <p className="view_nft">View</p>
         </div>
         {currentItems.map((nft, index) => (
-          <div className="item_nft" key={index} onClick={() => handleNftClick(nft)}>
-            <p className="stt">{nft.stt}</p>
-            <p className="collection">{nft.collectionType}</p>
-            <img className="image" src={nft.image} alt={nft.name} />
-            <p className="name">{nft.name}</p>
-            <p className="floor_price">{nft.floorPrice}</p>
-            <p className="volume">{nft.volume}</p>
-            <p className="view">{nft.views}</p>
+          <div className="item_nft2" key={index} onClick={() => handleNftClick(nft)}>
+            <p className="stt_nft">{nft.stt}</p>
+            <p className="collection_nft">{nft.collectionType}</p>
+            <img className="image_nft" src={nft.image} alt={nft.name} />
+            <p className="name_nft">{nft.name}</p>
+            <p className="floor_price_nft">{nft.floorPrice}</p>
+            <p className="volume_nft">{nft.volume}</p>
+            <p className="view_nft">{nft.views}</p>
           </div>
         ))}
       </div>

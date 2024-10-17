@@ -38,10 +38,9 @@ const Home = () => {
         <Connective/>
            {/* <LogoCompany/> */}
 
-{/* 
-     <div className="NFTGallery_home_page">
+
        <NFTGallery/>  
-      </div> */}
+
 
       {/* <div className="LogoCarousel_home_page">
         <LogoCarousel/>

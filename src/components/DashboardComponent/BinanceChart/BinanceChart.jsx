@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
-import './BinanceChart.scss';
+import './BinanceChart.css';
 const candlestickData = [
   ['2024/07/25', 570, 600, 560, 580],
   ['2024/07/26', 580, 620, 570, 600],
